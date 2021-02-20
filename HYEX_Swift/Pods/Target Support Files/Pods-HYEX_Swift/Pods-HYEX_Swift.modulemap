@@ -1,0 +1,6 @@
+framework module Pods_HYEX_Swift {
+  umbrella header "Pods-HYEX_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
