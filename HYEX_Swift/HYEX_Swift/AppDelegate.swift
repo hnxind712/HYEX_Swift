@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             window.backgroundColor = UIColor.white
         }
+        
+        let loginVC = LSLoginViewController()
+        loginVC.isShowClose = false
         window?.rootViewController = mainTabbar
         
         return true

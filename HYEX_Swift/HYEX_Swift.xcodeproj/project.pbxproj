@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
+		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
+		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
+		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
 		D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */; };
 		D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F50725C0FD6500BB32D7 /* Main.storyboard */; };
 		D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F50A25C0FD6700BB32D7 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYEX_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
+		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
+		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
 		D7F9F4FE25C0FD6500BB32D7 /* HYEX_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYEX_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F9F50825C0FD6500BB32D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +112,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D74C02E625E0E3750017E1E7 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */,
+				D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		D74C02F125E0E3D70017E1E7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		D7F9F4F525C0FD6500BB32D7 = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +155,11 @@
 			isa = PBXGroup;
 			children = (
 				D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */,
+				D74C02F125E0E3D70017E1E7 /* Tool */,
 				D7F9F56125C109B300BB32D7 /* Extension */,
 				D7F9F54E25C0FFB200BB32D7 /* Main_Root */,
 				D7F9F5A525C1120600BB32D7 /* Home */,
+				D74C02E625E0E3750017E1E7 /* Login&Register */,
 				D7F9F50725C0FD6500BB32D7 /* Main.storyboard */,
 				D7F9F50A25C0FD6700BB32D7 /* Assets.xcassets */,
 				D7F9F50C25C0FD6700BB32D7 /* LaunchScreen.storyboard */,
@@ -296,6 +321,7 @@
 				D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */,
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
+				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +393,8 @@
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
 				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
+				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
+				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
 				D7F9F55025C1000C00BB32D7 /* LSMainTabbarController.swift in Sources */,
 			);
