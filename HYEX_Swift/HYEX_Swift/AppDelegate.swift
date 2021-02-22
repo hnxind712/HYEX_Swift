@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let loginVC = LSLoginViewController()
         loginVC.isShowClose = false
-        window?.rootViewController = mainTabbar
+        let nav:LSBaseNavigationController = LSBaseNavigationController.init(rootViewController: loginVC)
+        window?.rootViewController = nav
         
         return true
     }

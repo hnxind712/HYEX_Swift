@@ -20,11 +20,21 @@ class LSLoginViewController: LSBaseViewController {
         super.viewDidLoad()
         self.closeBtn.isHidden = !isShowClose
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     // MARK: - 忘记密码
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
     }
     // MARK: - 去注册
     @IBAction func jumpToRegisterAction(_ sender: UIButton) {
+        let registerVC: LSRegisterViewController = LSRegisterViewController.init()
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
     // MARK: - 是否显示密码
     @IBAction func showPasswordAction(_ sender: UIButton) {
