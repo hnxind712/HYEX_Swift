@@ -14,10 +14,10 @@
                 <outlet property="accountInput" destination="RgK-PS-9XH" id="dgI-kz-Tbb"/>
                 <outlet property="codeBtn" destination="Fe8-Im-O5X" id="pUh-Bb-bhm"/>
                 <outlet property="codeLeftConstraint" destination="SZ3-0h-EcY" id="9wu-t5-7OW"/>
-                <outlet property="confirmInput" destination="fYC-bB-Vud" id="gsc-tZ-qNZ"/>
                 <outlet property="emailBtn" destination="gXO-oz-JVJ" id="71F-ae-RWp"/>
                 <outlet property="inviteCodeInput" destination="jAW-3A-YAR" id="XFx-Op-1pc"/>
                 <outlet property="passwordInput" destination="gCB-z5-4nA" id="M0B-ol-zIv"/>
+                <outlet property="payPassword" destination="fYC-bB-Vud" id="I7B-QX-j2u"/>
                 <outlet property="phoneBtn" destination="R1j-ea-13b" id="HdS-rd-v8B"/>
                 <outlet property="remarkLabel" destination="RVY-uU-2lR" id="uBh-Og-SGE"/>
                 <outlet property="verifyBtn" destination="a5c-SP-ZCB" id="apy-u2-Qh7"/>
@@ -195,6 +195,9 @@
                                             <real key="value" value="3"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="getMessageVerifyCodeAction:" destination="-1" eventType="touchUpInside" id="VEI-K6-hHp"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,8 +277,8 @@
                                         <constraint firstAttribute="height" constant="1" id="MDd-e5-8Gx"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认登录密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBN-AP-FJk">
-                                    <rect key="frame" x="10" y="79" width="80" height="15"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBN-AP-FJk">
+                                    <rect key="frame" x="10" y="79" width="53.5" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="Jpa-hg-IUP"/>
                                     </constraints>
@@ -286,7 +289,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yo2-fC-LCi">
                                     <rect key="frame" x="10" y="102" width="394" height="40"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-bB-Vud">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入交易密码" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-bB-Vud">
                                             <rect key="frame" x="0.0" y="5" width="354" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="mdS-Ly-9fi"/>
@@ -521,7 +524,7 @@
                 <constraint firstItem="KUE-SQ-KxV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z4Y-pz-69X"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KUE-SQ-KxV" secondAttribute="bottom" id="eCo-9H-gQs"/>
             </constraints>
-            <point key="canvasLocation" x="142" y="159"/>
+            <point key="canvasLocation" x="-116" y="48"/>
         </view>
     </objects>
     <resources>

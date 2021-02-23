@@ -7,6 +7,8 @@
 
 import UIKit
 
+let KRegisterUrl: String = "/user/register_login"//注册
+
 class LSRegisterViewController: LSBaseViewController {
     enum KRegitserType: Int {
         case phone = 1,email
@@ -21,16 +23,48 @@ class LSRegisterViewController: LSBaseViewController {
     @IBOutlet weak var verifyInput: UITextField!
     @IBOutlet weak var verifyBtn: UIButton!
     @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var confirmInput: UITextField!
+    @IBOutlet weak var payPassword: UITextField!
     @IBOutlet weak var inviteCodeInput: UITextField!
     
+    var areaCode: String = "86"//默认
     var registerType: KRegitserType = .phone//默认手机注册
-    
+    // MARK: 倒计时相关
+    var timeout: Int = 60//倒计时
+    let codeTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initTimer()
     }
-
+    private func initTimer(){
+        codeTimer.schedule(wallDeadline: .now(), repeating: 1)
+        codeTimer.setEventHandler {
+            self.timeout -= 1
+            if self.timeout <= 0 {
+                self.codeTimer.cancel()
+                DispatchQueue.main.async {
+                    self.verifyBtn.setTitle("获取验证码".localized, for: .normal)
+                }
+                self.timeout = 60
+            }else{
+                DispatchQueue.main.async {
+                    self.verifyBtn.setTitle("\(self.timeout)", for: .normal)
+                }
+            }
+            
+        }
+    }
+    // MARK: 获取验证码
+    @IBAction func getMessageVerifyCodeAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            codeTimer.resume()
+        }else{
+            codeTimer.suspend()
+            verifyBtn.setTitle("获取验证码".localized, for: .normal)
+            timeout = 60
+        }
+    }
     @IBAction func exchangeRegisterType(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         if !sender.isSelected {
@@ -53,6 +87,25 @@ class LSRegisterViewController: LSBaseViewController {
     }
     // MARK: 注册
     @IBAction func registerAction(_ sender: UIButton) {
+        var params:[String:Any] = [:]
+        params["areaCode"] = areaCode
+        if registerType == .phone {
+            params["mobile"] = accountInput.text
+        }else{
+            params["email"] = accountInput.text
+        }
+        params["password"] = passwordInput.text
+        params["payPassword"] = payPassword.text
+        params["userName"] = accountInput.text
+        params["verificationCode"] = verifyInput.text
+        params["invite"] = inviteCodeInput.text
+        
+        LSNetRequest.sharedInstance.postRequest(KBaseUrl+KRegisterUrl, params: params) { (response) in
+            
+        } failure: { (_ error: Error) in
+            
+        }
+
     }
     // MARK: 查看用户协议
     @IBAction func checkServiceProtocol(_ sender: UIButton) {
@@ -66,7 +119,7 @@ class LSRegisterViewController: LSBaseViewController {
         if sender.tag == 10 {
             passwordInput.isSecureTextEntry = sender.isSelected
         }else{
-            confirmInput.isSecureTextEntry = sender.isSelected
+            payPassword.isSecureTextEntry = sender.isSelected
         }
     }
 }
