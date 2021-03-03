@@ -19,4 +19,14 @@ func RGBCOLOR(r:CGFloat,g:CGFloat,b:CGFloat,alpha:CGFloat) -> UIColor {
 //随机色
 func RANDOMCOLOR() -> UIColor {
     return RGBCOLOR(r: CGFloat(arc4random()%256), g: CGFloat(arc4random()%256), b: CGFloat(arc4random()%256),alpha: 1)
+    
 }
+//如果不需要倒计时处理
+func sendMessageVerifyCode(_ params:[String : Any]) {
+    LSNetRequest.sharedInstance.postRequest(KBaseUrl + KMessageValidateCode, params: params) { (response) in
+        
+    } failure: { (error) in
+        
+    }
+}
+

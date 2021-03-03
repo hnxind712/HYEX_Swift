@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
+		D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */; };
 		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
 		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
+		D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */; };
+		D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */; };
+		D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */; };
+		D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */; };
 		D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820325E3512600F2360E /* LSRegisterViewController.swift */; };
 		D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78B820425E3512600F2360E /* LSRegisterViewController.xib */; };
 		D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820B25E3586400F2360E /* NSObject+Extension.swift */; };
@@ -54,9 +59,14 @@
 		392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYEX_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
 		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
 		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
+		D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSForgotPasswordVC.swift; sourceTree = "<group>"; };
+		D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSForgotPasswordVC.xib; sourceTree = "<group>"; };
+		D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeView.swift; sourceTree = "<group>"; };
+		D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSVerifyCodeView.xib; sourceTree = "<group>"; };
 		D78B820325E3512600F2360E /* LSRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSRegisterViewController.swift; sourceTree = "<group>"; };
 		D78B820425E3512600F2360E /* LSRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSRegisterViewController.xib; sourceTree = "<group>"; };
 		D78B820B25E3586400F2360E /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -135,6 +145,8 @@
 				D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */,
 				D78B820325E3512600F2360E /* LSRegisterViewController.swift */,
 				D78B820425E3512600F2360E /* LSRegisterViewController.xib */,
+				D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */,
+				D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
@@ -145,6 +157,16 @@
 				D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		D777B70825E64AD90082CC1B /* verifyCodeTool */ = {
+			isa = PBXGroup;
+			children = (
+				D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */,
+				D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */,
+				D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */,
+			);
+			path = verifyCodeTool;
 			sourceTree = "<group>";
 		};
 		D78B820A25E3586400F2360E /* Localize */ = {
@@ -184,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */,
+				D777B70825E64AD90082CC1B /* verifyCodeTool */,
 				D74C02F125E0E3D70017E1E7 /* Tool */,
 				D7F9F56125C109B300BB32D7 /* Extension */,
 				D7F9F54E25C0FFB200BB32D7 /* Main_Root */,
@@ -351,12 +374,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */,
 				D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */,
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
 				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
 				D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
+				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +450,8 @@
 			files = (
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
+				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
+				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
 				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
 				D78B821525E358DA00F2360E /* constantDefine.swift in Sources */,
@@ -438,6 +465,7 @@
 				D7F9F55025C1000C00BB32D7 /* LSMainTabbarController.swift in Sources */,
 				D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */,
 				D78B820F25E3586400F2360E /* Localize.swift in Sources */,
+				D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

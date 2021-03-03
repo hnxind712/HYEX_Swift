@@ -1,28 +1,36 @@
 PODS:
   - Alamofire (4.5.0)
+  - Kingfisher (4.10.1)
   - SnapKit (4.0.0)
+  - SwiftPullToRefresh (3.1.1)
   - SwiftyJSON (4.0.0)
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.5.0)
+  - Kingfisher (~> 4.0)
   - SnapKit (= 4.0.0)
+  - SwiftPullToRefresh
   - SwiftyJSON (~> 4.0.0)
   - Toast-Swift (~> 3.0.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - SnapKit
+    - SwiftPullToRefresh
     - SwiftyJSON
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftPullToRefresh: f61d67439c5b8d66420fe57193cab8c279398e7a
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 57464358684c74ef3b074a90049a97ae52ee093f
+PODFILE CHECKSUM: 1d84714df44b1adf3d7cfd7aad4781d26c323362
 
 COCOAPODS: 1.9.3

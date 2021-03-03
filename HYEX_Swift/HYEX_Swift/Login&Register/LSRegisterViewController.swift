@@ -21,41 +21,32 @@ class LSRegisterViewController: LSBaseViewController {
     @IBOutlet weak var codeLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var accountInput: UITextField!
     @IBOutlet weak var verifyInput: UITextField!
-    @IBOutlet weak var verifyBtn: UIButton!
+    @IBOutlet weak var verifyBtn: LSVerifyCodeBtn!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var payPassword: UITextField!
     @IBOutlet weak var inviteCodeInput: UITextField!
     
     var areaCode: String = "86"//默认
     var registerType: KRegitserType = .phone//默认手机注册
-    // MARK: 倒计时相关
-    var timeout: Int = 60//倒计时
-    let codeTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
 
+    // MARK: 验证码弹窗
+    lazy var verifyCodeView:LSVerifyCodeView = {
+        let codeView = LSVerifyCodeView.verifyCodeView()
+        codeView?.verifyBlock = {
+            self.verifyBtn.testFunc()
+        }
+        return codeView!
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTimer()
+        
     }
-    private func initTimer(){
-        codeTimer.schedule(wallDeadline: .now(), repeating: 1)
-        codeTimer.setEventHandler {
-            self.timeout -= 1
-            if self.timeout <= 0 {
-                self.codeTimer.cancel()
-                DispatchQueue.main.async {
-                    self.verifyBtn.setTitle("获取验证码".localized, for: .normal)
-                }
-                self.timeout = 60
-            }else{
-                DispatchQueue.main.async {
-                    self.verifyBtn.setTitle("\(self.timeout)", for: .normal)
-                }
-            }
-            
-        }
-    }
+    
     // MARK: 获取验证码
-    @IBAction func getMessageVerifyCodeAction(_ sender: UIButton) {
+    @IBAction func getMessageVerifyCodeAction(_ sender: LSVerifyCodeBtn) {
+        verifyCodeView.show(["areaCode":"86"])
+        /*
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             codeTimer.resume()
@@ -64,6 +55,7 @@ class LSRegisterViewController: LSBaseViewController {
             verifyBtn.setTitle("获取验证码".localized, for: .normal)
             timeout = 60
         }
+ */
     }
     @IBAction func exchangeRegisterType(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
