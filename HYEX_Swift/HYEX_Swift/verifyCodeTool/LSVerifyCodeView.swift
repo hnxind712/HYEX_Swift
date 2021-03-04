@@ -34,11 +34,15 @@ class LSVerifyCodeView: UIView {
     @IBAction func closeAction(_ sender: UIButton) {
         removeFromSuperview()
     }
-    var verifyBlock:(()->())?
+    var verifyBlock:((_ code: String)->())?
     @IBAction func sendVerifyCodeAction(_ sender: UIButton) {
+        guard self.verifyInput.text?.count != 0 else {
+            self.makeToast("请输入验证码".localized)
+            return
+        }
         self.removeFromSuperview()
         if let block = verifyBlock {
-            block()
+            block(self.verifyInput.text!)
         }
     }
     // MARK: 切换图形验证码

@@ -32,8 +32,13 @@ class LSRegisterViewController: LSBaseViewController {
     // MARK: 验证码弹窗
     lazy var verifyCodeView:LSVerifyCodeView = {
         let codeView = LSVerifyCodeView.verifyCodeView()
-        codeView?.verifyBlock = {
-            self.verifyBtn.testFunc()
+        codeView?.verifyBlock = {(code) in
+            var params: [String : Any] = [:]
+            params["areaCode"] = self.areaCode
+            params["phone"] = self.accountInput
+            params["type"] = "REGISTER"
+            params["captchaImgCode"] = code
+            self.verifyBtn.sendMessageVerifyCodeAction(params)
         }
         return codeView!
     }()
@@ -45,6 +50,10 @@ class LSRegisterViewController: LSBaseViewController {
     
     // MARK: 获取验证码
     @IBAction func getMessageVerifyCodeAction(_ sender: LSVerifyCodeBtn) {
+        guard self.accountInput.text?.count != 0 else {
+            self.view.makeToast("请输入手机号/邮箱".localized)
+            return
+        }
         verifyCodeView.show(["areaCode":"86"])
         /*
         sender.isSelected = !sender.isSelected

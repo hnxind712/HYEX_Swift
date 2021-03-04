@@ -49,10 +49,13 @@ class LSNetRequest{
                      failure: @escaping ResponseError) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .default
-        
+        print(params);
         Alamofire.request(urlString, method: .post, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
             switch response.result{
             case .success(let value):
+                print(value)
+                let dic = value as! NSDictionary
+                print(dic["errorMessage"])
                 success(value)
             case .failure(let error):
                 failure(error)
