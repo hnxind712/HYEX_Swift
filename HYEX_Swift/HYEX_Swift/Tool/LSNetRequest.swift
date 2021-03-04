@@ -66,7 +66,7 @@ class LSNetRequest{
                          success: @escaping ResponseSuccess,
                          failure: @escaping ResponseError) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-        let encoding:URLEncoding = .default
+        let encoding:URLEncoding = .queryString
         var seedParams:[String:Any] = params
 //        let userDefult:UserDefaults = UserDefaults.standard
         let interval = Date.init(timeIntervalSince1970: 0)
@@ -77,16 +77,15 @@ class LSNetRequest{
             let documentURL = URL(fileURLWithPath: NSHomeDirectory() + "/Documents/Download/")
             // 在路径追加文件名称
             let fileUrl = documentURL.appendingPathComponent(response.suggestedFilename!)
+            
             return (fileUrl , [.removePreviousFile, .createIntermediateDirectories])
         }
         
-        let downloadRequest = Alamofire.download(urlString, method: .get, parameters: params, encoding: encoding, headers: nil, to: destination).responseJSON { (defaultDownloadResponse) in
-            if defaultDownloadResponse.response?.statusCode == 200{
-                success(defaultDownloadResponse.destinationURL!)
-            }
-            print("\(defaultDownloadResponse.destinationURL)")
+        let downloadRequest = Alamofire.download(urlString, method: .get, parameters: seedParams, encoding: encoding, headers: nil, to: destination).responseData { (response) in
+            if let data = response.result.value {
+                   success(data)
+               }
         }
-        
         downloadRequest.downloadProgress(closure: downloadProgress1)
         progressBlock = progress
         

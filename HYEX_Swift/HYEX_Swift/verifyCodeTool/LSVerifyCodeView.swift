@@ -28,14 +28,7 @@ class LSVerifyCodeView: UIView {
         self.frame = view!.bounds
         //显示的时候每次刷新一下图形验证码
         _params = params
-        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KBaseUrl + KGraphValidateCode, params: params) { (progress) in
-            
-        } success: { (response) in
-            let url:URL = response as! URL
-            self.imageCode.image = UIImage.init(contentsOfFile:url.absoluteString)
-        } failure: { (error) in
-            
-        }
+        showGraphverifyCode()
     }
     
     @IBAction func closeAction(_ sender: UIButton) {
@@ -50,15 +43,19 @@ class LSVerifyCodeView: UIView {
     }
     // MARK: 切换图形验证码
     @IBAction func switchImageCodeAction(_ sender: UIButton) {
-        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KBaseUrl + KGraphValidateCode, params: _params!) { (progress) in
-            
-        } success: { (response) in
-            
-        } failure: { (error) in
-            
-        }
+        
     }
     // MARK: 刷新图形验证码
     @IBAction func refreshImageCodeAction(_ sender: UIButton) {
+        showGraphverifyCode()
+    }
+    func showGraphverifyCode() {
+        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KBaseUrl + KGraphValidateCode, params: _params!) { (progress) in
+            
+        } success: { (response) in
+            self.imageCode.image = UIImage(data: response as! Data)
+        } failure: { (error) in
+            
+        }
     }
 }
