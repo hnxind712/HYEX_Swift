@@ -151,9 +151,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D70CAFD925F217AE00037A52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D74C02E625E0E3750017E1E7 /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
+				D70CAFD925F217AE00037A52 /* Model */,
 				D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */,
 				D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */,
 				D78B820325E3512600F2360E /* LSRegisterViewController.swift */,
