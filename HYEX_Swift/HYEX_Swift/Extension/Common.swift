@@ -30,3 +30,11 @@ func sendMessageVerifyCode(_ params:[String : Any]) {
     }
 }
 
+func test1<T:Codable>(_ json: Any,_ className: T.Type) -> Array<Any> {
+    let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+    print(data!)
+    let decode = JSONDecoder()
+    let list = try! decode.decode(className.self, from: data!)
+    
+    return list as! Array<Any>
+}

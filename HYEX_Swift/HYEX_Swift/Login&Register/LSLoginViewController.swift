@@ -37,10 +37,11 @@ class LSLoginViewController: LSBaseViewController {
             if let dic = response as? Dictionary<String, Any>{
                 let json = dic["content"]
                 print(json!)
-                let data = try? JSONSerialization.data(withJSONObject: json, options: [])
-                print(data!)
-                let decode = JSONDecoder()
-                let list = try! decode.decode([TestModel].self, from: data!)
+//                let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+//                print(data!)
+//                let decode = JSONDecoder()
+                let list = test1(json, [TestModel].self)
+                    //try! decode.decode([TestModel].self, from: data!)
                 print(list)
                 UserDefaults.standard.set(try? PropertyListEncoder().encode(list.first), forKey: "lists")
                 sleep(2)
