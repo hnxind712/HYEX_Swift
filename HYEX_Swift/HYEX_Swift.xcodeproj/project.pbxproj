@@ -10,6 +10,7 @@
 		3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA43FF125F108B20070229F /* LSProfileViewController.swift */; };
 		3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA43FF225F108B20070229F /* LSProfileViewController.xib */; };
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
+		D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70CAFDD25F22D4700037A52 /* TestModel.swift */; };
 		D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */; };
 		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
 		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
@@ -63,6 +64,7 @@
 		3CA43FF225F108B20070229F /* LSProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileViewController.xib; sourceTree = "<group>"; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		D70CAFDD25F22D4700037A52 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
 		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
 		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		D70CAFD925F217AE00037A52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D70CAFDD25F22D4700037A52 /* TestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
 				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
 				D78B821525E358DA00F2360E /* constantDefine.swift in Sources */,
+				D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */,
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,

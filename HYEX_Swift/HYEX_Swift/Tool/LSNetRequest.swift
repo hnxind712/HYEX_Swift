@@ -7,6 +7,11 @@
 
 import UIKit
 import Alamofire
+
+let token = "7e1aaaab9215992dfe385ea54e43f9ed"//写死
+
+let header: HTTPHeaders = ["token":token]
+
 // MARK: 成功回调
 typealias ResponseSuccess = (_ responseData: Any)->()
 
@@ -32,7 +37,7 @@ class LSNetRequest{
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
         
-        Alamofire.request(urlString, method: .get, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
+        Alamofire.request(urlString, method: .get, parameters: params, encoding: encoding, headers: header).responseJSON { (response) in
             switch response.result{
             case .success(let value):
                 success(value)
@@ -50,7 +55,8 @@ class LSNetRequest{
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .default
         
-        Alamofire.request(urlString, method: .post, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
+        
+        Alamofire.request(urlString, method: .post, parameters: params, encoding: encoding, headers: header).responseJSON { (response) in
             switch response.result{
             case .success(let value):
                 success(value)

@@ -7,6 +7,7 @@
 
 import UIKit
 import Toast_Swift
+import SwiftyJSON
 
 class LSLoginViewController: LSBaseViewController {
 
@@ -19,6 +20,8 @@ class LSLoginViewController: LSBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.closeBtn.isHidden = !isShowClose
+        
+        testFunc()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,6 +31,37 @@ class LSLoginViewController: LSBaseViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    func testFunc() {
+        LSNetRequest.sharedInstance.getRequest(KBaseUrl + "/pc" , params: ["coinName":"ETH","settlementCurrency":"USDT"]) { (response) in
+            if let dic = response as? Dictionary<String, Any>{
+                let json = dic["content"]
+                print(json!)
+                let data = try? JSONSerialization.data(withJSONObject: json, options: [])
+                print(data!)
+                let decode = JSONDecoder()
+                let list = try! decode.decode([TestModel].self, from: data!)
+                print(list)
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(list.first), forKey: "lists")
+                sleep(2)
+                
+                
+                print("*******************")
+                
+                if let data = UserDefaults.standard.value(forKey: "lists") as? Data{
+                    let lists  = try? PropertyListDecoder().decode(TestModel.self,from:data)
+                    print(lists!)
+                }
+            }
+            
+        } failure: { (error) in
+            
+        }
+
+    }
+    
+    
+    
     // MARK: - 忘记密码
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
     }
