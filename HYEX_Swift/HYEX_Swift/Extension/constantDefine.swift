@@ -9,9 +9,9 @@ import Foundation
 
 #if DEBUG
 
-let KBaseUrl: String = "http://192.168.0.143:8088"
+//let KBaseUrl: String = "http://192.168.0.143:8088"
 
-//let KBaseUrl: String = "http://154.91.34.40:8080/api"
+let KBaseUrl: String = "http://154.91.34.40:8080/api"
 
 #else
 

@@ -15,6 +15,13 @@
 		D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B56E25F3169F00B51D61 /* LSUserInfo.swift */; };
 		D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57325F319F000B51D61 /* LSLoginModel.swift */; };
 		D726B57925F3206B00B51D61 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57825F3206B00B51D61 /* MD5.swift */; };
+		D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B59425F3632200B51D61 /* LSBannerModel.swift */; };
+		D726B59F25F369FC00B51D61 /* LSHomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */; };
+		D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */; };
+		D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */; };
+		D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */; };
+		D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726B5B025F3791800B51D61 /* LSMarketListCell.xib */; };
+		D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */; };
 		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
 		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
@@ -72,6 +79,13 @@
 		D726B56E25F3169F00B51D61 /* LSUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSUserInfo.swift; sourceTree = "<group>"; };
 		D726B57325F319F000B51D61 /* LSLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginModel.swift; sourceTree = "<group>"; };
 		D726B57825F3206B00B51D61 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		D726B59425F3632200B51D61 /* LSBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSBannerModel.swift; sourceTree = "<group>"; };
+		D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSHomeItemCell.swift; sourceTree = "<group>"; };
+		D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSHomeItemCell.xib; sourceTree = "<group>"; };
+		D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListModel.swift; sourceTree = "<group>"; };
+		D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListCell.swift; sourceTree = "<group>"; };
+		D726B5B025F3791800B51D61 /* LSMarketListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSMarketListCell.xib; sourceTree = "<group>"; };
+		D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNoticeListModel.swift; sourceTree = "<group>"; };
 		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
 		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
@@ -167,6 +181,27 @@
 				D726B57325F319F000B51D61 /* LSLoginModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D726B59325F3631600B51D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D726B59425F3632200B51D61 /* LSBannerModel.swift */,
+				D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */,
+				D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D726B59C25F369E000B51D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */,
+				D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */,
+				D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */,
+				D726B5B025F3791800B51D61 /* LSMarketListCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D74C02E625E0E3750017E1E7 /* Login&Register */ = {
@@ -297,6 +332,8 @@
 		D7F9F5A525C1120600BB32D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D726B59C25F369E000B51D61 /* View */,
+				D726B59325F3631600B51D61 /* Model */,
 				D7F9F5A625C1122B00BB32D7 /* LSHomeViewController.swift */,
 				D7F9F5A725C1122B00BB32D7 /* LSHomeViewController.xib */,
 			);
@@ -413,7 +450,9 @@
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
 				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
+				D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */,
 				D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */,
+				D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
 				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
 				3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */,
@@ -487,6 +526,8 @@
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
 				D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */,
 				D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */,
+				D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */,
+				D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */,
 				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
 				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
@@ -498,12 +539,15 @@
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
 				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,
 				D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */,
+				D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
+				D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */,
 				3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
 				D7F9F55025C1000C00BB32D7 /* LSMainTabbarController.swift in Sources */,
 				D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */,
+				D726B59F25F369FC00B51D61 /* LSHomeItemCell.swift in Sources */,
 				D78B820F25E3586400F2360E /* Localize.swift in Sources */,
 				D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */,
 			);
