@@ -29,12 +29,25 @@ func sendMessageVerifyCode(_ params:[String : Any]) {
         
     }
 }
-
-func test1<T:Codable>(_ json: Any,_ className: T.Type) -> Array<Any> {
-    let data = try? JSONSerialization.data(withJSONObject: json, options: [])
-    print(data!)
-    let decode = JSONDecoder()
-    let list = try! decode.decode(className.self, from: data!)
-    
-    return list as! Array<Any>
+//解析json或data为对应的model数据
+func decodeDataToModel<T:Decodable>(data : Data?,ele:T.Type) -> T? {
+    guard let data = data else { return nil }
+    do {
+        let object = try JSONDecoder().decode(T.self, from: data)
+        return object
+    } catch  {
+        print("Unable to decode", error)
+    }
+    return nil
+}
+func decodeJsonToModel<T:Decodable>(json : Any,ele:T.Type) -> T? {
+    let _data = try? JSONSerialization.data(withJSONObject: json, options: [])
+    guard let data = _data else { return nil }
+    do {
+        let object = try JSONDecoder().decode(T.self, from: data)
+        return object
+    } catch  {
+        print("Unable to decode", error)
+    }
+    return nil
 }

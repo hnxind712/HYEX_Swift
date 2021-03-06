@@ -12,6 +12,9 @@
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
 		D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70CAFDD25F22D4700037A52 /* TestModel.swift */; };
 		D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */; };
+		D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B56E25F3169F00B51D61 /* LSUserInfo.swift */; };
+		D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57325F319F000B51D61 /* LSLoginModel.swift */; };
+		D726B57925F3206B00B51D61 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57825F3206B00B51D61 /* MD5.swift */; };
 		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
 		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
@@ -66,6 +69,9 @@
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		D70CAFDD25F22D4700037A52 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
+		D726B56E25F3169F00B51D61 /* LSUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSUserInfo.swift; sourceTree = "<group>"; };
+		D726B57325F319F000B51D61 /* LSLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginModel.swift; sourceTree = "<group>"; };
+		D726B57825F3206B00B51D61 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
 		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				D70CAFDD25F22D4700037A52 /* TestModel.swift */,
+				D726B56E25F3169F00B51D61 /* LSUserInfo.swift */,
+				D726B57325F319F000B51D61 /* LSLoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */,
+				D726B57825F3206B00B51D61 /* MD5.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -476,6 +485,8 @@
 			files = (
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
+				D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */,
+				D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */,
 				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
 				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
@@ -487,6 +498,7 @@
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
 				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,
 				D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */,
+				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
 				3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,

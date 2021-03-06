@@ -23,14 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             window.backgroundColor = UIColor.white
         }
-        
-        let loginVC = LSLoginViewController()
-        loginVC.isShowClose = false
-        let nav:LSBaseNavigationController = LSBaseNavigationController.init(rootViewController: loginVC)
-        window?.rootViewController = nav
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(setMainVC), name: Notification.Name(KLoginSuccessNotifyKey), object: nil)
+        setMainVC()
         return true
     }
-
+    // MARK: 设置主界面
+    @objc private func setMainVC(){
+        if LSLoginModel.verifyLogin() {
+            window?.rootViewController = mainTabbar
+        }else{
+            let loginVC = LSLoginViewController()
+            loginVC.isShowClose = false
+            let nav:LSBaseNavigationController = LSBaseNavigationController.init(rootViewController: loginVC)
+            window?.rootViewController = nav
+        }
+    }
 }
 
