@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,8 +13,9 @@
             <connections>
                 <outlet property="accountInput" destination="OG4-Oz-aSE" id="WYx-6w-KQD"/>
                 <outlet property="closeBtn" destination="S0V-Yf-eYc" id="JXQ-lI-bx0"/>
+                <outlet property="imageCode" destination="kYG-FI-Geu" id="zay-rQ-vhr"/>
                 <outlet property="passwordInput" destination="272-Fb-cPv" id="PYp-nT-xRU"/>
-                <outlet property="verifyCodeInput" destination="EHE-ak-87e" id="l9P-hZ-BhY"/>
+                <outlet property="verifyCodeInput" destination="wpl-AZ-rY6" id="g1v-To-Hbx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,7 +38,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="PHq-Ws-68F"/>
                             </constraints>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -59,7 +60,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="WZ9-dy-qXV"/>
                             </constraints>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
@@ -91,12 +92,19 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkU-9R-iOB">
                             <rect key="frame" x="10" y="193" width="394" height="40"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-u0-DVm">
+                                    <rect key="frame" x="0.0" y="39" width="394" height="1"/>
+                                    <color key="backgroundColor" red="0.92156862750000001" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="QO7-Pd-QYG"/>
+                                    </constraints>
+                                </view>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpl-AZ-rY6">
                                     <rect key="frame" x="0.0" y="5" width="294" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="KgE-Vy-Q3s"/>
                                     </constraints>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -113,15 +121,21 @@
                                         <constraint firstAttribute="height" constant="32" id="26M-ou-NGI"/>
                                         <constraint firstAttribute="width" constant="72" id="IE6-FW-P6h"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="refreshGraphCodeAction:" destination="-1" eventType="touchUpInside" id="4lx-56-b1f"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="MkZ-u0-DVm" secondAttribute="bottom" id="0cd-la-NXQ"/>
                                 <constraint firstAttribute="height" constant="40" id="1KC-Yo-aFp"/>
                                 <constraint firstAttribute="trailing" secondItem="l8S-nh-t0H" secondAttribute="trailing" constant="8" id="3uL-jo-p32"/>
                                 <constraint firstAttribute="trailing" secondItem="wpl-AZ-rY6" secondAttribute="trailing" constant="100" id="GAa-4i-0yo"/>
+                                <constraint firstAttribute="trailing" secondItem="MkZ-u0-DVm" secondAttribute="trailing" id="MXX-uR-4tf"/>
                                 <constraint firstItem="kYG-FI-Geu" firstAttribute="centerY" secondItem="NkU-9R-iOB" secondAttribute="centerY" id="Ndg-3Z-bY2"/>
                                 <constraint firstItem="wpl-AZ-rY6" firstAttribute="centerY" secondItem="NkU-9R-iOB" secondAttribute="centerY" id="Y1A-qK-uGI"/>
+                                <constraint firstItem="MkZ-u0-DVm" firstAttribute="leading" secondItem="NkU-9R-iOB" secondAttribute="leading" id="hOq-jk-uDc"/>
                                 <constraint firstItem="l8S-nh-t0H" firstAttribute="centerY" secondItem="NkU-9R-iOB" secondAttribute="centerY" id="mb3-0n-Ffc"/>
                                 <constraint firstItem="wpl-AZ-rY6" firstAttribute="leading" secondItem="NkU-9R-iOB" secondAttribute="leading" id="nDi-xH-BWF"/>
                                 <constraint firstAttribute="trailing" secondItem="kYG-FI-Geu" secondAttribute="trailing" constant="8" id="q30-oW-X0h"/>
@@ -327,8 +341,8 @@
     <resources>
         <image name="arrow_down" width="6" height="4.6666665077209473"/>
         <image name="icon_loginPlac" width="375" height="78"/>
-        <image name="show_eye" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="show_eye_open" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="show_eye" width="19" height="15"/>
+        <image name="show_eye_open" width="19" height="15"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

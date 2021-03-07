@@ -7,6 +7,11 @@
 
 import UIKit
 import Alamofire
+
+let token = "7e1aaaab9215992dfe385ea54e43f9ed"//写死
+
+var header: HTTPHeaders = ["token":token,"Accept-Language":Localize.currentLanguage()]
+
 // MARK: 成功回调
 typealias ResponseSuccess = (_ responseData: Any)->()
 
@@ -26,31 +31,41 @@ class LSNetRequest{
     var progressBlock: ResponseProgress?
     // MARK: GET
     func getRequest(_ url: String,
-                    params: [String:Any]?,
+                    params: [String:Any]? = nil,
                     success: @escaping ResponseSuccess,
-                    failure: @escaping ResponseError) {
+                    failure: ResponseError? = nil) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
-        
-        Alamofire.request(urlString, method: .get, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
+        print(KBaseUrl + urlString)
+        Alamofire.request(KBaseUrl + urlString, method: .get, parameters: params, encoding: encoding, headers: header).responseJSON { (response) in
             switch response.result{
             case .success(let value):
                 success(value)
             case .failure(let error):
-                failure(error)
+                failure!(error)
             }
         }
     }
     
     // MARK: POST
     func postRequest(_ url: String,
-                     params: [String:Any]?,
+                     params: [String:Any]? = nil,
                      success: @escaping ResponseSuccess,
                      failure: @escaping ResponseError) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-        let encoding:URLEncoding = .default
-        print(params);
-        Alamofire.request(urlString, method: .post, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
+        let encoding:URLEncoding = .queryString
+        var dic: [String : Any] = params!
+        if let value = UserDefaults.standard.value(forKey: "uniqueStr"){
+            dic["uniqueStr"] = "\(value)"
+        }
+        //配置token信息
+        if LSLoginModel.verifyLogin() {
+            header["token"] = LSLoginModel.sharedInstace().token
+        }
+        print(KBaseUrl + urlString)
+        print("*********")
+        print(dic)
+        Alamofire.request(KBaseUrl + urlString, method: .post, parameters: dic, encoding: encoding, headers: header).responseJSON { (response) in
             switch response.result{
             case .success(let value):
                 print(value)
@@ -71,10 +86,12 @@ class LSNetRequest{
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
         var seedParams:[String:Any] = params
-//        let userDefult:UserDefaults = UserDefaults.standard
-        let interval = Date.init(timeIntervalSince1970: 0)
-        seedParams["seed"] = interval
-            
+        let interval = Int32(Date().timeIntervalSince1970)
+        seedParams["seed"] = "\(interval)"
+        if urlString == KGraphValidateCode {//如果是图形验证码
+            UserDefaults.standard.setValue(String(format: "%d", interval), forKey: "uniqueStr")
+            UserDefaults.standard.synchronize()
+        }
         var destination: DownloadRequest.DownloadFileDestination!
         destination = {_ ,response in
             let documentURL = URL(fileURLWithPath: NSHomeDirectory() + "/Documents/Download/")
@@ -84,7 +101,7 @@ class LSNetRequest{
             return (fileUrl , [.removePreviousFile, .createIntermediateDirectories])
         }
         
-        let downloadRequest = Alamofire.download(urlString, method: .get, parameters: seedParams, encoding: encoding, headers: nil, to: destination).responseData { (response) in
+        let downloadRequest = Alamofire.download(KBaseUrl + urlString, method: .get, parameters: seedParams, encoding: encoding, headers: nil, to: destination).responseData { (response) in
             if let data = response.result.value {
                    success(data)
                }

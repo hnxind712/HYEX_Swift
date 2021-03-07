@@ -7,18 +7,24 @@
 
 import UIKit
 import Toast_Swift
+import SwiftyJSON
+import Kingfisher
 
 class LSLoginViewController: LSBaseViewController {
 
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var accountInput: UITextField!//用户名
     @IBOutlet weak var passwordInput: UITextField!//密码
-    @IBOutlet weak var verifyCodeInput: UIView!//验证码
+    @IBOutlet weak var verifyCodeInput: UITextField!//验证码
+    @IBOutlet weak var imageCode: UIImageView!
     var isShowClose: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.closeBtn.isHidden = !isShowClose
+        
+        // MARK: 获取图形验证码
+        getGraphCode()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,6 +34,22 @@ class LSLoginViewController: LSBaseViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    func getGraphCode() {
+        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KGraphValidateCode, params: ["areaCode":KBasicAreaCode]) { (progrss) in
+            
+        } success: { (response) in
+            self.imageCode.image = UIImage(data: response as! Data)
+        } failure: { (error) in
+            
+        }
+
+    }
+    // MARK: refreshGraphCode
+    @IBAction func refreshGraphCodeAction(_ sender: UIButton) {
+        getGraphCode()
+    }
+    
     // MARK: - 忘记密码
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
     }
@@ -46,8 +68,30 @@ class LSLoginViewController: LSBaseViewController {
         style.messageColor = HEXCOLOR(h: 0x877889, alpha: 1)
         
         guard self.accountInput.text!.count > 0 else {
-            view.makeToast("请输入用户名", duration: 1, position: .center, title: nil, image: nil, style: style, completion: nil)
+            view.makeToast("请输入用户名".localized, duration: KHideDelay, position: .center, title: nil, image: nil, style: style, completion: nil)
             return
+        }
+        guard self.passwordInput.text!.count > 0 else {
+            view.makeToast("请输入密码".localized, duration: KHideDelay, position: .center, title: nil, image: nil, style: style, completion: nil)
+            return
+        }
+        guard self.verifyCodeInput.text!.count > 0 else {
+            view.makeToast("请输入验证码".localized, duration: KHideDelay, position: .center, title: nil, image: nil, style: style, completion: nil)
+            return
+        }
+        // MARK: 登录
+        LSNetRequest.sharedInstance.postRequest(KLoginUrl, params: ["userName":accountInput.text!,"password":passwordInput.text!,"captchaImgCode":verifyCodeInput.text!]) { (response) in
+            print(response)
+            if let jsonDic = response as? Dictionary<String, Any>{
+                let model: LSLoginModel = decodeJsonToModel(json: jsonDic["content"], ele: LSLoginModel.self)!
+                print(model)
+                //请求个人数据，并缓存到本地
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(model), forKey: KLoginModelKey)
+                
+                LSLoginModel.getUserInfo()
+            }
+        } failure: { (error) in
+            self.view.makeToast(error.localizedDescription)
         }
     }
     // MARK: - 关闭界面
@@ -56,5 +100,6 @@ class LSLoginViewController: LSBaseViewController {
     
     // MARK: - 设置语言
     @IBAction func setLanguageAction(_ sender: Any) {
+        print((LSUserInfo.sharedInstance()?.areaCode)! as String)
     }
 }

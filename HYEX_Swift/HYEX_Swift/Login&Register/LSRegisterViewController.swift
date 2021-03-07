@@ -26,7 +26,7 @@ class LSRegisterViewController: LSBaseViewController {
     @IBOutlet weak var payPassword: UITextField!
     @IBOutlet weak var inviteCodeInput: UITextField!
     
-    var areaCode: String = "86"//默认
+    var areaCode: String = KBasicAreaCode//默认
     var registerType: KRegitserType = .phone//默认手机注册
 
     // MARK: 验证码弹窗
@@ -101,7 +101,7 @@ class LSRegisterViewController: LSBaseViewController {
         params["verificationCode"] = verifyInput.text
         params["invite"] = inviteCodeInput.text
         
-        LSNetRequest.sharedInstance.postRequest(KBaseUrl+KRegisterUrl, params: params) { (response) in
+        LSNetRequest.sharedInstance.postRequest(KRegisterUrl, params: params) { (response) in
             
         } failure: { (_ error: Error) in
             

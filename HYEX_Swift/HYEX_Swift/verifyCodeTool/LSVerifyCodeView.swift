@@ -54,7 +54,7 @@ class LSVerifyCodeView: UIView {
         showGraphverifyCode()
     }
     func showGraphverifyCode() {
-        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KBaseUrl + KGraphValidateCode, params: _params!) { (progress) in
+        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KGraphValidateCode, params: _params!) { (progress) in
             
         } success: { (response) in
             self.imageCode.image = UIImage(data: response as! Data)

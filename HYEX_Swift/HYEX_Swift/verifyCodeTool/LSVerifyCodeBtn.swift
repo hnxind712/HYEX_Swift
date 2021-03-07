@@ -39,7 +39,7 @@ class LSVerifyCodeBtn: UIButton {
         self.timeSource.resume()
     }
     func sendMessageVerifyCodeAction(_ params:[String : Any]) {
-        LSNetRequest.sharedInstance.postRequest(KBaseUrl + KMessageValidateCode, params: params) { (response) in
+        LSNetRequest.sharedInstance.postRequest(KMessageValidateCode, params: params) { (response) in
             self.timeSource.resume()
         } failure: { (error) in
             
