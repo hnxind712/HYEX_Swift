@@ -40,7 +40,7 @@ class LSMainTabbarController: UITabBarController {
                                KTabbarImage:"icon_purse",
                                KTabbarSelectedImage:"icon_purse_h"
         ],
-        KTabbarItemType.profile:[KTabbarVC:"LSHomeViewController",
+        KTabbarItemType.profile:[KTabbarVC:"LSProfileViewController",
                                  KTabbarTitle:"我的",
                                  KTabbarImage:"icon_mine",
                                  KTabbarSelectedImage:"icon_mine_h"

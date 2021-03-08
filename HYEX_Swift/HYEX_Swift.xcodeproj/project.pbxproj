@@ -36,6 +36,15 @@
 		D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */; };
 		D78B821525E358DA00F2360E /* constantDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B821425E358DA00F2360E /* constantDefine.swift */; };
 		D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B821925E35C0300F2360E /* String+Extension.swift */; };
+		D79DC16125F5CCD8003ABCD5 /* LSProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */; };
+		D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */; };
+		D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */; };
+		D79DC17025F5D07C003ABCD5 /* LSSustainabilityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */; };
+		D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */; };
+		D79DC17A25F5D095003ABCD5 /* LSOTCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */; };
+		D79DC18025F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */; };
+		D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */; };
+		D79DC18725F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */; };
 		D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E81C9225E4ADB4003D760B /* LSIBInspectable.swift */; };
 		D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */; };
 		D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F50725C0FD6500BB32D7 /* Main.storyboard */; };
@@ -100,6 +109,15 @@
 		D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swizzling.swift"; sourceTree = "<group>"; };
 		D78B821425E358DA00F2360E /* constantDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constantDefine.swift; sourceTree = "<group>"; };
 		D78B821925E35C0300F2360E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSProfileCell.swift; sourceTree = "<group>"; };
+		D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileCell.xib; sourceTree = "<group>"; };
+		D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSustainabilityViewController.swift; sourceTree = "<group>"; };
+		D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSSustainabilityViewController.xib; sourceTree = "<group>"; };
+		D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSOTCMainViewController.swift; sourceTree = "<group>"; };
+		D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSOTCMainViewController.xib; sourceTree = "<group>"; };
+		D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSCoinCurrencyTradeVC.swift; sourceTree = "<group>"; };
+		D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSCoinCurrencyTradeVC.xib; sourceTree = "<group>"; };
+		D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSOTCTradeUserInfo.swift; sourceTree = "<group>"; };
 		D7E81C9225E4ADB4003D760B /* LSIBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSIBInspectable.swift; sourceTree = "<group>"; };
 		D7F9F4FE25C0FD6500BB32D7 /* HYEX_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYEX_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +168,7 @@
 		3CA43FF025F1088B0070229F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D79DC15E25F5CCBD003ABCD5 /* View */,
 				3CA43FF125F108B20070229F /* LSProfileViewController.swift */,
 				3CA43FF225F108B20070229F /* LSProfileViewController.xib */,
 			);
@@ -248,6 +267,61 @@
 			path = HYEX_Swift/Tool/Localize;
 			sourceTree = SOURCE_ROOT;
 		};
+		D79DC15E25F5CCBD003ABCD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */,
+				D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D79DC16925F5D001003ABCD5 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC16C25F5D030003ABCD5 /* CoinCurrency */,
+				D79DC16A25F5D030003ABCD5 /* OTC */,
+				D79DC16B25F5D030003ABCD5 /* Sustainability */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		D79DC16A25F5D030003ABCD5 /* OTC */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC18525F5D0B6003ABCD5 /* Model */,
+				D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */,
+				D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */,
+			);
+			path = OTC;
+			sourceTree = "<group>";
+		};
+		D79DC16B25F5D030003ABCD5 /* Sustainability */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */,
+				D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */,
+			);
+			path = Sustainability;
+			sourceTree = "<group>";
+		};
+		D79DC16C25F5D030003ABCD5 /* CoinCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */,
+				D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */,
+			);
+			path = CoinCurrency;
+			sourceTree = "<group>";
+		};
+		D79DC18525F5D0B6003ABCD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D7F9F4F525C0FD6500BB32D7 = {
 			isa = PBXGroup;
 			children = (
@@ -274,10 +348,11 @@
 			isa = PBXGroup;
 			children = (
 				D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */,
+				D7F9F54E25C0FFB200BB32D7 /* Main_Root */,
 				D777B70825E64AD90082CC1B /* verifyCodeTool */,
 				D74C02F125E0E3D70017E1E7 /* Tool */,
 				D7F9F56125C109B300BB32D7 /* Extension */,
-				D7F9F54E25C0FFB200BB32D7 /* Main_Root */,
+				D79DC16925F5D001003ABCD5 /* Trade */,
 				D7F9F5A525C1120600BB32D7 /* Home */,
 				3CA43FF025F1088B0070229F /* Profile */,
 				D74C02E625E0E3750017E1E7 /* Login&Register */,
@@ -446,15 +521,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */,
+				D79DC17A25F5D095003ABCD5 /* LSOTCMainViewController.xib in Resources */,
 				D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */,
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
 				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
 				D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */,
 				D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */,
+				D79DC17025F5D07C003ABCD5 /* LSSustainabilityViewController.xib in Resources */,
 				D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
 				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
+				D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */,
+				D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */,
 				3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +605,7 @@
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
 				D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */,
 				D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */,
+				D79DC18725F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift in Sources */,
 				D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */,
 				D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */,
 				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
@@ -535,13 +615,17 @@
 				D78B821525E358DA00F2360E /* constantDefine.swift in Sources */,
 				D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */,
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
+				D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
+				D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */,
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
 				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,
+				D79DC18025F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift in Sources */,
 				D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */,
 				D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
+				D79DC16125F5CCD8003ABCD5 /* LSProfileCell.swift in Sources */,
 				D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */,
 				3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
