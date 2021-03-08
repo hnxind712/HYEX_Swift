@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C13EBE125F65E85003A58BE /* LSMarketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */; };
+		3C13EBE225F65E85003A58BE /* LSMarketListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */; };
+		3C13EBF725F669AB003A58BE /* LSMarketListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */; };
 		3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA43FF125F108B20070229F /* LSProfileViewController.swift */; };
 		3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA43FF225F108B20070229F /* LSProfileViewController.xib */; };
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
@@ -79,6 +82,9 @@
 
 /* Begin PBXFileReference section */
 		392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYEX_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListViewController.swift; sourceTree = "<group>"; };
+		3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSMarketListViewController.xib; sourceTree = "<group>"; };
+		3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListItemModel.swift; sourceTree = "<group>"; };
 		3CA43FF125F108B20070229F /* LSProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSProfileViewController.swift; sourceTree = "<group>"; };
 		3CA43FF225F108B20070229F /* LSProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileViewController.xib; sourceTree = "<group>"; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +171,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C13EBDE25F65E6A003A58BE /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				3C13EBF525F66964003A58BE /* Model */,
+				3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */,
+				3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		3C13EBF525F66964003A58BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3CA43FF025F1088B0070229F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +376,7 @@
 				D777B70825E64AD90082CC1B /* verifyCodeTool */,
 				D74C02F125E0E3D70017E1E7 /* Tool */,
 				D7F9F56125C109B300BB32D7 /* Extension */,
+				3C13EBDE25F65E6A003A58BE /* Market */,
 				D79DC16925F5D001003ABCD5 /* Trade */,
 				D7F9F5A525C1120600BB32D7 /* Home */,
 				3CA43FF025F1088B0070229F /* Profile */,
@@ -533,6 +558,7 @@
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
 				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
 				D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */,
+				3C13EBE225F65E85003A58BE /* LSMarketListViewController.xib in Resources */,
 				D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */,
 				3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */,
 			);
@@ -609,6 +635,7 @@
 				D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */,
 				D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */,
 				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
+				3C13EBE125F65E85003A58BE /* LSMarketListViewController.swift in Sources */,
 				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
 				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
@@ -617,6 +644,7 @@
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
 				D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
+				3C13EBF725F669AB003A58BE /* LSMarketListItemModel.swift in Sources */,
 				D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */,
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
 				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,

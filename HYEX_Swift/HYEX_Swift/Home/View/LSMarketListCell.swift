@@ -33,14 +33,22 @@ class LSMarketListCell: UITableViewCell {
             }else{
                 price.text = "0.00"
             }
-            
-            convert.text = "\(marketModel!.latestCnyPrice!)"
-            if marketModel!.changeRate! >= 0 {
-                changeRate.backgroundColor = HEXCOLOR(h: 0x18ba96, alpha: 1)
-                changeRate.text = String(format: "+%.2f%%", marketModel!.changeRate! * 100)
+            if let latestCnyPrice = marketModel!.latestCnyPrice {
+                convert.text = "\(latestCnyPrice)"
             }else{
-                changeRate.backgroundColor = HEXCOLOR(h: 0xFFEDED, alpha: 1)
-                changeRate.text = String(format: "%.2f%%", marketModel!.changeRate! * 100)
+                convert.text = "0.00"
+            }
+            if let changerate = marketModel!.changeRate {
+                if changerate >= 0 {
+                    changeRate.backgroundColor = HEXCOLOR(h: 0x18ba96, alpha: 1)
+                    changeRate.text = String(format: "+%.2f%%", changerate * 100)
+                }else{
+                    changeRate.backgroundColor = HEXCOLOR(h: 0xFFEDED, alpha: 1)
+                    changeRate.text = String(format: "%.2f%%", changerate * 100)
+                }
+            }else{
+                changeRate.backgroundColor = HEXCOLOR(h: 0x18ba96, alpha: 1)
+                changeRate.text = "0.00"
             }
         }
     }

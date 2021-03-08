@@ -62,7 +62,7 @@ struct LSLoginModel: Codable {
     }
     
     // MARK: 获取用户信息
-    static func getUserInfo() {
+    static func getUserInfo(_ shouldPush: Bool = false) {
         LSNetRequest.sharedInstance.getRequest(KUserInfoUrl, params: nil) { (response) in
             print(response)
             
@@ -70,7 +70,10 @@ struct LSLoginModel: Codable {
                 if let userInfo = decodeJsonToModel(json: jsonData["content"] as Any, ele: LSUserInfo.self){
                     print(userInfo)
                     UserDefaults.standard.set(try? PropertyListEncoder().encode(userInfo.self), forKey: KUserInfoKey)
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: KLoginSuccessNotifyKey), object: nil)//发送通知
+                    if shouldPush {//登录状态下才需要发通知
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: KLoginSuccessNotifyKey), object: nil)//发送通知
+                    }
+
                 }
             }
         } failure: { (error) in

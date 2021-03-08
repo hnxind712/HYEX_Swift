@@ -25,7 +25,7 @@ class LSMainTabbarController: UITabBarController {
                                KTabbarImage:"icon_home",
                                KTabbarSelectedImage:"icon_home_h"
         ],
-        KTabbarItemType.market:[KTabbarVC:"LSHomeViewController",
+        KTabbarItemType.market:[KTabbarVC:"LSMarketListViewController",
                                 KTabbarTitle:"行情",
                                 KTabbarImage:"icon_market",
                                 KTabbarSelectedImage:"icon_market_h"

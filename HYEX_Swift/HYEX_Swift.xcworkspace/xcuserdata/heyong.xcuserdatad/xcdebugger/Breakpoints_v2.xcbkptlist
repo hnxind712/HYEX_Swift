@@ -3,4 +3,54 @@
    uuid = "A7D46430-307E-4EB7-B185-855EABD8B590"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50FE3AEA-9F8C-4F99-9999-5B67F52CC046"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HYEX_Swift/Login&amp;Register/Model/LSLoginModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getUserInfo(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50FE3AEA-9F8C-4F99-9999-5B67F52CC046 - f0eb7153099ac810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HYEX_Swift.LSLoginModel.getUserInfo(Swift.Bool) -&gt; ()"
+                  moduleName = "HYEX_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heyong/Desktop/HYEX_Swift/HYEX_Swift/HYEX_Swift/Login&amp;Register/Model/LSLoginModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "50FE3AEA-9F8C-4F99-9999-5B67F52CC046 - 5d575080d2487ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in static HYEX_Swift.LSLoginModel.getUserInfo(Swift.Bool) -&gt; ()"
+                  moduleName = "HYEX_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heyong/Desktop/HYEX_Swift/HYEX_Swift/HYEX_Swift/Login&amp;Register/Model/LSLoginModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "153">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

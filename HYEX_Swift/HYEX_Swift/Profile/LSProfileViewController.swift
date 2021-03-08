@@ -52,8 +52,9 @@ class LSProfileViewController: LSBaseViewController {
         } failure: { (error) in
             
         }
-
+        LSLoginModel.getUserInfo()
     }
+    
 }
 extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,11 +94,12 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
             case 2:
                 cell.detailMessage.text = Localize.currentLanguage()
                 cell.detailMessage.textColor = HEXCOLOR(h: 0x4162A6, alpha: 1)
+                cell.detailMessage.textAlignment = .right
                 break
             case 3:
                 cell.detailMessage.text = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
                 cell.detailMessage.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
-                
+                cell.detailMessage.textAlignment = .right
                 break
             default:
                 cell.detailMessage.text = ""

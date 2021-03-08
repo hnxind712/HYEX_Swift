@@ -88,7 +88,7 @@ class LSLoginViewController: LSBaseViewController {
                 //请求个人数据，并缓存到本地
                 UserDefaults.standard.set(try? PropertyListEncoder().encode(model), forKey: KLoginModelKey)
                 
-                LSLoginModel.getUserInfo()
+                LSLoginModel.getUserInfo(true)
             }
         } failure: { (error) in
             self.view.makeToast(error.localizedDescription)
