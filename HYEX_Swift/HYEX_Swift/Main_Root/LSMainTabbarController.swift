@@ -30,7 +30,7 @@ class LSMainTabbarController: UITabBarController {
                                 KTabbarImage:"icon_market",
                                 KTabbarSelectedImage:"icon_market_h"
         ],
-        KTabbarItemType.trade:[KTabbarVC:"LSHomeViewController",
+        KTabbarItemType.trade:[KTabbarVC:"LSTradeMainViewController",
                                KTabbarTitle:"交易",
                                KTabbarImage:"icon_trade",
                                KTabbarSelectedImage:"icon_trade_h"

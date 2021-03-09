@@ -51,3 +51,9 @@ func decodeJsonToModel<T:Decodable>(json : Any,ele:T.Type) -> T? {
     }
     return nil
 }
+public var kScreen_width: CGFloat{
+    return UIScreen.main.bounds.width
+}
+public var kScreen_height: CGFloat{
+    return UIScreen.main.bounds.height
+}
