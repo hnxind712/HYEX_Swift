@@ -15,6 +15,27 @@
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
 		D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70CAFDD25F22D4700037A52 /* TestModel.swift */; };
 		D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */; };
+		D712C58C25F774F400D5EA0A /* SecondaryChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */; };
+		D712C58D25F774F400D5EA0A /* MainChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57425F774F400D5EA0A /* MainChartRenderer.swift */; };
+		D712C58E25F774F400D5EA0A /* VolChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57525F774F400D5EA0A /* VolChartRenderer.swift */; };
+		D712C58F25F774F400D5EA0A /* BaseChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */; };
+		D712C59025F774F400D5EA0A /* KLinePainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57725F774F400D5EA0A /* KLinePainterView.swift */; };
+		D712C59125F774F400D5EA0A /* KLineStateManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57925F774F400D5EA0A /* KLineStateManger.swift */; };
+		D712C59225F774F400D5EA0A /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57A25F774F400D5EA0A /* DataUtil.swift */; };
+		D712C59325F774F400D5EA0A /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */; };
+		D712C59425F774F400D5EA0A /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57C25F774F400D5EA0A /* Calculate.swift */; };
+		D712C59525F774F400D5EA0A /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57E25F774F400D5EA0A /* ChartStyle.swift */; };
+		D712C59625F774F400D5EA0A /* KLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57F25F774F400D5EA0A /* KLineChartView.swift */; };
+		D712C59725F774F400D5EA0A /* KLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58125F774F400D5EA0A /* KLineModel.swift */; };
+		D712C59825F774F400D5EA0A /* KLineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58225F774F400D5EA0A /* KLineState.swift */; };
+		D712C59925F774F400D5EA0A /* KLineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58425F774F400D5EA0A /* KLineInfoView.swift */; };
+		D712C59A25F774F400D5EA0A /* KLineIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */; };
+		D712C59B25F774F400D5EA0A /* KLinePeriodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58625F774F400D5EA0A /* KLinePeriodView.xib */; };
+		D712C59C25F774F400D5EA0A /* KLineIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */; };
+		D712C59D25F774F400D5EA0A /* KLinePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58825F774F400D5EA0A /* KLinePeriodView.swift */; };
+		D712C59E25F774F400D5EA0A /* KLineVerticalIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */; };
+		D712C59F25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */; };
+		D712C5A025F774F400D5EA0A /* KLineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58B25F774F400D5EA0A /* KLineInfoView.xib */; };
 		D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B56E25F3169F00B51D61 /* LSUserInfo.swift */; };
 		D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57325F319F000B51D61 /* LSLoginModel.swift */; };
 		D726B57925F3206B00B51D61 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57825F3206B00B51D61 /* MD5.swift */; };
@@ -91,6 +112,27 @@
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		D70CAFDD25F22D4700037A52 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
+		D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryChartRenderer.swift; sourceTree = "<group>"; };
+		D712C57425F774F400D5EA0A /* MainChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChartRenderer.swift; sourceTree = "<group>"; };
+		D712C57525F774F400D5EA0A /* VolChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolChartRenderer.swift; sourceTree = "<group>"; };
+		D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChartRenderer.swift; sourceTree = "<group>"; };
+		D712C57725F774F400D5EA0A /* KLinePainterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePainterView.swift; sourceTree = "<group>"; };
+		D712C57925F774F400D5EA0A /* KLineStateManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineStateManger.swift; sourceTree = "<group>"; };
+		D712C57A25F774F400D5EA0A /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
+		D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		D712C57C25F774F400D5EA0A /* Calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		D712C57E25F774F400D5EA0A /* ChartStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartStyle.swift; sourceTree = "<group>"; };
+		D712C57F25F774F400D5EA0A /* KLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineChartView.swift; sourceTree = "<group>"; };
+		D712C58125F774F400D5EA0A /* KLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineModel.swift; sourceTree = "<group>"; };
+		D712C58225F774F400D5EA0A /* KLineState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineState.swift; sourceTree = "<group>"; };
+		D712C58425F774F400D5EA0A /* KLineInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineInfoView.swift; sourceTree = "<group>"; };
+		D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineIndicatorsView.swift; sourceTree = "<group>"; };
+		D712C58625F774F400D5EA0A /* KLinePeriodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLinePeriodView.xib; sourceTree = "<group>"; };
+		D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineIndicatorsView.xib; sourceTree = "<group>"; };
+		D712C58825F774F400D5EA0A /* KLinePeriodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePeriodView.swift; sourceTree = "<group>"; };
+		D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineVerticalIndicatorsView.swift; sourceTree = "<group>"; };
+		D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineVerticalIndicatorsView.xib; sourceTree = "<group>"; };
+		D712C58B25F774F400D5EA0A /* KLineInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineInfoView.xib; sourceTree = "<group>"; };
 		D726B56E25F3169F00B51D61 /* LSUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSUserInfo.swift; sourceTree = "<group>"; };
 		D726B57325F319F000B51D61 /* LSLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginModel.swift; sourceTree = "<group>"; };
 		D726B57825F3206B00B51D61 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
@@ -224,6 +266,75 @@
 				D726B57325F319F000B51D61 /* LSLoginModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D712C57125F774F400D5EA0A /* KLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				D712C57F25F774F400D5EA0A /* KLineChartView.swift */,
+				D712C57725F774F400D5EA0A /* KLinePainterView.swift */,
+				D712C57225F774F400D5EA0A /* Renderer */,
+				D712C57825F774F400D5EA0A /* Util */,
+				D712C57D25F774F400D5EA0A /* Style */,
+				D712C58025F774F400D5EA0A /* Model */,
+				D712C58325F774F400D5EA0A /* View */,
+			);
+			name = KLineChart;
+			path = HYEX_Swift/Tool/KLineChart;
+			sourceTree = SOURCE_ROOT;
+		};
+		D712C57225F774F400D5EA0A /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				D712C57425F774F400D5EA0A /* MainChartRenderer.swift */,
+				D712C57525F774F400D5EA0A /* VolChartRenderer.swift */,
+				D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */,
+				D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		D712C57825F774F400D5EA0A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D712C57925F774F400D5EA0A /* KLineStateManger.swift */,
+				D712C57A25F774F400D5EA0A /* DataUtil.swift */,
+				D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */,
+				D712C57C25F774F400D5EA0A /* Calculate.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D712C57D25F774F400D5EA0A /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D712C57E25F774F400D5EA0A /* ChartStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		D712C58025F774F400D5EA0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D712C58125F774F400D5EA0A /* KLineModel.swift */,
+				D712C58225F774F400D5EA0A /* KLineState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D712C58325F774F400D5EA0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D712C58425F774F400D5EA0A /* KLineInfoView.swift */,
+				D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */,
+				D712C58625F774F400D5EA0A /* KLinePeriodView.xib */,
+				D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */,
+				D712C58825F774F400D5EA0A /* KLinePeriodView.swift */,
+				D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */,
+				D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */,
+				D712C58B25F774F400D5EA0A /* KLineInfoView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D726B59325F3631600B51D61 /* Model */ = {
@@ -420,6 +531,7 @@
 		D7F9F56125C109B300BB32D7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D712C57125F774F400D5EA0A /* KLineChart */,
 				D78B820A25E3586400F2360E /* Localize */,
 				D7F9F5A025C10CDD00BB32D7 /* Common.swift */,
 				D78B821425E358DA00F2360E /* constantDefine.swift */,
@@ -545,21 +657,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D712C5A025F774F400D5EA0A /* KLineInfoView.xib in Resources */,
 				D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */,
 				D79DC17A25F5D095003ABCD5 /* LSOTCMainViewController.xib in Resources */,
 				D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */,
+				D712C59B25F774F400D5EA0A /* KLinePeriodView.xib in Resources */,
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
 				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
 				D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */,
 				D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */,
 				D79DC17025F5D07C003ABCD5 /* LSSustainabilityViewController.xib in Resources */,
+				D712C59F25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib in Resources */,
 				D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
 				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
 				D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */,
 				3C13EBE225F65E85003A58BE /* LSMarketListViewController.xib in Resources */,
 				D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */,
+				D712C59C25F774F400D5EA0A /* KLineIndicatorsView.xib in Resources */,
 				3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,7 +733,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\ndiff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -627,22 +743,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D712C59A25F774F400D5EA0A /* KLineIndicatorsView.swift in Sources */,
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
 				D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */,
 				D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */,
+				D712C59925F774F400D5EA0A /* KLineInfoView.swift in Sources */,
 				D79DC18725F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift in Sources */,
 				D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */,
+				D712C59E25F774F400D5EA0A /* KLineVerticalIndicatorsView.swift in Sources */,
+				D712C59125F774F400D5EA0A /* KLineStateManger.swift in Sources */,
 				D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */,
+				D712C58E25F774F400D5EA0A /* VolChartRenderer.swift in Sources */,
 				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
 				3C13EBE125F65E85003A58BE /* LSMarketListViewController.swift in Sources */,
+				D712C59725F774F400D5EA0A /* KLineModel.swift in Sources */,
 				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
+				D712C59D25F774F400D5EA0A /* KLinePeriodView.swift in Sources */,
 				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
+				D712C58F25F774F400D5EA0A /* BaseChartRenderer.swift in Sources */,
 				D78B821525E358DA00F2360E /* constantDefine.swift in Sources */,
 				D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */,
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
+				D712C59325F774F400D5EA0A /* UIColor+RGB.swift in Sources */,
 				D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */,
+				D712C59025F774F400D5EA0A /* KLinePainterView.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
 				3C13EBF725F669AB003A58BE /* LSMarketListItemModel.swift in Sources */,
 				D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */,
@@ -651,17 +777,24 @@
 				D79DC18025F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift in Sources */,
 				D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */,
 				D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */,
+				D712C58C25F774F400D5EA0A /* SecondaryChartRenderer.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
+				D712C58D25F774F400D5EA0A /* MainChartRenderer.swift in Sources */,
 				D79DC16125F5CCD8003ABCD5 /* LSProfileCell.swift in Sources */,
 				D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */,
 				3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
+				D712C59625F774F400D5EA0A /* KLineChartView.swift in Sources */,
 				D7F9F55025C1000C00BB32D7 /* LSMainTabbarController.swift in Sources */,
+				D712C59525F774F400D5EA0A /* ChartStyle.swift in Sources */,
+				D712C59225F774F400D5EA0A /* DataUtil.swift in Sources */,
 				D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */,
+				D712C59425F774F400D5EA0A /* Calculate.swift in Sources */,
 				D726B59F25F369FC00B51D61 /* LSHomeItemCell.swift in Sources */,
 				D78B820F25E3586400F2360E /* Localize.swift in Sources */,
 				D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */,
+				D712C59825F774F400D5EA0A /* KLineState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
