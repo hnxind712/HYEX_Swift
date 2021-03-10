@@ -26,17 +26,42 @@ class LSProfileViewController: LSBaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var tradeInfo: LSOTCTradeUserInfo?
     
-    
+    lazy var headerView: LSProfileHeaderView = {
+        let header = LSProfileHeaderView.profileHeaderView()
+        
+        header?.shareBlock = {
+            
+        }
+        return header!
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "我的".localized
         
         setupLayout()
         
         setupBind()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)//(0x3685F9)
+        self.navigationController?.navigationBar.barTintColor = headerView.backgroundColor
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0xffffff,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        headerView.reloadHeaderView()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0xffffff,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+    }
     func setupLayout() {
         tableView.register(UINib.init(nibName: String(describing: LSProfileCell.self), bundle: nil), forCellReuseIdentifier: String(describing: LSProfileCell.self))
+        tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
     }
     

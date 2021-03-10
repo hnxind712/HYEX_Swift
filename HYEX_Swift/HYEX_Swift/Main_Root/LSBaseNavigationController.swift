@@ -12,6 +12,7 @@ class LSBaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        navigationBar.isTranslucent = true
     }
  
 }
@@ -23,7 +24,7 @@ extension LSBaseNavigationController:UINavigationControllerDelegate{
             leftBtn.setImage(UIImage.init(named: "icon_back"), for: .highlighted)
             leftBtn.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
             leftBtn.frame = CGRect.init(x: 0, y: 0, width: 45, height: 35)
-            leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0)
+            leftBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
             let leftItem: UIBarButtonItem = UIBarButtonItem.init(customView: leftBtn)
             let spaceItem: UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
             

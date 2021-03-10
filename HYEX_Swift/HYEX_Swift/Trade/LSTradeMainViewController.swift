@@ -40,7 +40,7 @@ class LSTradeMainViewController: LSBaseViewController {
     }
     func addChildVC() {
         
-        self.addChildViewController(coinCurrencyVC)
+        self.addChild(coinCurrencyVC)
         scrollView.addSubview(coinCurrencyVC.view)
         coinCurrencyVC.view.frame = CGRect(x: 0, y: 0, width: kScreen_width, height: scrollView.bounds.height)
 //        coinCurrencyVC.view.snp.makeConstraints { (maker) in
@@ -69,7 +69,7 @@ class LSTradeMainViewController: LSBaseViewController {
         selectedBtn = sender
         scrollView.setContentOffset(CGPoint(x: kScreen_width, y: 0), animated: true)
         if !sustainabilityVC.isViewLoaded {//如果没有加载
-            self.addChildViewController(sustainabilityVC)
+            self.addChild(sustainabilityVC)
             scrollView.addSubview(sustainabilityVC.view)
             sustainabilityVC.view.frame = CGRect(x: kScreen_width, y: 0, width: kScreen_width, height: scrollView.bounds.height)
 //            sustainabilityVC.view.snp.makeConstraints { (maker) in

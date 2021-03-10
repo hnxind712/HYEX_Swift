@@ -12,6 +12,8 @@ struct LSUserInfo: Codable {
     
     let autoWithdraw: Int32? //是否允许提现的时候自动审核 0: 不允许 1:允许 2: 未限制
     
+    let headUrl: String?    //头像
+    
     let bindBank: Bool? //是否绑定收款码
     
     let bindPaypwd: Bool?    //是否绑定支付密码

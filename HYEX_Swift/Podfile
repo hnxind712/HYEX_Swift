@@ -11,5 +11,4 @@ pod 'Toast-Swift', '~> 3.0.1'       #toast提示
 pod 'Kingfisher', '~> 4.0’
 pod 'SwiftPullToRefresh'
 pod 'JXBanner'
-pod 'R.swift'
 end
