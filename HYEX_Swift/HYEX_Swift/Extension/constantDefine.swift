@@ -47,3 +47,6 @@ let KLoginUrl = "/user/login"
 // MARK: 获取用户信息
 let KUserInfoUrl = "/user/user-info"
 
+// MARK: 版本信息
+let KGetAppVersionURL = "/app-version"
+

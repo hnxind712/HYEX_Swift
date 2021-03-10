@@ -83,6 +83,10 @@
 		D70E2F2825F8B2190025B9F3 /* CHDepthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F1E25F8B2190025B9F3 /* CHDepthChartView.swift */; };
 		D70E2F2925F8B2190025B9F3 /* CHShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F1F25F8B2190025B9F3 /* CHShapeLayer.swift */; };
 		D70E2F2E25F8B2F90025B9F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70E2F2D25F8B2F90025B9F3 /* QuartzCore.framework */; };
+		D70E2F4325F8B55B0025B9F3 /* LSSafetyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */; };
+		D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */; };
+		D70E2F5625F8C31D0025B9F3 /* LSInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */; };
+		D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */; };
 		D726B57925F3206B00B51D61 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57825F3206B00B51D61 /* MD5.swift */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
 		D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820B25E3586400F2360E /* NSObject+Extension.swift */; };
@@ -199,6 +203,10 @@
 		D70E2F1E25F8B2190025B9F3 /* CHDepthChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHDepthChartView.swift; sourceTree = "<group>"; };
 		D70E2F1F25F8B2190025B9F3 /* CHShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHShapeLayer.swift; sourceTree = "<group>"; };
 		D70E2F2D25F8B2F90025B9F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSafetyViewController.swift; sourceTree = "<group>"; };
+		D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSSafetyViewController.xib; sourceTree = "<group>"; };
+		D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSInviteViewController.swift; sourceTree = "<group>"; };
+		D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSInviteViewController.xib; sourceTree = "<group>"; };
 		D726B57825F3206B00B51D61 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
 		D78B820B25E3586400F2360E /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -454,6 +462,10 @@
 				D70E2EBA25F86DFF0025B9F3 /* View */,
 				D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */,
 				D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */,
+				D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */,
+				D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */,
+				D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */,
+				D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -778,8 +790,10 @@
 				D70E2ED625F86DFF0025B9F3 /* LSHomeViewController.xib in Resources */,
 				D70E2E3525F86DAB0025B9F3 /* KLineInfoView.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
+				D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */,
 				D70E2F2125F8B2190025B9F3 /* Market2.json in Resources */,
 				D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */,
+				D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */,
 				D70E2E3125F86DAB0025B9F3 /* KLineIndicatorsView.xib in Resources */,
 				D70E2EE325F86DFF0025B9F3 /* LSSustainabilityViewController.xib in Resources */,
 				D70E2F2525F8B2190025B9F3 /* depth.json in Resources */,
@@ -850,6 +864,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70E2F4325F8B55B0025B9F3 /* LSSafetyViewController.swift in Sources */,
 				D70E2ED425F86DFF0025B9F3 /* LSHomeItemCell.swift in Sources */,
 				D70E2E2925F86DAB0025B9F3 /* Calculate.swift in Sources */,
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
@@ -873,6 +888,7 @@
 				D70E2E2F25F86DAB0025B9F3 /* KLineIndicatorsView.swift in Sources */,
 				D70E2F0725F86F140025B9F3 /* LSProfileHeaderView.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
+				D70E2F5625F8C31D0025B9F3 /* LSInviteViewController.swift in Sources */,
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
 				D70E2E2125F86DAB0025B9F3 /* SecondaryChartRenderer.swift in Sources */,
 				D70E2E2725F86DAB0025B9F3 /* DataUtil.swift in Sources */,

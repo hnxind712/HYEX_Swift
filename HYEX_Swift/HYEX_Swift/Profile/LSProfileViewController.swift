@@ -30,7 +30,8 @@ class LSProfileViewController: LSBaseViewController {
         let header = LSProfileHeaderView.profileHeaderView()
         
         header?.shareBlock = {
-            
+            let share = LSInviteViewController()
+            self.navigationController?.pushViewController(share, animated: true)
         }
         return header!
     }()
@@ -138,8 +139,30 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: kScreen_width, height: 4))
+        view.backgroundColor = HEXCOLOR(h: 0xEBF1F7, alpha: 1)
+        return view
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 4
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == 0 {
+                
+            }
+        case 1:
+            if indexPath.row == 0 {//安全中心
+                let safety = LSSafetyViewController()
+                self.navigationController?.pushViewController(safety, animated: true)
+            }
+        case 2: break
+
+        default: break
+            
+        }
     }
 }

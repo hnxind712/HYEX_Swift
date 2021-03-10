@@ -31,4 +31,8 @@ extension LSBaseNavigationController:UINavigationControllerDelegate{
             viewController.navigationItem.leftBarButtonItems = [leftItem,spaceItem]
         }
     }
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: animated)
+        viewController.hidesBottomBarWhenPushed = true
+    }
 }

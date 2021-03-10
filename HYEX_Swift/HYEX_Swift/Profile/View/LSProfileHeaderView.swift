@@ -37,9 +37,8 @@ class LSProfileHeaderView: UIView {
         //处理nickName
         var location = 4
         
-        if ((userInfo.userName?.contains("@")) != nil) {
-            let range = userInfo.userName?.range(of: "@")
-            let _nsRange = NSRange(range!,in: "@")
+        if let range = userInfo.userName?.range(of: "@") {
+            let _nsRange = NSRange(range,in: "@")
             location = userInfo.userName!.count - _nsRange.location
         }
         let length = userInfo.userName!.count - 3 - location
@@ -48,10 +47,8 @@ class LSProfileHeaderView: UIView {
             for _ in 0 ..< length {
                 string.append("*")
             }
-            let range = Range(NSMakeRange(3, length), in:userInfo.userName!)!
-            
-            let text: String = (userInfo.userName?.replacingCharacters(in: range, with: userInfo.userName!))!
-            
+            let _string: NSString = userInfo.userName! as NSString
+            let text = _string.replacingCharacters(in: NSMakeRange(3, length), with: string)
             userName.text = text
         }else{
             userName.text = userInfo.userName
