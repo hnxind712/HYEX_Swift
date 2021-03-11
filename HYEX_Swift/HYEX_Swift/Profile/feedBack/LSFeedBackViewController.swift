@@ -41,7 +41,11 @@ class LSFeedBackViewController: LSBaseViewController {
         imagePicker.singleImageChooseType = .singlePicture
         imagePicker.cameraOut = true
         imagePicker.cl_setupImagePickerWith(MaxImagesCount: 1) { (asset, image) in
-            sender.setBackgroundImage(image, for: .normal)
+            LSAliyunOSSManager.shared.uploadImage(with: image!) { (url) in
+                print(url)
+                self.imageUrl = url
+                sender.setBackgroundImage(image, for: .normal)
+            }
         }
     }
     
@@ -52,7 +56,7 @@ class LSFeedBackViewController: LSBaseViewController {
             self.view.makeToast("请描述您的问题".localized)
             return
         }
-        LSNetRequest.sharedInstance.postRequest(KFeedBackURL, params: ["message":textView.text,"image":imageUrl]) { (response) in
+        LSNetRequest.sharedInstance.postRequest(KFeedBackURL, params: ["message":textView.text as! String,"image":imageUrl]) { (response) in
              let data = JSON(response)
             if data["statusCode"].int == 0{
                 self.view.makeToast("提交成功".localized)

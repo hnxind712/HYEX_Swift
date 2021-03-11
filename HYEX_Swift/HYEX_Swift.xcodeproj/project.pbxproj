@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CEDFB7825FA5EDD0004F88B /* LSFeedBackRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEDFB7625FA5EDD0004F88B /* LSFeedBackRecordCell.swift */; };
+		3CEDFB7925FA5EDD0004F88B /* LSFeedBackRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CEDFB7725FA5EDD0004F88B /* LSFeedBackRecordCell.xib */; };
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
 		D70E2DFD25F86D730025B9F3 /* LSVerifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2DFA25F86D730025B9F3 /* LSVerifyCodeView.xib */; };
 		D70E2DFE25F86D730025B9F3 /* LSVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2DFB25F86D730025B9F3 /* LSVerifyCodeView.swift */; };
@@ -134,6 +136,8 @@
 
 /* Begin PBXFileReference section */
 		392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYEX_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEDFB7625FA5EDD0004F88B /* LSFeedBackRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackRecordCell.swift; sourceTree = "<group>"; };
+		3CEDFB7725FA5EDD0004F88B /* LSFeedBackRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSFeedBackRecordCell.xib; sourceTree = "<group>"; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		D70E2DFA25F86D730025B9F3 /* LSVerifyCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSVerifyCodeView.xib; sourceTree = "<group>"; };
@@ -276,6 +280,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CEDFB7525FA5EC40004F88B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CEDFB7625FA5EDD0004F88B /* LSFeedBackRecordCell.swift */,
+				3CEDFB7725FA5EDD0004F88B /* LSFeedBackRecordCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		588ABF90956E00E848E6DD6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +589,7 @@
 		D748D56725F9BA010048662A /* feedBack */ = {
 			isa = PBXGroup;
 			children = (
+				3CEDFB7525FA5EC40004F88B /* View */,
 				D748D5FC25FA12CA0048662A /* Model */,
 				D748D56825F9BA180048662A /* LSFeedBackRootVC.swift */,
 				D748D56925F9BA180048662A /* LSFeedBackRootVC.xib */,
@@ -838,6 +852,7 @@
 				D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */,
 				D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */,
 				D70E2E3125F86DAB0025B9F3 /* KLineIndicatorsView.xib in Resources */,
+				3CEDFB7925FA5EDD0004F88B /* LSFeedBackRecordCell.xib in Resources */,
 				D70E2EE325F86DFF0025B9F3 /* LSSustainabilityViewController.xib in Resources */,
 				D70E2F2525F8B2190025B9F3 /* depth.json in Resources */,
 				D70E2DFD25F86D730025B9F3 /* LSVerifyCodeView.xib in Resources */,
@@ -947,6 +962,7 @@
 				D70E2ED525F86DFF0025B9F3 /* LSMarketListCell.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
 				D70E2EE525F86DFF0025B9F3 /* LSProfileCell.swift in Sources */,
+				3CEDFB7825FA5EDD0004F88B /* LSFeedBackRecordCell.swift in Sources */,
 				D70E2ECF25F86DFF0025B9F3 /* LSMarketListModel.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
 				D70E2ED025F86DFF0025B9F3 /* LSBannerModel.swift in Sources */,
