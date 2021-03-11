@@ -57,3 +57,45 @@ public var kScreen_width: CGFloat{
 public var kScreen_height: CGFloat{
     return UIScreen.main.bounds.height
 }
+
+extension UIImage{
+    // MARK: 定义渐变颜色枚举
+    enum GradientDirection:Int {
+        case TopToBottom = 0,LeftToRight,LeftTopToRightBottom,LeftBottomToRightTop
+    }
+    class func gradientImage(size: CGSize,colors color: [UIColor],gradientType type: GradientDirection) -> UIImage {
+        var arr:[CGColor] = Array()
+        for _color in color {
+            arr.append(_color.cgColor)
+        }
+        UIGraphicsBeginImageContextWithOptions(size, true, 1)
+        let context = UIGraphicsGetCurrentContext()!
+        context.saveGState()
+        let colorSpace =  arr.last!.colorSpace;
+        let gradient = CGGradient(colorsSpace: colorSpace, colors: arr as CFArray, locations: nil)
+        
+        var startPoint = CGPoint.zero
+        
+        var endPoint = CGPoint.zero
+        
+        switch type {
+        case .TopToBottom:
+            startPoint = CGPoint(x: size.width/2, y: 0)
+            endPoint = CGPoint(x: size.width/2, y: size.height)
+        case .LeftToRight:
+            startPoint = CGPoint(x: 0, y: size.height/2)
+            endPoint = CGPoint(x: size.width, y: size.height/2)
+        case .LeftTopToRightBottom:
+            endPoint = CGPoint(x: size.width, y: size.height)
+        case .LeftBottomToRightTop:
+            startPoint = CGPoint(x: 0, y: size.height)
+            endPoint = CGPoint(x: size.width, y: 0)
+        }
+        context.drawLinearGradient(gradient!,start: startPoint,end: endPoint,options: CGGradientDrawingOptions.drawsBeforeStartLocation)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+}
+

@@ -7,74 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C13EBE125F65E85003A58BE /* LSMarketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */; };
-		3C13EBE225F65E85003A58BE /* LSMarketListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */; };
-		3C13EBF725F669AB003A58BE /* LSMarketListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */; };
-		3C4CB3E425F7A45500501916 /* LSTradeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4CB3E225F7A45500501916 /* LSTradeMainViewController.swift */; };
-		3C4CB3E525F7A45500501916 /* LSTradeMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4CB3E325F7A45500501916 /* LSTradeMainViewController.xib */; };
-		3C4CB3EC25F7B4B400501916 /* LSSustainabilityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4CB3EB25F7B4B400501916 /* LSSustainabilityHeaderView.swift */; };
-		3C4CB3F425F7B4BC00501916 /* LSSustainabilityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4CB3F325F7B4BC00501916 /* LSSustainabilityHeaderView.xib */; };
-		3C4CB3F925F7B57D00501916 /* LSSustainabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4CB3F825F7B57D00501916 /* LSSustainabilityManager.swift */; };
-		3C4CB3FE25F7B67900501916 /* LSSustainabilityBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4CB3FD25F7B67900501916 /* LSSustainabilityBaseView.swift */; };
-		3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA43FF125F108B20070229F /* LSProfileViewController.swift */; };
-		3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA43FF225F108B20070229F /* LSProfileViewController.xib */; };
 		431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */; };
-		D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70CAFDD25F22D4700037A52 /* TestModel.swift */; };
-		D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */; };
-		D712C58C25F774F400D5EA0A /* SecondaryChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */; };
-		D712C58D25F774F400D5EA0A /* MainChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57425F774F400D5EA0A /* MainChartRenderer.swift */; };
-		D712C58E25F774F400D5EA0A /* VolChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57525F774F400D5EA0A /* VolChartRenderer.swift */; };
-		D712C58F25F774F400D5EA0A /* BaseChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */; };
-		D712C59025F774F400D5EA0A /* KLinePainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57725F774F400D5EA0A /* KLinePainterView.swift */; };
-		D712C59125F774F400D5EA0A /* KLineStateManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57925F774F400D5EA0A /* KLineStateManger.swift */; };
-		D712C59225F774F400D5EA0A /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57A25F774F400D5EA0A /* DataUtil.swift */; };
-		D712C59325F774F400D5EA0A /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */; };
-		D712C59425F774F400D5EA0A /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57C25F774F400D5EA0A /* Calculate.swift */; };
-		D712C59525F774F400D5EA0A /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57E25F774F400D5EA0A /* ChartStyle.swift */; };
-		D712C59625F774F400D5EA0A /* KLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C57F25F774F400D5EA0A /* KLineChartView.swift */; };
-		D712C59725F774F400D5EA0A /* KLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58125F774F400D5EA0A /* KLineModel.swift */; };
-		D712C59825F774F400D5EA0A /* KLineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58225F774F400D5EA0A /* KLineState.swift */; };
-		D712C59925F774F400D5EA0A /* KLineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58425F774F400D5EA0A /* KLineInfoView.swift */; };
-		D712C59A25F774F400D5EA0A /* KLineIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */; };
-		D712C59B25F774F400D5EA0A /* KLinePeriodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58625F774F400D5EA0A /* KLinePeriodView.xib */; };
-		D712C59C25F774F400D5EA0A /* KLineIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */; };
-		D712C59D25F774F400D5EA0A /* KLinePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58825F774F400D5EA0A /* KLinePeriodView.swift */; };
-		D712C59E25F774F400D5EA0A /* KLineVerticalIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */; };
-		D712C59F25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */; };
-		D712C5A025F774F400D5EA0A /* KLineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D712C58B25F774F400D5EA0A /* KLineInfoView.xib */; };
-		D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B56E25F3169F00B51D61 /* LSUserInfo.swift */; };
-		D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57325F319F000B51D61 /* LSLoginModel.swift */; };
+		D70E2DFD25F86D730025B9F3 /* LSVerifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2DFA25F86D730025B9F3 /* LSVerifyCodeView.xib */; };
+		D70E2DFE25F86D730025B9F3 /* LSVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2DFB25F86D730025B9F3 /* LSVerifyCodeView.swift */; };
+		D70E2DFF25F86D730025B9F3 /* LSVerifyCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2DFC25F86D730025B9F3 /* LSVerifyCodeBtn.swift */; };
+		D70E2E2125F86DAB0025B9F3 /* SecondaryChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0825F86DAB0025B9F3 /* SecondaryChartRenderer.swift */; };
+		D70E2E2225F86DAB0025B9F3 /* MainChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0925F86DAB0025B9F3 /* MainChartRenderer.swift */; };
+		D70E2E2325F86DAB0025B9F3 /* VolChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0A25F86DAB0025B9F3 /* VolChartRenderer.swift */; };
+		D70E2E2425F86DAB0025B9F3 /* BaseChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0B25F86DAB0025B9F3 /* BaseChartRenderer.swift */; };
+		D70E2E2525F86DAB0025B9F3 /* KLinePainterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0C25F86DAB0025B9F3 /* KLinePainterView.swift */; };
+		D70E2E2625F86DAB0025B9F3 /* KLineStateManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0E25F86DAB0025B9F3 /* KLineStateManger.swift */; };
+		D70E2E2725F86DAB0025B9F3 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E0F25F86DAB0025B9F3 /* DataUtil.swift */; };
+		D70E2E2825F86DAB0025B9F3 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1025F86DAB0025B9F3 /* UIColor+RGB.swift */; };
+		D70E2E2925F86DAB0025B9F3 /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1125F86DAB0025B9F3 /* Calculate.swift */; };
+		D70E2E2A25F86DAB0025B9F3 /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1325F86DAB0025B9F3 /* ChartStyle.swift */; };
+		D70E2E2B25F86DAB0025B9F3 /* KLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1425F86DAB0025B9F3 /* KLineChartView.swift */; };
+		D70E2E2C25F86DAB0025B9F3 /* KLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1625F86DAB0025B9F3 /* KLineModel.swift */; };
+		D70E2E2D25F86DAB0025B9F3 /* KLineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1725F86DAB0025B9F3 /* KLineState.swift */; };
+		D70E2E2E25F86DAB0025B9F3 /* KLineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1925F86DAB0025B9F3 /* KLineInfoView.swift */; };
+		D70E2E2F25F86DAB0025B9F3 /* KLineIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1A25F86DAB0025B9F3 /* KLineIndicatorsView.swift */; };
+		D70E2E3025F86DAB0025B9F3 /* KLinePeriodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2E1B25F86DAB0025B9F3 /* KLinePeriodView.xib */; };
+		D70E2E3125F86DAB0025B9F3 /* KLineIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2E1C25F86DAB0025B9F3 /* KLineIndicatorsView.xib */; };
+		D70E2E3225F86DAB0025B9F3 /* KLinePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1D25F86DAB0025B9F3 /* KLinePeriodView.swift */; };
+		D70E2E3325F86DAB0025B9F3 /* KLineVerticalIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E1E25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.swift */; };
+		D70E2E3425F86DAB0025B9F3 /* KLineVerticalIndicatorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2E1F25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.xib */; };
+		D70E2E3525F86DAB0025B9F3 /* KLineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2E2025F86DAB0025B9F3 /* KLineInfoView.xib */; };
+		D70E2ECE25F86DFF0025B9F3 /* LSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E9925F86DFF0025B9F3 /* LSHomeViewController.swift */; };
+		D70E2ECF25F86DFF0025B9F3 /* LSMarketListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E9B25F86DFF0025B9F3 /* LSMarketListModel.swift */; };
+		D70E2ED025F86DFF0025B9F3 /* LSBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E9C25F86DFF0025B9F3 /* LSBannerModel.swift */; };
+		D70E2ED125F86DFF0025B9F3 /* LSNoticeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2E9D25F86DFF0025B9F3 /* LSNoticeListModel.swift */; };
+		D70E2ED225F86DFF0025B9F3 /* LSHomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2E9F25F86DFF0025B9F3 /* LSHomeItemCell.xib */; };
+		D70E2ED325F86DFF0025B9F3 /* LSMarketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EA025F86DFF0025B9F3 /* LSMarketListCell.xib */; };
+		D70E2ED425F86DFF0025B9F3 /* LSHomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EA125F86DFF0025B9F3 /* LSHomeItemCell.swift */; };
+		D70E2ED525F86DFF0025B9F3 /* LSMarketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EA225F86DFF0025B9F3 /* LSMarketListCell.swift */; };
+		D70E2ED625F86DFF0025B9F3 /* LSHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EA325F86DFF0025B9F3 /* LSHomeViewController.xib */; };
+		D70E2ED725F86DFF0025B9F3 /* LSTradeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EA525F86DFF0025B9F3 /* LSTradeMainViewController.swift */; };
+		D70E2ED825F86DFF0025B9F3 /* LSOTCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EA725F86DFF0025B9F3 /* LSOTCMainViewController.xib */; };
+		D70E2ED925F86DFF0025B9F3 /* LSOTCTradeUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EA925F86DFF0025B9F3 /* LSOTCTradeUserInfo.swift */; };
+		D70E2EDA25F86DFF0025B9F3 /* LSOTCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EAA25F86DFF0025B9F3 /* LSOTCMainViewController.swift */; };
+		D70E2EDB25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EAC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.xib */; };
+		D70E2EDC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EAD25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift */; };
+		D70E2EDD25F86DFF0025B9F3 /* LSTradeMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EAE25F86DFF0025B9F3 /* LSTradeMainViewController.xib */; };
+		D70E2EDE25F86DFF0025B9F3 /* LSSustainabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EB025F86DFF0025B9F3 /* LSSustainabilityViewController.swift */; };
+		D70E2EDF25F86DFF0025B9F3 /* LSSustainabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EB225F86DFF0025B9F3 /* LSSustainabilityManager.swift */; };
+		D70E2EE025F86DFF0025B9F3 /* LSSustainabilityBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EB425F86DFF0025B9F3 /* LSSustainabilityBaseView.swift */; };
+		D70E2EE125F86DFF0025B9F3 /* LSSustainabilityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EB525F86DFF0025B9F3 /* LSSustainabilityHeaderView.xib */; };
+		D70E2EE225F86DFF0025B9F3 /* LSSustainabilityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EB625F86DFF0025B9F3 /* LSSustainabilityHeaderView.swift */; };
+		D70E2EE325F86DFF0025B9F3 /* LSSustainabilityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EB725F86DFF0025B9F3 /* LSSustainabilityViewController.xib */; };
+		D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */; };
+		D70E2EE525F86DFF0025B9F3 /* LSProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EBB25F86DFF0025B9F3 /* LSProfileCell.swift */; };
+		D70E2EE625F86DFF0025B9F3 /* LSProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EBC25F86DFF0025B9F3 /* LSProfileCell.xib */; };
+		D70E2EE725F86DFF0025B9F3 /* LSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */; };
+		D70E2EE825F86DFF0025B9F3 /* LSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EBF25F86DFF0025B9F3 /* LSRegisterViewController.swift */; };
+		D70E2EE925F86DFF0025B9F3 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EC025F86DFF0025B9F3 /* LSLoginViewController.xib */; };
+		D70E2EEA25F86DFF0025B9F3 /* LSForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EC125F86DFF0025B9F3 /* LSForgotPasswordVC.xib */; };
+		D70E2EEB25F86DFF0025B9F3 /* LSRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2EC225F86DFF0025B9F3 /* LSRegisterViewController.xib */; };
+		D70E2EEC25F86DFF0025B9F3 /* LSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EC425F86DFF0025B9F3 /* LSLoginModel.swift */; };
+		D70E2EED25F86DFF0025B9F3 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EC525F86DFF0025B9F3 /* TestModel.swift */; };
+		D70E2EEE25F86DFF0025B9F3 /* LSUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EC625F86DFF0025B9F3 /* LSUserInfo.swift */; };
+		D70E2EEF25F86DFF0025B9F3 /* LSForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EC725F86DFF0025B9F3 /* LSForgotPasswordVC.swift */; };
+		D70E2EF025F86DFF0025B9F3 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2EC825F86DFF0025B9F3 /* LSLoginViewController.swift */; };
+		D70E2EF125F86DFF0025B9F3 /* LSMarketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2ECA25F86DFF0025B9F3 /* LSMarketListViewController.swift */; };
+		D70E2EF225F86DFF0025B9F3 /* LSMarketListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2ECC25F86DFF0025B9F3 /* LSMarketListItemModel.swift */; };
+		D70E2EF325F86DFF0025B9F3 /* LSMarketListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2ECD25F86DFF0025B9F3 /* LSMarketListViewController.xib */; };
+		D70E2F0725F86F140025B9F3 /* LSProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F0625F86F140025B9F3 /* LSProfileHeaderView.swift */; };
+		D70E2F0F25F86F2F0025B9F3 /* LSProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F0E25F86F2F0025B9F3 /* LSProfileHeaderView.xib */; };
+		D70E2F2025F8B2190025B9F3 /* Market3.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1525F8B2190025B9F3 /* Market3.json */; };
+		D70E2F2125F8B2190025B9F3 /* Market2.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1625F8B2190025B9F3 /* Market2.json */; };
+		D70E2F2225F8B2190025B9F3 /* Market4.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1725F8B2190025B9F3 /* Market4.json */; };
+		D70E2F2325F8B2190025B9F3 /* Market1.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1825F8B2190025B9F3 /* Market1.json */; };
+		D70E2F2425F8B2190025B9F3 /* kline.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1A25F8B2190025B9F3 /* kline.json */; };
+		D70E2F2525F8B2190025B9F3 /* depth.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1B25F8B2190025B9F3 /* depth.json */; };
+		D70E2F2625F8B2190025B9F3 /* kmon.json in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F1C25F8B2190025B9F3 /* kmon.json */; };
+		D70E2F2725F8B2190025B9F3 /* CHKLineChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F1D25F8B2190025B9F3 /* CHKLineChartStyle.swift */; };
+		D70E2F2825F8B2190025B9F3 /* CHDepthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F1E25F8B2190025B9F3 /* CHDepthChartView.swift */; };
+		D70E2F2925F8B2190025B9F3 /* CHShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F1F25F8B2190025B9F3 /* CHShapeLayer.swift */; };
+		D70E2F2E25F8B2F90025B9F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70E2F2D25F8B2F90025B9F3 /* QuartzCore.framework */; };
+		D70E2F4325F8B55B0025B9F3 /* LSSafetyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */; };
+		D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */; };
+		D70E2F5625F8C31D0025B9F3 /* LSInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */; };
+		D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */; };
 		D726B57925F3206B00B51D61 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B57825F3206B00B51D61 /* MD5.swift */; };
-		D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B59425F3632200B51D61 /* LSBannerModel.swift */; };
-		D726B59F25F369FC00B51D61 /* LSHomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */; };
-		D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */; };
-		D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */; };
-		D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */; };
-		D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726B5B025F3791800B51D61 /* LSMarketListCell.xib */; };
-		D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */; };
-		D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */; };
-		D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */; };
+		D748D56A25F9BA180048662A /* LSFeedBackRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D56825F9BA180048662A /* LSFeedBackRootVC.swift */; };
+		D748D56B25F9BA180048662A /* LSFeedBackRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D748D56925F9BA180048662A /* LSFeedBackRootVC.xib */; };
+		D748D57425F9BB430048662A /* LSFeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D57225F9BB430048662A /* LSFeedBackViewController.swift */; };
+		D748D57525F9BB430048662A /* LSFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D748D57325F9BB430048662A /* LSFeedBackViewController.xib */; };
+		D748D57B25F9BB530048662A /* LSFeedBackRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D57925F9BB530048662A /* LSFeedBackRecordVC.swift */; };
+		D748D57C25F9BB530048662A /* LSFeedBackRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D748D57A25F9BB530048662A /* LSFeedBackRecordVC.xib */; };
+		D748D5FE25FA12D70048662A /* LSFeedBackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D5FD25FA12D70048662A /* LSFeedBackModel.swift */; };
+		D748D61625FA1F960048662A /* LSAliyunOSSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D61525FA1F960048662A /* LSAliyunOSSManager.swift */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
-		D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */; };
-		D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */; };
-		D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */; };
-		D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */; };
-		D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820325E3512600F2360E /* LSRegisterViewController.swift */; };
-		D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78B820425E3512600F2360E /* LSRegisterViewController.xib */; };
 		D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820B25E3586400F2360E /* NSObject+Extension.swift */; };
 		D78B820F25E3586400F2360E /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820C25E3586400F2360E /* Localize.swift */; };
 		D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */; };
 		D78B821525E358DA00F2360E /* constantDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B821425E358DA00F2360E /* constantDefine.swift */; };
 		D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B821925E35C0300F2360E /* String+Extension.swift */; };
-		D79DC16125F5CCD8003ABCD5 /* LSProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */; };
-		D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */; };
-		D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */; };
-		D79DC17025F5D07C003ABCD5 /* LSSustainabilityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */; };
-		D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */; };
-		D79DC17A25F5D095003ABCD5 /* LSOTCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */; };
-		D79DC18025F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */; };
-		D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */; };
-		D79DC18725F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */; };
 		D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E81C9225E4ADB4003D760B /* LSIBInspectable.swift */; };
 		D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */; };
 		D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F50725C0FD6500BB32D7 /* Main.storyboard */; };
@@ -86,8 +113,6 @@
 		D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F55725C1063C00BB32D7 /* LSBaseViewController.swift */; };
 		D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F55C25C1089B00BB32D7 /* LSBaseNavigationController.swift */; };
 		D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F5A025C10CDD00BB32D7 /* Common.swift */; };
-		D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9F5A625C1122B00BB32D7 /* LSHomeViewController.swift */; };
-		D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F5A725C1122B00BB32D7 /* LSHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,75 +134,102 @@
 
 /* Begin PBXFileReference section */
 		392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HYEX_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListViewController.swift; sourceTree = "<group>"; };
-		3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSMarketListViewController.xib; sourceTree = "<group>"; };
-		3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListItemModel.swift; sourceTree = "<group>"; };
-		3C4CB3E225F7A45500501916 /* LSTradeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSTradeMainViewController.swift; sourceTree = "<group>"; };
-		3C4CB3E325F7A45500501916 /* LSTradeMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSTradeMainViewController.xib; sourceTree = "<group>"; };
-		3C4CB3EB25F7B4B400501916 /* LSSustainabilityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSustainabilityHeaderView.swift; sourceTree = "<group>"; };
-		3C4CB3F325F7B4BC00501916 /* LSSustainabilityHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSSustainabilityHeaderView.xib; sourceTree = "<group>"; };
-		3C4CB3F825F7B57D00501916 /* LSSustainabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSustainabilityManager.swift; sourceTree = "<group>"; };
-		3C4CB3FD25F7B67900501916 /* LSSustainabilityBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSustainabilityBaseView.swift; sourceTree = "<group>"; };
-		3CA43FF125F108B20070229F /* LSProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSProfileViewController.swift; sourceTree = "<group>"; };
-		3CA43FF225F108B20070229F /* LSProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileViewController.xib; sourceTree = "<group>"; };
 		7A397BAF0800A9BEE834BB9D /* Pods-HYEX_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.release.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		851456A3235A6C9CE3F6B601 /* Pods-HYEX_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYEX_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		D70CAFDD25F22D4700037A52 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
-		D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
-		D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryChartRenderer.swift; sourceTree = "<group>"; };
-		D712C57425F774F400D5EA0A /* MainChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChartRenderer.swift; sourceTree = "<group>"; };
-		D712C57525F774F400D5EA0A /* VolChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolChartRenderer.swift; sourceTree = "<group>"; };
-		D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChartRenderer.swift; sourceTree = "<group>"; };
-		D712C57725F774F400D5EA0A /* KLinePainterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePainterView.swift; sourceTree = "<group>"; };
-		D712C57925F774F400D5EA0A /* KLineStateManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineStateManger.swift; sourceTree = "<group>"; };
-		D712C57A25F774F400D5EA0A /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
-		D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
-		D712C57C25F774F400D5EA0A /* Calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
-		D712C57E25F774F400D5EA0A /* ChartStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartStyle.swift; sourceTree = "<group>"; };
-		D712C57F25F774F400D5EA0A /* KLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineChartView.swift; sourceTree = "<group>"; };
-		D712C58125F774F400D5EA0A /* KLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineModel.swift; sourceTree = "<group>"; };
-		D712C58225F774F400D5EA0A /* KLineState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineState.swift; sourceTree = "<group>"; };
-		D712C58425F774F400D5EA0A /* KLineInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineInfoView.swift; sourceTree = "<group>"; };
-		D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineIndicatorsView.swift; sourceTree = "<group>"; };
-		D712C58625F774F400D5EA0A /* KLinePeriodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLinePeriodView.xib; sourceTree = "<group>"; };
-		D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineIndicatorsView.xib; sourceTree = "<group>"; };
-		D712C58825F774F400D5EA0A /* KLinePeriodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePeriodView.swift; sourceTree = "<group>"; };
-		D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineVerticalIndicatorsView.swift; sourceTree = "<group>"; };
-		D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineVerticalIndicatorsView.xib; sourceTree = "<group>"; };
-		D712C58B25F774F400D5EA0A /* KLineInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineInfoView.xib; sourceTree = "<group>"; };
-		D726B56E25F3169F00B51D61 /* LSUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSUserInfo.swift; sourceTree = "<group>"; };
-		D726B57325F319F000B51D61 /* LSLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginModel.swift; sourceTree = "<group>"; };
+		D70E2DFA25F86D730025B9F3 /* LSVerifyCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSVerifyCodeView.xib; sourceTree = "<group>"; };
+		D70E2DFB25F86D730025B9F3 /* LSVerifyCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeView.swift; sourceTree = "<group>"; };
+		D70E2DFC25F86D730025B9F3 /* LSVerifyCodeBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeBtn.swift; sourceTree = "<group>"; };
+		D70E2E0825F86DAB0025B9F3 /* SecondaryChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryChartRenderer.swift; sourceTree = "<group>"; };
+		D70E2E0925F86DAB0025B9F3 /* MainChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainChartRenderer.swift; sourceTree = "<group>"; };
+		D70E2E0A25F86DAB0025B9F3 /* VolChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolChartRenderer.swift; sourceTree = "<group>"; };
+		D70E2E0B25F86DAB0025B9F3 /* BaseChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChartRenderer.swift; sourceTree = "<group>"; };
+		D70E2E0C25F86DAB0025B9F3 /* KLinePainterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePainterView.swift; sourceTree = "<group>"; };
+		D70E2E0E25F86DAB0025B9F3 /* KLineStateManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineStateManger.swift; sourceTree = "<group>"; };
+		D70E2E0F25F86DAB0025B9F3 /* DataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
+		D70E2E1025F86DAB0025B9F3 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		D70E2E1125F86DAB0025B9F3 /* Calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		D70E2E1325F86DAB0025B9F3 /* ChartStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartStyle.swift; sourceTree = "<group>"; };
+		D70E2E1425F86DAB0025B9F3 /* KLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineChartView.swift; sourceTree = "<group>"; };
+		D70E2E1625F86DAB0025B9F3 /* KLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineModel.swift; sourceTree = "<group>"; };
+		D70E2E1725F86DAB0025B9F3 /* KLineState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineState.swift; sourceTree = "<group>"; };
+		D70E2E1925F86DAB0025B9F3 /* KLineInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineInfoView.swift; sourceTree = "<group>"; };
+		D70E2E1A25F86DAB0025B9F3 /* KLineIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineIndicatorsView.swift; sourceTree = "<group>"; };
+		D70E2E1B25F86DAB0025B9F3 /* KLinePeriodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLinePeriodView.xib; sourceTree = "<group>"; };
+		D70E2E1C25F86DAB0025B9F3 /* KLineIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineIndicatorsView.xib; sourceTree = "<group>"; };
+		D70E2E1D25F86DAB0025B9F3 /* KLinePeriodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLinePeriodView.swift; sourceTree = "<group>"; };
+		D70E2E1E25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineVerticalIndicatorsView.swift; sourceTree = "<group>"; };
+		D70E2E1F25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineVerticalIndicatorsView.xib; sourceTree = "<group>"; };
+		D70E2E2025F86DAB0025B9F3 /* KLineInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLineInfoView.xib; sourceTree = "<group>"; };
+		D70E2E9925F86DFF0025B9F3 /* LSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSHomeViewController.swift; sourceTree = "<group>"; };
+		D70E2E9B25F86DFF0025B9F3 /* LSMarketListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMarketListModel.swift; sourceTree = "<group>"; };
+		D70E2E9C25F86DFF0025B9F3 /* LSBannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSBannerModel.swift; sourceTree = "<group>"; };
+		D70E2E9D25F86DFF0025B9F3 /* LSNoticeListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNoticeListModel.swift; sourceTree = "<group>"; };
+		D70E2E9F25F86DFF0025B9F3 /* LSHomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSHomeItemCell.xib; sourceTree = "<group>"; };
+		D70E2EA025F86DFF0025B9F3 /* LSMarketListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSMarketListCell.xib; sourceTree = "<group>"; };
+		D70E2EA125F86DFF0025B9F3 /* LSHomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSHomeItemCell.swift; sourceTree = "<group>"; };
+		D70E2EA225F86DFF0025B9F3 /* LSMarketListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMarketListCell.swift; sourceTree = "<group>"; };
+		D70E2EA325F86DFF0025B9F3 /* LSHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSHomeViewController.xib; sourceTree = "<group>"; };
+		D70E2EA525F86DFF0025B9F3 /* LSTradeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTradeMainViewController.swift; sourceTree = "<group>"; };
+		D70E2EA725F86DFF0025B9F3 /* LSOTCMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSOTCMainViewController.xib; sourceTree = "<group>"; };
+		D70E2EA925F86DFF0025B9F3 /* LSOTCTradeUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOTCTradeUserInfo.swift; sourceTree = "<group>"; };
+		D70E2EAA25F86DFF0025B9F3 /* LSOTCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSOTCMainViewController.swift; sourceTree = "<group>"; };
+		D70E2EAC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSCoinCurrencyTradeVC.xib; sourceTree = "<group>"; };
+		D70E2EAD25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSCoinCurrencyTradeVC.swift; sourceTree = "<group>"; };
+		D70E2EAE25F86DFF0025B9F3 /* LSTradeMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSTradeMainViewController.xib; sourceTree = "<group>"; };
+		D70E2EB025F86DFF0025B9F3 /* LSSustainabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSustainabilityViewController.swift; sourceTree = "<group>"; };
+		D70E2EB225F86DFF0025B9F3 /* LSSustainabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSustainabilityManager.swift; sourceTree = "<group>"; };
+		D70E2EB425F86DFF0025B9F3 /* LSSustainabilityBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSustainabilityBaseView.swift; sourceTree = "<group>"; };
+		D70E2EB525F86DFF0025B9F3 /* LSSustainabilityHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSSustainabilityHeaderView.xib; sourceTree = "<group>"; };
+		D70E2EB625F86DFF0025B9F3 /* LSSustainabilityHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSSustainabilityHeaderView.swift; sourceTree = "<group>"; };
+		D70E2EB725F86DFF0025B9F3 /* LSSustainabilityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSSustainabilityViewController.xib; sourceTree = "<group>"; };
+		D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSProfileViewController.xib; sourceTree = "<group>"; };
+		D70E2EBB25F86DFF0025B9F3 /* LSProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSProfileCell.swift; sourceTree = "<group>"; };
+		D70E2EBC25F86DFF0025B9F3 /* LSProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSProfileCell.xib; sourceTree = "<group>"; };
+		D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSProfileViewController.swift; sourceTree = "<group>"; };
+		D70E2EBF25F86DFF0025B9F3 /* LSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSRegisterViewController.swift; sourceTree = "<group>"; };
+		D70E2EC025F86DFF0025B9F3 /* LSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
+		D70E2EC125F86DFF0025B9F3 /* LSForgotPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSForgotPasswordVC.xib; sourceTree = "<group>"; };
+		D70E2EC225F86DFF0025B9F3 /* LSRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSRegisterViewController.xib; sourceTree = "<group>"; };
+		D70E2EC425F86DFF0025B9F3 /* LSLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLoginModel.swift; sourceTree = "<group>"; };
+		D70E2EC525F86DFF0025B9F3 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		D70E2EC625F86DFF0025B9F3 /* LSUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSUserInfo.swift; sourceTree = "<group>"; };
+		D70E2EC725F86DFF0025B9F3 /* LSForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSForgotPasswordVC.swift; sourceTree = "<group>"; };
+		D70E2EC825F86DFF0025B9F3 /* LSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
+		D70E2ECA25F86DFF0025B9F3 /* LSMarketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMarketListViewController.swift; sourceTree = "<group>"; };
+		D70E2ECC25F86DFF0025B9F3 /* LSMarketListItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSMarketListItemModel.swift; sourceTree = "<group>"; };
+		D70E2ECD25F86DFF0025B9F3 /* LSMarketListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSMarketListViewController.xib; sourceTree = "<group>"; };
+		D70E2F0625F86F140025B9F3 /* LSProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSProfileHeaderView.swift; sourceTree = "<group>"; };
+		D70E2F0E25F86F2F0025B9F3 /* LSProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileHeaderView.xib; sourceTree = "<group>"; };
+		D70E2F1525F8B2190025B9F3 /* Market3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Market3.json; sourceTree = "<group>"; };
+		D70E2F1625F8B2190025B9F3 /* Market2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Market2.json; sourceTree = "<group>"; };
+		D70E2F1725F8B2190025B9F3 /* Market4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Market4.json; sourceTree = "<group>"; };
+		D70E2F1825F8B2190025B9F3 /* Market1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Market1.json; sourceTree = "<group>"; };
+		D70E2F1A25F8B2190025B9F3 /* kline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kline.json; sourceTree = "<group>"; };
+		D70E2F1B25F8B2190025B9F3 /* depth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = depth.json; sourceTree = "<group>"; };
+		D70E2F1C25F8B2190025B9F3 /* kmon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kmon.json; sourceTree = "<group>"; };
+		D70E2F1D25F8B2190025B9F3 /* CHKLineChartStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHKLineChartStyle.swift; sourceTree = "<group>"; };
+		D70E2F1E25F8B2190025B9F3 /* CHDepthChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHDepthChartView.swift; sourceTree = "<group>"; };
+		D70E2F1F25F8B2190025B9F3 /* CHShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHShapeLayer.swift; sourceTree = "<group>"; };
+		D70E2F2D25F8B2F90025B9F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSafetyViewController.swift; sourceTree = "<group>"; };
+		D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSSafetyViewController.xib; sourceTree = "<group>"; };
+		D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSInviteViewController.swift; sourceTree = "<group>"; };
+		D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSInviteViewController.xib; sourceTree = "<group>"; };
 		D726B57825F3206B00B51D61 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
-		D726B59425F3632200B51D61 /* LSBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSBannerModel.swift; sourceTree = "<group>"; };
-		D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSHomeItemCell.swift; sourceTree = "<group>"; };
-		D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSHomeItemCell.xib; sourceTree = "<group>"; };
-		D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListModel.swift; sourceTree = "<group>"; };
-		D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSMarketListCell.swift; sourceTree = "<group>"; };
-		D726B5B025F3791800B51D61 /* LSMarketListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSMarketListCell.xib; sourceTree = "<group>"; };
-		D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNoticeListModel.swift; sourceTree = "<group>"; };
-		D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLoginViewController.swift; sourceTree = "<group>"; };
-		D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSLoginViewController.xib; sourceTree = "<group>"; };
+		D748D56825F9BA180048662A /* LSFeedBackRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackRootVC.swift; sourceTree = "<group>"; };
+		D748D56925F9BA180048662A /* LSFeedBackRootVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSFeedBackRootVC.xib; sourceTree = "<group>"; };
+		D748D57225F9BB430048662A /* LSFeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackViewController.swift; sourceTree = "<group>"; };
+		D748D57325F9BB430048662A /* LSFeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSFeedBackViewController.xib; sourceTree = "<group>"; };
+		D748D57925F9BB530048662A /* LSFeedBackRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackRecordVC.swift; sourceTree = "<group>"; };
+		D748D57A25F9BB530048662A /* LSFeedBackRecordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSFeedBackRecordVC.xib; sourceTree = "<group>"; };
+		D748D5FD25FA12D70048662A /* LSFeedBackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackModel.swift; sourceTree = "<group>"; };
+		D748D61525FA1F960048662A /* LSAliyunOSSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSAliyunOSSManager.swift; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
-		D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSForgotPasswordVC.swift; sourceTree = "<group>"; };
-		D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSForgotPasswordVC.xib; sourceTree = "<group>"; };
-		D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSVerifyCodeView.swift; sourceTree = "<group>"; };
-		D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSVerifyCodeView.xib; sourceTree = "<group>"; };
-		D78B820325E3512600F2360E /* LSRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSRegisterViewController.swift; sourceTree = "<group>"; };
-		D78B820425E3512600F2360E /* LSRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSRegisterViewController.xib; sourceTree = "<group>"; };
 		D78B820B25E3586400F2360E /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		D78B820C25E3586400F2360E /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swizzling.swift"; sourceTree = "<group>"; };
 		D78B821425E358DA00F2360E /* constantDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constantDefine.swift; sourceTree = "<group>"; };
 		D78B821925E35C0300F2360E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSProfileCell.swift; sourceTree = "<group>"; };
-		D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSProfileCell.xib; sourceTree = "<group>"; };
-		D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSSustainabilityViewController.swift; sourceTree = "<group>"; };
-		D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSSustainabilityViewController.xib; sourceTree = "<group>"; };
-		D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSOTCMainViewController.swift; sourceTree = "<group>"; };
-		D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSOTCMainViewController.xib; sourceTree = "<group>"; };
-		D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSCoinCurrencyTradeVC.swift; sourceTree = "<group>"; };
-		D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSCoinCurrencyTradeVC.xib; sourceTree = "<group>"; };
-		D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSOTCTradeUserInfo.swift; sourceTree = "<group>"; };
 		D7E81C9225E4ADB4003D760B /* LSIBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSIBInspectable.swift; sourceTree = "<group>"; };
 		D7F9F4FE25C0FD6500BB32D7 /* HYEX_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYEX_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,8 +247,6 @@
 		D7F9F55725C1063C00BB32D7 /* LSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSBaseViewController.swift; sourceTree = "<group>"; };
 		D7F9F55C25C1089B00BB32D7 /* LSBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSBaseNavigationController.swift; sourceTree = "<group>"; };
 		D7F9F5A025C10CDD00BB32D7 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		D7F9F5A625C1122B00BB32D7 /* LSHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSHomeViewController.swift; sourceTree = "<group>"; };
-		D7F9F5A725C1122B00BB32D7 /* LSHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70E2F2E25F8B2F90025B9F3 /* QuartzCore.framework in Frameworks */,
 				431C3158D3673A70A36BF790 /* Pods_HYEX_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,55 +276,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C13EBDE25F65E6A003A58BE /* Market */ = {
-			isa = PBXGroup;
-			children = (
-				3C13EBF525F66964003A58BE /* Model */,
-				3C13EBDF25F65E85003A58BE /* LSMarketListViewController.swift */,
-				3C13EBE025F65E85003A58BE /* LSMarketListViewController.xib */,
-			);
-			path = Market;
-			sourceTree = "<group>";
-		};
-		3C13EBF525F66964003A58BE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3C13EBF625F669AB003A58BE /* LSMarketListItemModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3C4CB3E925F7B49E00501916 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3C4CB3FD25F7B67900501916 /* LSSustainabilityBaseView.swift */,
-				3C4CB3EB25F7B4B400501916 /* LSSustainabilityHeaderView.swift */,
-				3C4CB3F325F7B4BC00501916 /* LSSustainabilityHeaderView.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3C4CB3EA25F7B49E00501916 /* manager */ = {
-			isa = PBXGroup;
-			children = (
-				3C4CB3F825F7B57D00501916 /* LSSustainabilityManager.swift */,
-			);
-			path = manager;
-			sourceTree = "<group>";
-		};
-		3CA43FF025F1088B0070229F /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC15E25F5CCBD003ABCD5 /* View */,
-				3CA43FF125F108B20070229F /* LSProfileViewController.swift */,
-				3CA43FF225F108B20070229F /* LSProfileViewController.xib */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		588ABF90956E00E848E6DD6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D70E2F2D25F8B2F90025B9F3 /* QuartzCore.framework */,
 				392F33080D2BEC680542A74E /* Pods_HYEX_Swift.framework */,
 			);
 			name = Frameworks;
@@ -288,137 +294,315 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D70CAFD925F217AE00037A52 /* Model */ = {
+		D70E2DF925F86D730025B9F3 /* verifyCodeTool */ = {
 			isa = PBXGroup;
 			children = (
-				D70CAFDD25F22D4700037A52 /* TestModel.swift */,
-				D726B56E25F3169F00B51D61 /* LSUserInfo.swift */,
-				D726B57325F319F000B51D61 /* LSLoginModel.swift */,
+				D70E2DFA25F86D730025B9F3 /* LSVerifyCodeView.xib */,
+				D70E2DFB25F86D730025B9F3 /* LSVerifyCodeView.swift */,
+				D70E2DFC25F86D730025B9F3 /* LSVerifyCodeBtn.swift */,
 			);
-			path = Model;
+			path = verifyCodeTool;
 			sourceTree = "<group>";
 		};
-		D712C57125F774F400D5EA0A /* KLineChart */ = {
+		D70E2E0625F86DAB0025B9F3 /* KLineChart */ = {
 			isa = PBXGroup;
 			children = (
-				D712C57F25F774F400D5EA0A /* KLineChartView.swift */,
-				D712C57725F774F400D5EA0A /* KLinePainterView.swift */,
-				D712C57225F774F400D5EA0A /* Renderer */,
-				D712C57825F774F400D5EA0A /* Util */,
-				D712C57D25F774F400D5EA0A /* Style */,
-				D712C58025F774F400D5EA0A /* Model */,
-				D712C58325F774F400D5EA0A /* View */,
+				D70E2E1425F86DAB0025B9F3 /* KLineChartView.swift */,
+				D70E2E0C25F86DAB0025B9F3 /* KLinePainterView.swift */,
+				D70E2E0725F86DAB0025B9F3 /* Renderer */,
+				D70E2E0D25F86DAB0025B9F3 /* Util */,
+				D70E2E1225F86DAB0025B9F3 /* Style */,
+				D70E2E1525F86DAB0025B9F3 /* Model */,
+				D70E2E1825F86DAB0025B9F3 /* View */,
 			);
-			name = KLineChart;
-			path = HYEX_Swift/Tool/KLineChart;
-			sourceTree = SOURCE_ROOT;
+			path = KLineChart;
+			sourceTree = "<group>";
 		};
-		D712C57225F774F400D5EA0A /* Renderer */ = {
+		D70E2E0725F86DAB0025B9F3 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
-				D712C57425F774F400D5EA0A /* MainChartRenderer.swift */,
-				D712C57525F774F400D5EA0A /* VolChartRenderer.swift */,
-				D712C57625F774F400D5EA0A /* BaseChartRenderer.swift */,
-				D712C57325F774F400D5EA0A /* SecondaryChartRenderer.swift */,
+				D70E2E0825F86DAB0025B9F3 /* SecondaryChartRenderer.swift */,
+				D70E2E0925F86DAB0025B9F3 /* MainChartRenderer.swift */,
+				D70E2E0A25F86DAB0025B9F3 /* VolChartRenderer.swift */,
+				D70E2E0B25F86DAB0025B9F3 /* BaseChartRenderer.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
 		};
-		D712C57825F774F400D5EA0A /* Util */ = {
+		D70E2E0D25F86DAB0025B9F3 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				D712C57925F774F400D5EA0A /* KLineStateManger.swift */,
-				D712C57A25F774F400D5EA0A /* DataUtil.swift */,
-				D712C57B25F774F400D5EA0A /* UIColor+RGB.swift */,
-				D712C57C25F774F400D5EA0A /* Calculate.swift */,
+				D70E2E0E25F86DAB0025B9F3 /* KLineStateManger.swift */,
+				D70E2E0F25F86DAB0025B9F3 /* DataUtil.swift */,
+				D70E2E1025F86DAB0025B9F3 /* UIColor+RGB.swift */,
+				D70E2E1125F86DAB0025B9F3 /* Calculate.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		D712C57D25F774F400D5EA0A /* Style */ = {
+		D70E2E1225F86DAB0025B9F3 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				D712C57E25F774F400D5EA0A /* ChartStyle.swift */,
+				D70E2E1325F86DAB0025B9F3 /* ChartStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
 		};
-		D712C58025F774F400D5EA0A /* Model */ = {
+		D70E2E1525F86DAB0025B9F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D712C58125F774F400D5EA0A /* KLineModel.swift */,
-				D712C58225F774F400D5EA0A /* KLineState.swift */,
+				D70E2E1625F86DAB0025B9F3 /* KLineModel.swift */,
+				D70E2E1725F86DAB0025B9F3 /* KLineState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D712C58325F774F400D5EA0A /* View */ = {
+		D70E2E1825F86DAB0025B9F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D712C58425F774F400D5EA0A /* KLineInfoView.swift */,
-				D712C58525F774F400D5EA0A /* KLineIndicatorsView.swift */,
-				D712C58625F774F400D5EA0A /* KLinePeriodView.xib */,
-				D712C58725F774F400D5EA0A /* KLineIndicatorsView.xib */,
-				D712C58825F774F400D5EA0A /* KLinePeriodView.swift */,
-				D712C58925F774F400D5EA0A /* KLineVerticalIndicatorsView.swift */,
-				D712C58A25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib */,
-				D712C58B25F774F400D5EA0A /* KLineInfoView.xib */,
+				D70E2E1925F86DAB0025B9F3 /* KLineInfoView.swift */,
+				D70E2E1A25F86DAB0025B9F3 /* KLineIndicatorsView.swift */,
+				D70E2E1B25F86DAB0025B9F3 /* KLinePeriodView.xib */,
+				D70E2E1C25F86DAB0025B9F3 /* KLineIndicatorsView.xib */,
+				D70E2E1D25F86DAB0025B9F3 /* KLinePeriodView.swift */,
+				D70E2E1E25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.swift */,
+				D70E2E1F25F86DAB0025B9F3 /* KLineVerticalIndicatorsView.xib */,
+				D70E2E2025F86DAB0025B9F3 /* KLineInfoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		D726B59325F3631600B51D61 /* Model */ = {
+		D70E2E9825F86DFF0025B9F3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D726B59425F3632200B51D61 /* LSBannerModel.swift */,
-				D726B5AA25F3701C00B51D61 /* LSMarketListModel.swift */,
-				D726B5B625F383CE00B51D61 /* LSNoticeListModel.swift */,
+				D70E2E9925F86DFF0025B9F3 /* LSHomeViewController.swift */,
+				D70E2E9A25F86DFF0025B9F3 /* Model */,
+				D70E2E9E25F86DFF0025B9F3 /* View */,
+				D70E2EA325F86DFF0025B9F3 /* LSHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D70E2E9A25F86DFF0025B9F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2E9B25F86DFF0025B9F3 /* LSMarketListModel.swift */,
+				D70E2E9C25F86DFF0025B9F3 /* LSBannerModel.swift */,
+				D70E2E9D25F86DFF0025B9F3 /* LSNoticeListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D726B59C25F369E000B51D61 /* View */ = {
+		D70E2E9E25F86DFF0025B9F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D726B59D25F369FC00B51D61 /* LSHomeItemCell.swift */,
-				D726B59E25F369FC00B51D61 /* LSHomeItemCell.xib */,
-				D726B5AF25F3791700B51D61 /* LSMarketListCell.swift */,
-				D726B5B025F3791800B51D61 /* LSMarketListCell.xib */,
+				D70E2E9F25F86DFF0025B9F3 /* LSHomeItemCell.xib */,
+				D70E2EA025F86DFF0025B9F3 /* LSMarketListCell.xib */,
+				D70E2EA125F86DFF0025B9F3 /* LSHomeItemCell.swift */,
+				D70E2EA225F86DFF0025B9F3 /* LSMarketListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		D74C02E625E0E3750017E1E7 /* Login&Register */ = {
+		D70E2EA425F86DFF0025B9F3 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
-				D70CAFD925F217AE00037A52 /* Model */,
-				D74C02E725E0E3C40017E1E7 /* LSLoginViewController.swift */,
-				D74C02E825E0E3C40017E1E7 /* LSLoginViewController.xib */,
-				D78B820325E3512600F2360E /* LSRegisterViewController.swift */,
-				D78B820425E3512600F2360E /* LSRegisterViewController.xib */,
-				D777B70125E647F00082CC1B /* LSForgotPasswordVC.swift */,
-				D777B70225E647F00082CC1B /* LSForgotPasswordVC.xib */,
+				D70E2EA525F86DFF0025B9F3 /* LSTradeMainViewController.swift */,
+				D70E2EA625F86DFF0025B9F3 /* OTC */,
+				D70E2EAB25F86DFF0025B9F3 /* CoinCurrency */,
+				D70E2EAE25F86DFF0025B9F3 /* LSTradeMainViewController.xib */,
+				D70E2EAF25F86DFF0025B9F3 /* Sustainability */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		D70E2EA625F86DFF0025B9F3 /* OTC */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EA725F86DFF0025B9F3 /* LSOTCMainViewController.xib */,
+				D70E2EA825F86DFF0025B9F3 /* Model */,
+				D70E2EAA25F86DFF0025B9F3 /* LSOTCMainViewController.swift */,
+			);
+			path = OTC;
+			sourceTree = "<group>";
+		};
+		D70E2EA825F86DFF0025B9F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EA925F86DFF0025B9F3 /* LSOTCTradeUserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D70E2EAB25F86DFF0025B9F3 /* CoinCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EAC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.xib */,
+				D70E2EAD25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift */,
+			);
+			path = CoinCurrency;
+			sourceTree = "<group>";
+		};
+		D70E2EAF25F86DFF0025B9F3 /* Sustainability */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EB025F86DFF0025B9F3 /* LSSustainabilityViewController.swift */,
+				D70E2EB125F86DFF0025B9F3 /* manager */,
+				D70E2EB325F86DFF0025B9F3 /* View */,
+				D70E2EB725F86DFF0025B9F3 /* LSSustainabilityViewController.xib */,
+			);
+			path = Sustainability;
+			sourceTree = "<group>";
+		};
+		D70E2EB125F86DFF0025B9F3 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EB225F86DFF0025B9F3 /* LSSustainabilityManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		D70E2EB325F86DFF0025B9F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EB425F86DFF0025B9F3 /* LSSustainabilityBaseView.swift */,
+				D70E2EB525F86DFF0025B9F3 /* LSSustainabilityHeaderView.xib */,
+				D70E2EB625F86DFF0025B9F3 /* LSSustainabilityHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D70E2EB825F86DFF0025B9F3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EBA25F86DFF0025B9F3 /* View */,
+				D748D56725F9BA010048662A /* feedBack */,
+				D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */,
+				D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */,
+				D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */,
+				D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */,
+				D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */,
+				D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D70E2EBA25F86DFF0025B9F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EBB25F86DFF0025B9F3 /* LSProfileCell.swift */,
+				D70E2EBC25F86DFF0025B9F3 /* LSProfileCell.xib */,
+				D70E2F0625F86F140025B9F3 /* LSProfileHeaderView.swift */,
+				D70E2F0E25F86F2F0025B9F3 /* LSProfileHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D70E2EBE25F86DFF0025B9F3 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EBF25F86DFF0025B9F3 /* LSRegisterViewController.swift */,
+				D70E2EC025F86DFF0025B9F3 /* LSLoginViewController.xib */,
+				D70E2EC125F86DFF0025B9F3 /* LSForgotPasswordVC.xib */,
+				D70E2EC225F86DFF0025B9F3 /* LSRegisterViewController.xib */,
+				D70E2EC325F86DFF0025B9F3 /* Model */,
+				D70E2EC725F86DFF0025B9F3 /* LSForgotPasswordVC.swift */,
+				D70E2EC825F86DFF0025B9F3 /* LSLoginViewController.swift */,
 			);
 			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		D70E2EC325F86DFF0025B9F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2EC425F86DFF0025B9F3 /* LSLoginModel.swift */,
+				D70E2EC525F86DFF0025B9F3 /* TestModel.swift */,
+				D70E2EC625F86DFF0025B9F3 /* LSUserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D70E2EC925F86DFF0025B9F3 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2ECB25F86DFF0025B9F3 /* Model */,
+				D70E2ECA25F86DFF0025B9F3 /* LSMarketListViewController.swift */,
+				D70E2ECD25F86DFF0025B9F3 /* LSMarketListViewController.xib */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		D70E2ECB25F86DFF0025B9F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2ECC25F86DFF0025B9F3 /* LSMarketListItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D70E2F1325F8B2190025B9F3 /* DepthChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2F1425F8B2190025B9F3 /* testJson */,
+				D70E2F1D25F8B2190025B9F3 /* CHKLineChartStyle.swift */,
+				D70E2F1E25F8B2190025B9F3 /* CHDepthChartView.swift */,
+				D70E2F1F25F8B2190025B9F3 /* CHShapeLayer.swift */,
+			);
+			path = DepthChartView;
+			sourceTree = "<group>";
+		};
+		D70E2F1425F8B2190025B9F3 /* testJson */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2F1525F8B2190025B9F3 /* Market3.json */,
+				D70E2F1625F8B2190025B9F3 /* Market2.json */,
+				D70E2F1725F8B2190025B9F3 /* Market4.json */,
+				D70E2F1825F8B2190025B9F3 /* Market1.json */,
+				D70E2F1925F8B2190025B9F3 /* Resource */,
+			);
+			path = testJson;
+			sourceTree = "<group>";
+		};
+		D70E2F1925F8B2190025B9F3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D70E2F1A25F8B2190025B9F3 /* kline.json */,
+				D70E2F1B25F8B2190025B9F3 /* depth.json */,
+				D70E2F1C25F8B2190025B9F3 /* kmon.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D748D56725F9BA010048662A /* feedBack */ = {
+			isa = PBXGroup;
+			children = (
+				D748D5FC25FA12CA0048662A /* Model */,
+				D748D56825F9BA180048662A /* LSFeedBackRootVC.swift */,
+				D748D56925F9BA180048662A /* LSFeedBackRootVC.xib */,
+				D748D57225F9BB430048662A /* LSFeedBackViewController.swift */,
+				D748D57325F9BB430048662A /* LSFeedBackViewController.xib */,
+				D748D57925F9BB530048662A /* LSFeedBackRecordVC.swift */,
+				D748D57A25F9BB530048662A /* LSFeedBackRecordVC.xib */,
+			);
+			path = feedBack;
+			sourceTree = "<group>";
+		};
+		D748D5FC25FA12CA0048662A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D748D5FD25FA12D70048662A /* LSFeedBackModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D74C02F125E0E3D70017E1E7 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 				D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */,
+				D748D61525FA1F960048662A /* LSAliyunOSSManager.swift */,
 				D726B57825F3206B00B51D61 /* MD5.swift */,
 			);
 			path = Tool;
-			sourceTree = "<group>";
-		};
-		D777B70825E64AD90082CC1B /* verifyCodeTool */ = {
-			isa = PBXGroup;
-			children = (
-				D777B70925E64AF70082CC1B /* LSVerifyCodeView.swift */,
-				D777B71125E64B020082CC1B /* LSVerifyCodeView.xib */,
-				D70D19DF25E78A22009F7C3C /* LSVerifyCodeBtn.swift */,
-			);
-			path = verifyCodeTool;
 			sourceTree = "<group>";
 		};
 		D78B820A25E3586400F2360E /* Localize */ = {
@@ -431,65 +615,6 @@
 			name = Localize;
 			path = HYEX_Swift/Tool/Localize;
 			sourceTree = SOURCE_ROOT;
-		};
-		D79DC15E25F5CCBD003ABCD5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC15F25F5CCD8003ABCD5 /* LSProfileCell.swift */,
-				D79DC16025F5CCD8003ABCD5 /* LSProfileCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D79DC16925F5D001003ABCD5 /* Trade */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC16C25F5D030003ABCD5 /* CoinCurrency */,
-				D79DC16A25F5D030003ABCD5 /* OTC */,
-				D79DC16B25F5D030003ABCD5 /* Sustainability */,
-				3C4CB3E225F7A45500501916 /* LSTradeMainViewController.swift */,
-				3C4CB3E325F7A45500501916 /* LSTradeMainViewController.xib */,
-			);
-			path = Trade;
-			sourceTree = "<group>";
-		};
-		D79DC16A25F5D030003ABCD5 /* OTC */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC18525F5D0B6003ABCD5 /* Model */,
-				D79DC17725F5D095003ABCD5 /* LSOTCMainViewController.swift */,
-				D79DC17825F5D095003ABCD5 /* LSOTCMainViewController.xib */,
-			);
-			path = OTC;
-			sourceTree = "<group>";
-		};
-		D79DC16B25F5D030003ABCD5 /* Sustainability */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC16D25F5D07C003ABCD5 /* LSSustainabilityViewController.swift */,
-				D79DC16E25F5D07C003ABCD5 /* LSSustainabilityViewController.xib */,
-				3C4CB3EA25F7B49E00501916 /* manager */,
-				3C4CB3E925F7B49E00501916 /* View */,
-			);
-			path = Sustainability;
-			sourceTree = "<group>";
-		};
-		D79DC16C25F5D030003ABCD5 /* CoinCurrency */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC17E25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift */,
-				D79DC17F25F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib */,
-			);
-			path = CoinCurrency;
-			sourceTree = "<group>";
-		};
-		D79DC18525F5D0B6003ABCD5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D79DC18625F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
 		};
 		D7F9F4F525C0FD6500BB32D7 = {
 			isa = PBXGroup;
@@ -517,15 +642,15 @@
 			isa = PBXGroup;
 			children = (
 				D7F9F50125C0FD6500BB32D7 /* AppDelegate.swift */,
+				D70E2DF925F86D730025B9F3 /* verifyCodeTool */,
 				D7F9F54E25C0FFB200BB32D7 /* Main_Root */,
-				D777B70825E64AD90082CC1B /* verifyCodeTool */,
 				D74C02F125E0E3D70017E1E7 /* Tool */,
 				D7F9F56125C109B300BB32D7 /* Extension */,
-				3C13EBDE25F65E6A003A58BE /* Market */,
-				D79DC16925F5D001003ABCD5 /* Trade */,
-				D7F9F5A525C1120600BB32D7 /* Home */,
-				3CA43FF025F1088B0070229F /* Profile */,
-				D74C02E625E0E3750017E1E7 /* Login&Register */,
+				D70E2E9825F86DFF0025B9F3 /* Home */,
+				D70E2EBE25F86DFF0025B9F3 /* Login&Register */,
+				D70E2EC925F86DFF0025B9F3 /* Market */,
+				D70E2EB825F86DFF0025B9F3 /* Profile */,
+				D70E2EA425F86DFF0025B9F3 /* Trade */,
 				D7F9F50725C0FD6500BB32D7 /* Main.storyboard */,
 				D7F9F50A25C0FD6700BB32D7 /* Assets.xcassets */,
 				D7F9F50C25C0FD6700BB32D7 /* LaunchScreen.storyboard */,
@@ -565,7 +690,8 @@
 		D7F9F56125C109B300BB32D7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D712C57125F774F400D5EA0A /* KLineChart */,
+				D70E2F1325F8B2190025B9F3 /* DepthChartView */,
+				D70E2E0625F86DAB0025B9F3 /* KLineChart */,
 				D78B820A25E3586400F2360E /* Localize */,
 				D7F9F5A025C10CDD00BB32D7 /* Common.swift */,
 				D78B821425E358DA00F2360E /* constantDefine.swift */,
@@ -573,17 +699,6 @@
 				D7E81C9225E4ADB4003D760B /* LSIBInspectable.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		D7F9F5A525C1120600BB32D7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D726B59C25F369E000B51D61 /* View */,
-				D726B59325F3631600B51D61 /* Model */,
-				D7F9F5A625C1122B00BB32D7 /* LSHomeViewController.swift */,
-				D7F9F5A725C1122B00BB32D7 /* LSHomeViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -691,28 +806,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D712C5A025F774F400D5EA0A /* KLineInfoView.xib in Resources */,
-				D777B70425E647F00082CC1B /* LSForgotPasswordVC.xib in Resources */,
-				D79DC17A25F5D095003ABCD5 /* LSOTCMainViewController.xib in Resources */,
-				D7F9F5A925C1122B00BB32D7 /* LSHomeViewController.xib in Resources */,
-				D712C59B25F774F400D5EA0A /* KLinePeriodView.xib in Resources */,
+				D70E2E3025F86DAB0025B9F3 /* KLinePeriodView.xib in Resources */,
+				D70E2F2425F8B2190025B9F3 /* kline.json in Resources */,
+				D70E2EDD25F86DFF0025B9F3 /* LSTradeMainViewController.xib in Resources */,
+				D748D57C25F9BB530048662A /* LSFeedBackRecordVC.xib in Resources */,
+				D70E2F2225F8B2190025B9F3 /* Market4.json in Resources */,
+				D70E2ED825F86DFF0025B9F3 /* LSOTCMainViewController.xib in Resources */,
+				D70E2F2025F8B2190025B9F3 /* Market3.json in Resources */,
 				D7F9F50E25C0FD6700BB32D7 /* LaunchScreen.storyboard in Resources */,
+				D70E2EE925F86DFF0025B9F3 /* LSLoginViewController.xib in Resources */,
+				D748D57525F9BB430048662A /* LSFeedBackViewController.xib in Resources */,
+				D70E2EE625F86DFF0025B9F3 /* LSProfileCell.xib in Resources */,
+				D70E2E3425F86DAB0025B9F3 /* KLineVerticalIndicatorsView.xib in Resources */,
+				D70E2EEA25F86DFF0025B9F3 /* LSForgotPasswordVC.xib in Resources */,
 				D7F9F50B25C0FD6700BB32D7 /* Assets.xcassets in Resources */,
-				D74C02EA25E0E3C40017E1E7 /* LSLoginViewController.xib in Resources */,
-				3C4CB3E525F7A45500501916 /* LSTradeMainViewController.xib in Resources */,
-				D726B5B225F3791800B51D61 /* LSMarketListCell.xib in Resources */,
-				D78B820625E3512600F2360E /* LSRegisterViewController.xib in Resources */,
-				3C4CB3F425F7B4BC00501916 /* LSSustainabilityHeaderView.xib in Resources */,
-				D79DC17025F5D07C003ABCD5 /* LSSustainabilityViewController.xib in Resources */,
-				D712C59F25F774F400D5EA0A /* KLineVerticalIndicatorsView.xib in Resources */,
-				D726B5A025F369FC00B51D61 /* LSHomeItemCell.xib in Resources */,
+				D70E2ED325F86DFF0025B9F3 /* LSMarketListCell.xib in Resources */,
+				D70E2EE125F86DFF0025B9F3 /* LSSustainabilityHeaderView.xib in Resources */,
+				D70E2ED225F86DFF0025B9F3 /* LSHomeItemCell.xib in Resources */,
+				D70E2EDB25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.xib in Resources */,
+				D748D56B25F9BA180048662A /* LSFeedBackRootVC.xib in Resources */,
+				D70E2F2625F8B2190025B9F3 /* kmon.json in Resources */,
+				D70E2EF325F86DFF0025B9F3 /* LSMarketListViewController.xib in Resources */,
+				D70E2EEB25F86DFF0025B9F3 /* LSRegisterViewController.xib in Resources */,
+				D70E2F0F25F86F2F0025B9F3 /* LSProfileHeaderView.xib in Resources */,
+				D70E2F2325F8B2190025B9F3 /* Market1.json in Resources */,
+				D70E2ED625F86DFF0025B9F3 /* LSHomeViewController.xib in Resources */,
+				D70E2E3525F86DAB0025B9F3 /* KLineInfoView.xib in Resources */,
 				D7F9F50925C0FD6500BB32D7 /* Main.storyboard in Resources */,
-				D777B71225E64B020082CC1B /* LSVerifyCodeView.xib in Resources */,
-				D79DC16225F5CCD8003ABCD5 /* LSProfileCell.xib in Resources */,
-				3C13EBE225F65E85003A58BE /* LSMarketListViewController.xib in Resources */,
-				D79DC18125F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.xib in Resources */,
-				D712C59C25F774F400D5EA0A /* KLineIndicatorsView.xib in Resources */,
-				3CA43FF425F108B20070229F /* LSProfileViewController.xib in Resources */,
+				D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */,
+				D70E2F2125F8B2190025B9F3 /* Market2.json in Resources */,
+				D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */,
+				D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */,
+				D70E2E3125F86DAB0025B9F3 /* KLineIndicatorsView.xib in Resources */,
+				D70E2EE325F86DFF0025B9F3 /* LSSustainabilityViewController.xib in Resources */,
+				D70E2F2525F8B2190025B9F3 /* depth.json in Resources */,
+				D70E2DFD25F86D730025B9F3 /* LSVerifyCodeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +897,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\ndiff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -779,62 +907,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D712C59A25F774F400D5EA0A /* KLineIndicatorsView.swift in Sources */,
+				D70E2F4325F8B55B0025B9F3 /* LSSafetyViewController.swift in Sources */,
+				D70E2ED425F86DFF0025B9F3 /* LSHomeItemCell.swift in Sources */,
+				D70E2E2925F86DAB0025B9F3 /* Calculate.swift in Sources */,
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
+				D70E2EDF25F86DFF0025B9F3 /* LSSustainabilityManager.swift in Sources */,
+				D70E2EDA25F86DFF0025B9F3 /* LSOTCMainViewController.swift in Sources */,
+				D70E2E2325F86DAB0025B9F3 /* VolChartRenderer.swift in Sources */,
+				D70E2EEC25F86DFF0025B9F3 /* LSLoginModel.swift in Sources */,
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
-				3C4CB3E425F7A45500501916 /* LSTradeMainViewController.swift in Sources */,
-				D726B57425F319F000B51D61 /* LSLoginModel.swift in Sources */,
-				D726B56F25F3169F00B51D61 /* LSUserInfo.swift in Sources */,
-				D712C59925F774F400D5EA0A /* KLineInfoView.swift in Sources */,
-				D79DC18725F5D0CD003ABCD5 /* LSOTCTradeUserInfo.swift in Sources */,
-				D726B59525F3632200B51D61 /* LSBannerModel.swift in Sources */,
-				D712C59E25F774F400D5EA0A /* KLineVerticalIndicatorsView.swift in Sources */,
-				3C4CB3EC25F7B4B400501916 /* LSSustainabilityHeaderView.swift in Sources */,
-				D712C59125F774F400D5EA0A /* KLineStateManger.swift in Sources */,
-				D726B5B125F3791800B51D61 /* LSMarketListCell.swift in Sources */,
-				D712C58E25F774F400D5EA0A /* VolChartRenderer.swift in Sources */,
-				D777B70A25E64AF70082CC1B /* LSVerifyCodeView.swift in Sources */,
-				3C13EBE125F65E85003A58BE /* LSMarketListViewController.swift in Sources */,
-				D712C59725F774F400D5EA0A /* KLineModel.swift in Sources */,
-				D70D19E025E78A22009F7C3C /* LSVerifyCodeBtn.swift in Sources */,
+				D70E2EEF25F86DFF0025B9F3 /* LSForgotPasswordVC.swift in Sources */,
+				D70E2DFF25F86D730025B9F3 /* LSVerifyCodeBtn.swift in Sources */,
 				D7F9F50225C0FD6500BB32D7 /* AppDelegate.swift in Sources */,
-				D712C59D25F774F400D5EA0A /* KLinePeriodView.swift in Sources */,
-				D7F9F5A825C1122B00BB32D7 /* LSHomeViewController.swift in Sources */,
-				D712C58F25F774F400D5EA0A /* BaseChartRenderer.swift in Sources */,
+				D70E2EE825F86DFF0025B9F3 /* LSRegisterViewController.swift in Sources */,
+				D70E2E2825F86DAB0025B9F3 /* UIColor+RGB.swift in Sources */,
 				D78B821525E358DA00F2360E /* constantDefine.swift in Sources */,
-				D70CAFDE25F22D4700037A52 /* TestModel.swift in Sources */,
 				D7F9F55825C1063C00BB32D7 /* LSBaseViewController.swift in Sources */,
-				3C4CB3F925F7B57D00501916 /* LSSustainabilityManager.swift in Sources */,
-				D712C59325F774F400D5EA0A /* UIColor+RGB.swift in Sources */,
-				D79DC17925F5D095003ABCD5 /* LSOTCMainViewController.swift in Sources */,
-				D712C59025F774F400D5EA0A /* KLinePainterView.swift in Sources */,
+				D70E2E2625F86DAB0025B9F3 /* KLineStateManger.swift in Sources */,
+				D70E2EED25F86DFF0025B9F3 /* TestModel.swift in Sources */,
+				D70E2F2725F8B2190025B9F3 /* CHKLineChartStyle.swift in Sources */,
+				D70E2ED925F86DFF0025B9F3 /* LSOTCTradeUserInfo.swift in Sources */,
+				D70E2EEE25F86DFF0025B9F3 /* LSUserInfo.swift in Sources */,
+				D748D5FE25FA12D70048662A /* LSFeedBackModel.swift in Sources */,
+				D748D57B25F9BB530048662A /* LSFeedBackRecordVC.swift in Sources */,
+				D70E2E2F25F86DAB0025B9F3 /* KLineIndicatorsView.swift in Sources */,
+				D70E2F0725F86F140025B9F3 /* LSProfileHeaderView.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
-				3C13EBF725F669AB003A58BE /* LSMarketListItemModel.swift in Sources */,
-				D79DC16F25F5D07C003ABCD5 /* LSSustainabilityViewController.swift in Sources */,
+				D70E2F5625F8C31D0025B9F3 /* LSInviteViewController.swift in Sources */,
 				D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */,
-				D74C02E925E0E3C40017E1E7 /* LSLoginViewController.swift in Sources */,
-				D79DC18025F5D0AC003ABCD5 /* LSCoinCurrencyTradeVC.swift in Sources */,
+				D70E2E2125F86DAB0025B9F3 /* SecondaryChartRenderer.swift in Sources */,
+				D70E2E2725F86DAB0025B9F3 /* DataUtil.swift in Sources */,
 				D78B821A25E35C0300F2360E /* String+Extension.swift in Sources */,
-				D726B5AB25F3701C00B51D61 /* LSMarketListModel.swift in Sources */,
-				D712C58C25F774F400D5EA0A /* SecondaryChartRenderer.swift in Sources */,
+				D748D61625FA1F960048662A /* LSAliyunOSSManager.swift in Sources */,
+				D70E2E3225F86DAB0025B9F3 /* KLinePeriodView.swift in Sources */,
+				D70E2E2D25F86DAB0025B9F3 /* KLineState.swift in Sources */,
+				D70E2E2425F86DAB0025B9F3 /* BaseChartRenderer.swift in Sources */,
+				D70E2F2925F8B2190025B9F3 /* CHShapeLayer.swift in Sources */,
+				D70E2EE725F86DFF0025B9F3 /* LSProfileViewController.swift in Sources */,
+				D70E2ED525F86DFF0025B9F3 /* LSMarketListCell.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
+				D70E2EE525F86DFF0025B9F3 /* LSProfileCell.swift in Sources */,
+				D70E2ECF25F86DFF0025B9F3 /* LSMarketListModel.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
-				D712C58D25F774F400D5EA0A /* MainChartRenderer.swift in Sources */,
-				D79DC16125F5CCD8003ABCD5 /* LSProfileCell.swift in Sources */,
-				D726B5B725F383CE00B51D61 /* LSNoticeListModel.swift in Sources */,
-				3CA43FF325F108B20070229F /* LSProfileViewController.swift in Sources */,
+				D70E2ED025F86DFF0025B9F3 /* LSBannerModel.swift in Sources */,
+				D70E2EF025F86DFF0025B9F3 /* LSLoginViewController.swift in Sources */,
+				D748D56A25F9BA180048662A /* LSFeedBackRootVC.swift in Sources */,
+				D70E2ECE25F86DFF0025B9F3 /* LSHomeViewController.swift in Sources */,
+				D70E2F2825F8B2190025B9F3 /* CHDepthChartView.swift in Sources */,
+				D70E2E2E25F86DAB0025B9F3 /* KLineInfoView.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
-				D712C59625F774F400D5EA0A /* KLineChartView.swift in Sources */,
+				D70E2EDC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift in Sources */,
+				D70E2EDE25F86DFF0025B9F3 /* LSSustainabilityViewController.swift in Sources */,
+				D70E2ED725F86DFF0025B9F3 /* LSTradeMainViewController.swift in Sources */,
+				D70E2E2B25F86DAB0025B9F3 /* KLineChartView.swift in Sources */,
+				D70E2E2C25F86DAB0025B9F3 /* KLineModel.swift in Sources */,
+				D70E2ED125F86DFF0025B9F3 /* LSNoticeListModel.swift in Sources */,
+				D70E2EF225F86DFF0025B9F3 /* LSMarketListItemModel.swift in Sources */,
+				D70E2DFE25F86D730025B9F3 /* LSVerifyCodeView.swift in Sources */,
+				D70E2E2225F86DAB0025B9F3 /* MainChartRenderer.swift in Sources */,
 				D7F9F55025C1000C00BB32D7 /* LSMainTabbarController.swift in Sources */,
-				D712C59525F774F400D5EA0A /* ChartStyle.swift in Sources */,
-				D712C59225F774F400D5EA0A /* DataUtil.swift in Sources */,
-				D78B820525E3512600F2360E /* LSRegisterViewController.swift in Sources */,
-				D712C59425F774F400D5EA0A /* Calculate.swift in Sources */,
-				3C4CB3FE25F7B67900501916 /* LSSustainabilityBaseView.swift in Sources */,
-				D726B59F25F369FC00B51D61 /* LSHomeItemCell.swift in Sources */,
+				D70E2EE225F86DFF0025B9F3 /* LSSustainabilityHeaderView.swift in Sources */,
+				D70E2E3325F86DAB0025B9F3 /* KLineVerticalIndicatorsView.swift in Sources */,
+				D70E2EE025F86DFF0025B9F3 /* LSSustainabilityBaseView.swift in Sources */,
+				D70E2E2525F86DAB0025B9F3 /* KLinePainterView.swift in Sources */,
+				D748D57425F9BB430048662A /* LSFeedBackViewController.swift in Sources */,
+				D70E2EF125F86DFF0025B9F3 /* LSMarketListViewController.swift in Sources */,
+				D70E2E2A25F86DAB0025B9F3 /* ChartStyle.swift in Sources */,
 				D78B820F25E3586400F2360E /* Localize.swift in Sources */,
-				D777B70325E647F00082CC1B /* LSForgotPasswordVC.swift in Sources */,
-				D712C59825F774F400D5EA0A /* KLineState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,7 +1079,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -995,7 +1134,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1014,14 +1153,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HYEX_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.HYEX-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1035,14 +1174,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HYEX_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.HYEX-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

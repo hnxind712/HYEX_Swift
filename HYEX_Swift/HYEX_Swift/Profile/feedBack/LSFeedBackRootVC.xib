@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSFeedBackRootVC" customModule="HYEX_Swift" customModuleProvider="target">
+            <connections>
+                <outlet property="functionView" destination="hhT-Fe-t4m" id="7Tr-OW-dbH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhT-Fe-t4m">
+                    <rect key="frame" x="10" y="54" width="394" height="30"/>
+                    <subviews>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6n-J2-t7D">
+                            <rect key="frame" x="0.0" y="0.0" width="197" height="30"/>
+                            <color key="backgroundColor" red="0.18823529411764706" green="0.47058823529411764" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="在线反馈">
+                                <color key="titleColor" red="0.31372549019607843" green="0.32156862745098036" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="showFeedBackAction:" destination="-1" eventType="touchUpInside" id="Hbu-WD-2UQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcZ-gw-JTH">
+                            <rect key="frame" x="197" y="0.0" width="197" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="反馈记录">
+                                <color key="titleColor" red="0.31372549020000001" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="showFeedBackRecordAction:" destination="-1" eventType="touchUpInside" id="wZP-8w-uH2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="lcZ-gw-JTH" firstAttribute="width" secondItem="Y6n-J2-t7D" secondAttribute="width" id="D0p-Y2-5lC"/>
+                        <constraint firstItem="lcZ-gw-JTH" firstAttribute="leading" secondItem="Y6n-J2-t7D" secondAttribute="trailing" id="IFV-F7-iZc"/>
+                        <constraint firstAttribute="bottom" secondItem="Y6n-J2-t7D" secondAttribute="bottom" id="Lyb-YI-R8p"/>
+                        <constraint firstItem="Y6n-J2-t7D" firstAttribute="leading" secondItem="hhT-Fe-t4m" secondAttribute="leading" id="OwV-u0-PpM"/>
+                        <constraint firstAttribute="height" constant="30" id="itm-OF-qXb"/>
+                        <constraint firstAttribute="bottom" secondItem="lcZ-gw-JTH" secondAttribute="bottom" id="rs8-ZK-Trt"/>
+                        <constraint firstItem="lcZ-gw-JTH" firstAttribute="top" secondItem="hhT-Fe-t4m" secondAttribute="top" id="u6z-0m-4rr"/>
+                        <constraint firstAttribute="trailing" secondItem="lcZ-gw-JTH" secondAttribute="trailing" id="wLW-tn-GMu"/>
+                        <constraint firstItem="Y6n-J2-t7D" firstAttribute="top" secondItem="hhT-Fe-t4m" secondAttribute="top" id="xv2-ra-lik"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.89019607840000003" green="0.91372549020000005" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hhT-Fe-t4m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="2su-g3-YTx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hhT-Fe-t4m" secondAttribute="trailing" constant="10" id="p0R-LW-n9h"/>
+                <constraint firstItem="hhT-Fe-t4m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="tIu-Lj-yAC"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="127"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

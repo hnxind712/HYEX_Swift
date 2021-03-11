@@ -24,6 +24,9 @@ let KBaseUrl: String = "http://45.204.12.243/api-test"
 // MARK: toast隐藏的时间
 let KHideDelay: TimeInterval = 1
 
+// MARK: 页码size
+let KPageSize = 20
+
 // MARK: 区域号
 let KBasicAreaCode = "86"
 
@@ -46,4 +49,7 @@ let KLoginUrl = "/user/login"
 
 // MARK: 获取用户信息
 let KUserInfoUrl = "/user/user-info"
+
+// MARK: 版本信息
+let KGetAppVersionURL = "/app-version"
 

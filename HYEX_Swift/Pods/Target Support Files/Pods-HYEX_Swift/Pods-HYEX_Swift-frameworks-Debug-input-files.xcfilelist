@@ -1,9 +1,11 @@
 ${PODS_ROOT}/Target Support Files/Pods-HYEX_Swift/Pods-HYEX_Swift-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework
+${BUILT_PRODUCTS_DIR}/CLImagePickerTool/CLImagePickerTool.framework
+${BUILT_PRODUCTS_DIR}/DryAliyunOSS-iOS/DryAliyunOSS_iOS.framework
 ${BUILT_PRODUCTS_DIR}/JXBanner/JXBanner.framework
 ${BUILT_PRODUCTS_DIR}/JXPageControl/JXPageControl.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
-${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftPullToRefresh/SwiftPullToRefresh.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

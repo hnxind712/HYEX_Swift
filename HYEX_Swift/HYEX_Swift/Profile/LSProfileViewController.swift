@@ -26,17 +26,43 @@ class LSProfileViewController: LSBaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var tradeInfo: LSOTCTradeUserInfo?
     
-    
+    lazy var headerView: LSProfileHeaderView = {
+        let header = LSProfileHeaderView.profileHeaderView()
+        
+        header?.shareBlock = {
+            let share = LSInviteViewController()
+            self.navigationController?.pushViewController(share, animated: true)
+        }
+        return header!
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "我的".localized
         
         setupLayout()
         
         setupBind()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)//(0x3685F9)
+        self.navigationController?.navigationBar.barTintColor = headerView.backgroundColor
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0xffffff,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        headerView.reloadHeaderView()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0x000000,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+    }
     func setupLayout() {
         tableView.register(UINib.init(nibName: String(describing: LSProfileCell.self), bundle: nil), forCellReuseIdentifier: String(describing: LSProfileCell.self))
+        tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
     }
     
@@ -113,8 +139,34 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView.init(frame: CGRect(x: 0, y: 0, width: kScreen_width, height: 4))
+        view.backgroundColor = HEXCOLOR(h: 0xEBF1F7, alpha: 1)
+        return view
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 4
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == 0 {
+                
+            }
+        case 1:
+            if indexPath.row == 0 {//安全中心
+                let safety = LSSafetyViewController()
+                self.navigationController?.pushViewController(safety, animated: true)
+            }
+        case 2:
+            if indexPath.row == 3 {
+                let feedback = LSFeedBackRootVC()
+                self.navigationController?.pushViewController(feedback, animated: true)
+            }
+
+        default: break
+            
+        }
     }
 }

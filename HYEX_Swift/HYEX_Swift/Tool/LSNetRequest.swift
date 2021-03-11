@@ -37,9 +37,10 @@ class LSNetRequest{
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
         print(KBaseUrl + urlString)
-        Alamofire.request(KBaseUrl + urlString, method: .get, parameters: params, encoding: encoding, headers: header).responseJSON { (response) in
+        AF.request(KBaseUrl + urlString, method: .get, parameters: params, encoding: encoding, headers: header).responseJSON{ (response) in
             switch response.result{
             case .success(let value):
+                print(value)
                 success(value)
             case .failure(let error):
                 failure!(error)
@@ -60,12 +61,12 @@ class LSNetRequest{
         }
         //配置token信息
         if LSLoginModel.verifyLogin() {
-            header["token"] = LSLoginModel.sharedInstace().token
+            header["token"] = LSLoginModel.sharedInstace()?.token
         }
         print(KBaseUrl + urlString)
         print("*********")
         print(dic)
-        Alamofire.request(KBaseUrl + urlString, method: .post, parameters: dic, encoding: encoding, headers: header).responseJSON { (response) in
+        AF.request(KBaseUrl + urlString, method: .post, parameters: dic, encoding: encoding, headers: header).responseJSON { (response) in
             switch response.result{
             case .success(let value):
                 print(value)
@@ -92,7 +93,7 @@ class LSNetRequest{
             UserDefaults.standard.setValue(String(format: "%d", interval), forKey: "uniqueStr")
             UserDefaults.standard.synchronize()
         }
-        var destination: DownloadRequest.DownloadFileDestination!
+        var destination: DownloadRequest.Destination!
         destination = {_ ,response in
             let documentURL = URL(fileURLWithPath: NSHomeDirectory() + "/Documents/Download/")
             // 在路径追加文件名称
@@ -101,8 +102,8 @@ class LSNetRequest{
             return (fileUrl , [.removePreviousFile, .createIntermediateDirectories])
         }
         
-        let downloadRequest = Alamofire.download(KBaseUrl + urlString, method: .get, parameters: seedParams, encoding: encoding, headers: nil, to: destination).responseData { (response) in
-            if let data = response.result.value {
+        let downloadRequest = AF.download(KBaseUrl + urlString, method: .get, parameters: seedParams, encoding: encoding, headers: nil, to: destination).responseData { (response) in
+            if let data = response.value {
                    success(data)
                }
         }

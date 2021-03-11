@@ -66,8 +66,8 @@ class LSMainTabbarController: UITabBarController {
                     nav.tabBarItem.title = (dic[KTabbarTitle])
                     nav.tabBarItem.image = UIImage(named: dic[KTabbarImage]!)
                     nav.tabBarItem.selectedImage = UIImage(named: dic[KTabbarSelectedImage]!)
-                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),NSAttributedStringKey.foregroundColor : HEXCOLOR(h: 0xc8c8c8, alpha: 1)], for: .normal)
-                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),NSAttributedStringKey.foregroundColor : HEXCOLOR(h: 0x5B5B5B, alpha: 1)], for: .selected)
+                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor : HEXCOLOR(h: 0xc8c8c8, alpha: 1)], for: .normal)
+                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor : HEXCOLOR(h: 0x5B5B5B, alpha: 1)], for: .selected)
                     childControllers.append(nav)
                 }
             }

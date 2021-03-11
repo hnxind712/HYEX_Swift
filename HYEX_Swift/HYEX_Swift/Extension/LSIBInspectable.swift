@@ -49,4 +49,21 @@ extension UIView {
         filLayer.path = filPath.cgPath
         layer.mask = filLayer
     }
+    // MARK: 定义渐变颜色枚举
+    enum GradientDirection:Int {
+        case TopToBottom = 0,LeftToRight,LeftTopToRightBottom,LeftBottomToRightTop
+    }
+    func viewGradient(with colors: [CGColor],gradient: GradientDirection = .LeftToRight) {
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.bounds
+        
+        gradientLayer.startPoint = CGPoint.zero
+        
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        gradientLayer.colors = colors
+        
+        self.layer.addSublayer(gradientLayer)
+    }
 }
