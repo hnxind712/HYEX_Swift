@@ -27,7 +27,7 @@ class LSInviteViewController: LSBaseViewController {
             if let userInfo = LSUserInfo.sharedInstance(){
                 self.inviteUrl.text = "\(download)?invite=\(userInfo.inviteCode!)"
                 self.inviteCode.text = userInfo.inviteCode!
-                self.loadQRcode(with: self.inviteUrl.text!, self.imageCode.bounds.width)
+                self.imageCode.image = self.loadQRcode(with: self.inviteUrl.text!, self.imageCode.bounds.width)
             }
         } failure: { (error) in
             

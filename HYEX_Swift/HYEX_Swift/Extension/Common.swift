@@ -57,63 +57,12 @@ public var kScreen_width: CGFloat{
 public var kScreen_height: CGFloat{
     return UIScreen.main.bounds.height
 }
-/**
- 
- typedef NS_ENUM(NSInteger, GradientDirection) {
-      GradientDirectionTopToBottom = 0,    // 从上往下 渐变
-      GradientDirectionLeftToRight,        // 从左往右
-      GradientDirectionBottomToTop,      // 从下往上
-      GradientDirectionRightToLeft      // 从右往左
- };
 
-
- +(UIImage*)gradientImageWithBounds:(CGRect)bounds andColors:(NSArray*)colors andGradientType:(GradientDirection)gradientType{
-     NSMutableArray *ar = [NSMutableArray array];
-
-     for(UIColor *c in colors) {
-        [ar addObject:(id)c.CGColor];
-     }
-     UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 1);
-     CGContextRef context = UIGraphicsGetCurrentContext();
-     CGContextSaveGState(context);
-     CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors lastObject] CGColor]);
-     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)ar, NULL);
-     CGPoint startPt =  CGPointMake(0.0, 0.0);
-     CGPoint endPt =  CGPointMake(0.0, 0.0);
-
-    switch (gradientType) {
-        case GradientDirectionTopToBottom:
-           startPt= CGPointMake(0.0, 0.0);
-           endPt= CGPointMake(0.0, bounds.size.height);
-        break;
-        case GradientDirectionLeftToRight:
-           startPt = CGPointMake(0.0, 0.0);
-           endPt = CGPointMake(bounds.size.width, 0.0);
-        break;
-        case GradientDirectionBottomToTop:
-           startPt = CGPointMake(0.0, bounds.size.height);
-           endPt = CGPointMake(0.0, 0.0);
-        break;
-        case GradientDirectionRightToLeft:
-           startPt = CGPointMake(bounds.size.width, 0.0);
-           endPt = CGPointMake(0, 0.0);
-        break;
-   }
-   CGContextDrawLinearGradient(context, gradient, startPt, endPt, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
-   UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-   CGGradientRelease(gradient);
-   CGContextRestoreGState(context);
-   CGColorSpaceRelease(colorSpace);
-   UIGraphicsEndImageContext();
-   return image;
- }
- 
- */
-// MARK: 定义渐变颜色枚举
-enum GradientDirection:Int {
-    case TopToBottom = 0,LeftToRight,LeftTopToRightBottom,LeftBottomToRightTop
-}
 extension UIImage{
+    // MARK: 定义渐变颜色枚举
+    enum GradientDirection:Int {
+        case TopToBottom = 0,LeftToRight,LeftTopToRightBottom,LeftBottomToRightTop
+    }
     class func gradientImage(size: CGSize,colors color: [UIColor],gradientType type: GradientDirection) -> UIImage {
         var arr:[CGColor] = Array()
         for _color in color {

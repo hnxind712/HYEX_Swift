@@ -39,11 +39,11 @@ struct LSLoginModel: Codable {
     let token: String?
     
     // MARK: 创建初始化方法
-    static func sharedInstace()->LSLoginModel{
-        return instance!
+    static func sharedInstace()->LSLoginModel?{
+        return instance
     }
     private static var instance:LSLoginModel? = {
-        if let data = UserDefaults.standard.value(forKey: "lists") as? Data{
+        if let data = UserDefaults.standard.value(forKey: KLoginModelKey) as? Data{
             let model: LSLoginModel  = try! PropertyListDecoder().decode(LSLoginModel.self,from:data)
             return model
         }

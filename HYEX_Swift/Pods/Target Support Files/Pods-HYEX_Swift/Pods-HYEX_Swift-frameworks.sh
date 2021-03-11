@@ -198,6 +198,9 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CLImagePickerTool/CLImagePickerTool.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DryAliyunOSS-iOS/DryAliyunOSS_iOS.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXBanner/JXBanner.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPageControl/JXPageControl.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
@@ -208,6 +211,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CLImagePickerTool/CLImagePickerTool.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DryAliyunOSS-iOS/DryAliyunOSS_iOS.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXBanner/JXBanner.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPageControl/JXPageControl.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"

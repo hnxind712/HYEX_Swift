@@ -58,7 +58,7 @@ class LSProfileViewController: LSBaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0xffffff,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0x000000,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
     }
     func setupLayout() {
         tableView.register(UINib.init(nibName: String(describing: LSProfileCell.self), bundle: nil), forCellReuseIdentifier: String(describing: LSProfileCell.self))
@@ -159,7 +159,11 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 let safety = LSSafetyViewController()
                 self.navigationController?.pushViewController(safety, animated: true)
             }
-        case 2: break
+        case 2:
+            if indexPath.row == 3 {
+                let feedback = LSFeedBackRootVC()
+                self.navigationController?.pushViewController(feedback, animated: true)
+            }
 
         default: break
             

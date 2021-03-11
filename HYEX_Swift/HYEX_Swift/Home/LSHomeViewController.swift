@@ -85,7 +85,7 @@ class LSHomeViewController: LSBaseViewController {
     private func getNoticeListDatasource(){
         let params: [String : Any] = ["locale" : "zh_CN",
                                       "pageNo" : "1",
-                                      "pageSize" : "20",
+                                      "pageSize" : KPageSize,
                                       "type" : "CONTENT"]
         
         LSNetRequest.sharedInstance.getRequest(KNoticeUrl, params: params) { (response) in
