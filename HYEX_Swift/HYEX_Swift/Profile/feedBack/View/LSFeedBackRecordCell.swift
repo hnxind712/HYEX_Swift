@@ -13,7 +13,6 @@ class LSFeedBackRecordCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var replyView: UIView!
-    @IBOutlet weak var replyHeight: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN8-oA-I1h">
-                        <rect key="frame" x="10" y="85" width="355" height="30"/>
+                        <rect key="frame" x="10" y="87" width="355" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回复：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-OZ-r9E">
                                 <rect key="frame" x="10" y="6" width="40" height="16"/>
@@ -56,8 +56,8 @@
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tns-oU-ZOH" firstAttribute="top" secondItem="Ncx-OZ-r9E" secondAttribute="top" id="2IX-eD-ejn"/>
+                            <constraint firstAttribute="bottom" secondItem="tns-oU-ZOH" secondAttribute="bottom" constant="6" id="Lmh-pO-qpP"/>
                             <constraint firstAttribute="trailing" secondItem="tns-oU-ZOH" secondAttribute="trailing" constant="10" id="PEB-kQ-3Ik"/>
-                            <constraint firstAttribute="height" constant="30" id="ViT-WJ-Wfg"/>
                             <constraint firstItem="tns-oU-ZOH" firstAttribute="leading" secondItem="Ncx-OZ-r9E" secondAttribute="trailing" constant="4" id="hUk-Sw-nl5"/>
                             <constraint firstItem="Ncx-OZ-r9E" firstAttribute="top" secondItem="iN8-oA-I1h" secondAttribute="top" constant="6" id="k1V-1L-zcQ"/>
                             <constraint firstItem="Ncx-OZ-r9E" firstAttribute="leading" secondItem="iN8-oA-I1h" secondAttribute="leading" constant="10" id="wwI-wh-8kD"/>
@@ -93,7 +93,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="message" destination="tns-oU-ZOH" id="HZS-Sv-pI9"/>
-                <outlet property="replyHeight" destination="ViT-WJ-Wfg" id="5i8-l5-h4j"/>
                 <outlet property="replyView" destination="iN8-oA-I1h" id="kyN-bV-8cn"/>
                 <outlet property="time" destination="pjh-vj-oU6" id="Fei-XV-85M"/>
                 <outlet property="title" destination="2Rf-Wu-0Ps" id="Vci-ge-PFG"/>

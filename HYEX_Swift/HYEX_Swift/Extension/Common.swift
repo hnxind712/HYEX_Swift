@@ -98,4 +98,26 @@ extension UIImage{
         return image!
     }
 }
-
+// MARK: 实名认证的跳转问题
+func authentication(parent viewController: LSBaseViewController) {
+    let userInfo = LSUserInfo.sharedInstance()
+    
+    switch userInfo?.realNameStatus {
+    case 0:
+        let authen = LSAuthenticationViewController()
+        viewController.navigationController?.pushViewController(authen, animated: true)
+    case 1:
+        let authen = LSAuthenticationStatusVC()
+        authen.authentiCationStatus = .process
+        viewController.navigationController?.pushViewController(authen, animated: true)
+        
+    case 2:
+        let authen = LSAuthenticationStatusVC()
+        authen.authentiCationStatus = .passed
+        viewController.navigationController?.pushViewController(authen, animated: true)
+    default:
+        let authen = LSAuthenticationViewController()
+        viewController.navigationController?.pushViewController(authen, animated: true)
+    }
+    
+}

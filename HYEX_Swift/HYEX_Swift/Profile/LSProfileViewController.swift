@@ -122,7 +122,7 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.detailMessage.textColor = HEXCOLOR(h: 0x4162A6, alpha: 1)
                 cell.detailMessage.textAlignment = .right
                 break
-            case 3:
+            case 4:
                 cell.detailMessage.text = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
                 cell.detailMessage.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
                 cell.detailMessage.textAlignment = .right
@@ -158,11 +158,16 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
             if indexPath.row == 0 {//安全中心
                 let safety = LSSafetyViewController()
                 self.navigationController?.pushViewController(safety, animated: true)
+            }else{
+                authentication(parent: self)
             }
         case 2:
-            if indexPath.row == 3 {
+            if indexPath.row == 3 {//提交工单
                 let feedback = LSFeedBackRootVC()
                 self.navigationController?.pushViewController(feedback, animated: true)
+            }else if indexPath.row == 4 {//版本更新
+                let version = LSVersinUploadViewController()
+                self.navigationController?.pushViewController(version, animated: true)
             }
 
         default: break

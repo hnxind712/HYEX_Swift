@@ -62,7 +62,7 @@ struct LSUserInfo: Codable {
     
     let realName: String?    //用户真实姓名
     
-    let realNameStatus: Int32?   //实名验证状态，0，未实名验证，1，等待身份证验证，2：身份证号码验证通过
+    var realNameStatus: Int32?   //实名验证状态，0，未实名验证，1，等待身份证验证，2：身份证号码验证通过
     
     let referrer: Int32? //推荐人id
     
