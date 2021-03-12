@@ -125,6 +125,11 @@
 		D7FED3FA25FB666200DD3F6F /* LSVersinUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FED3F825FB666200DD3F6F /* LSVersinUploadViewController.xib */; };
 		D7FED3FF25FB6D6100DD3F6F /* LSCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FED3FE25FB6D6000DD3F6F /* LSCustomAlertView.swift */; };
 		D7FED40425FB6D7400DD3F6F /* LSCustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FED40325FB6D7400DD3F6F /* LSCustomAlertView.xib */; };
+		D7FED40E25FB749300DD3F6F /* LSInviteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FED40C25FB749300DD3F6F /* LSInviteListViewController.swift */; };
+		D7FED40F25FB749300DD3F6F /* LSInviteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FED40D25FB749300DD3F6F /* LSInviteListViewController.xib */; };
+		D7FED41A25FB775E00DD3F6F /* LSInviteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FED41825FB775E00DD3F6F /* LSInviteListCell.swift */; };
+		D7FED41B25FB775E00DD3F6F /* LSInviteListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FED41925FB775E00DD3F6F /* LSInviteListCell.xib */; };
+		D7FED42025FB777700DD3F6F /* LSInviteListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FED41F25FB777700DD3F6F /* LSInviteListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +276,11 @@
 		D7FED3F825FB666200DD3F6F /* LSVersinUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSVersinUploadViewController.xib; sourceTree = "<group>"; };
 		D7FED3FE25FB6D6000DD3F6F /* LSCustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSCustomAlertView.swift; sourceTree = "<group>"; };
 		D7FED40325FB6D7400DD3F6F /* LSCustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSCustomAlertView.xib; sourceTree = "<group>"; };
+		D7FED40C25FB749300DD3F6F /* LSInviteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSInviteListViewController.swift; sourceTree = "<group>"; };
+		D7FED40D25FB749300DD3F6F /* LSInviteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSInviteListViewController.xib; sourceTree = "<group>"; };
+		D7FED41825FB775E00DD3F6F /* LSInviteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSInviteListCell.swift; sourceTree = "<group>"; };
+		D7FED41925FB775E00DD3F6F /* LSInviteListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSInviteListCell.xib; sourceTree = "<group>"; };
+		D7FED41F25FB777700DD3F6F /* LSInviteListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSInviteListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,12 +521,11 @@
 				D70E2EBA25F86DFF0025B9F3 /* View */,
 				D748D56725F9BA010048662A /* feedBack */,
 				D732D60A25FB1E41000126E6 /* Authentication */,
+				D7FED40B25FB746C00DD3F6F /* Invite */,
 				D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */,
 				D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */,
 				D70E2F4125F8B55B0025B9F3 /* LSSafetyViewController.swift */,
 				D70E2F4225F8B55B0025B9F3 /* LSSafetyViewController.xib */,
-				D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */,
-				D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */,
 				D7FED3F025FB558300DD3F6F /* LSHelpCenterViewController.swift */,
 				D7FED3F125FB558300DD3F6F /* LSHelpCenterViewController.xib */,
 				D7FED3F725FB666200DD3F6F /* LSVersinUploadViewController.swift */,
@@ -753,6 +762,36 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D7FED40B25FB746C00DD3F6F /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				D7FED41725FB773F00DD3F6F /* Model */,
+				D7FED41625FB773F00DD3F6F /* View */,
+				D70E2F5425F8C31D0025B9F3 /* LSInviteViewController.swift */,
+				D70E2F5525F8C31D0025B9F3 /* LSInviteViewController.xib */,
+				D7FED40C25FB749300DD3F6F /* LSInviteListViewController.swift */,
+				D7FED40D25FB749300DD3F6F /* LSInviteListViewController.xib */,
+			);
+			path = Invite;
+			sourceTree = "<group>";
+		};
+		D7FED41625FB773F00DD3F6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7FED41825FB775E00DD3F6F /* LSInviteListCell.swift */,
+				D7FED41925FB775E00DD3F6F /* LSInviteListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7FED41725FB773F00DD3F6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7FED41F25FB777700DD3F6F /* LSInviteListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -858,6 +897,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FED40F25FB749300DD3F6F /* LSInviteListViewController.xib in Resources */,
 				D70E2E3025F86DAB0025B9F3 /* KLinePeriodView.xib in Resources */,
 				D70E2F2425F8B2190025B9F3 /* kline.json in Resources */,
 				D70E2EDD25F86DFF0025B9F3 /* LSTradeMainViewController.xib in Resources */,
@@ -889,6 +929,7 @@
 				D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */,
 				D70E2F2125F8B2190025B9F3 /* Market2.json in Resources */,
 				D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */,
+				D7FED41B25FB775E00DD3F6F /* LSInviteListCell.xib in Resources */,
 				D732D60E25FB1E59000126E6 /* LSAuthenticationViewController.xib in Resources */,
 				D7FED3F325FB558300DD3F6F /* LSHelpCenterViewController.xib in Resources */,
 				D70E2F4425F8B55B0025B9F3 /* LSSafetyViewController.xib in Resources */,
@@ -1005,14 +1046,17 @@
 				D70E2EE725F86DFF0025B9F3 /* LSProfileViewController.swift in Sources */,
 				D70E2ED525F86DFF0025B9F3 /* LSMarketListCell.swift in Sources */,
 				D726B57925F3206B00B51D61 /* MD5.swift in Sources */,
+				D7FED41A25FB775E00DD3F6F /* LSInviteListCell.swift in Sources */,
 				D70E2EE525F86DFF0025B9F3 /* LSProfileCell.swift in Sources */,
 				3CEDFB7825FA5EDD0004F88B /* LSFeedBackRecordCell.swift in Sources */,
 				D70E2ECF25F86DFF0025B9F3 /* LSMarketListModel.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
+				D7FED42025FB777700DD3F6F /* LSInviteListModel.swift in Sources */,
 				D70E2ED025F86DFF0025B9F3 /* LSBannerModel.swift in Sources */,
 				D7FED3F225FB558300DD3F6F /* LSHelpCenterViewController.swift in Sources */,
 				D70E2EF025F86DFF0025B9F3 /* LSLoginViewController.swift in Sources */,
 				D748D56A25F9BA180048662A /* LSFeedBackRootVC.swift in Sources */,
+				D7FED40E25FB749300DD3F6F /* LSInviteListViewController.swift in Sources */,
 				D70E2ECE25F86DFF0025B9F3 /* LSHomeViewController.swift in Sources */,
 				D70E2F2825F8B2190025B9F3 /* CHDepthChartView.swift in Sources */,
 				D70E2E2E25F86DAB0025B9F3 /* KLineInfoView.swift in Sources */,
