@@ -9,7 +9,11 @@ import UIKit
 import SwiftyJSON
 
 let KVersionUpdateUrl = "/app-version"
+let KLogoutUrl = "/user/logout"
 
+enum KRootType {
+    case main,login
+}
 @main
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +50,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = nav
         }
     }
+    
+    // MARK: 重新设置界面
+    func resetAppRoot(with type: KRootType) {
+        if type == .login {
+            self.logout {
+                let loginVC = LSLoginViewController()
+                loginVC.isShowClose = false
+                let nav:LSBaseNavigationController = LSBaseNavigationController.init(rootViewController: loginVC)
+                self.window?.rootViewController = nav
+            }
+        }else{
+            window?.rootViewController = mainTabbar
+        }
+    }
 }
 extension AppDelegate{
     func updateVersion() {
@@ -72,5 +90,18 @@ extension AppDelegate{
             
         }
     }
-    
+    // MARK: 修改登录密码之后需要重新登录,暂时保留回调，理论上只需要切换root
+    func logout(_ sucess:(()->())? = nil) {
+        LSNetRequest.sharedInstance.getRequest(KLoginUrl) { (response) in
+            let json = JSON(response)
+            if json["statusCode"].int == 0 {
+                UserDefaults.standard.removeObject(forKey: KUserInfoKey)
+                UserDefaults.standard.removeObject(forKey: KLoginModelKey)
+                UserDefaults.standard.synchronize()
+                sucess?()
+            }else{
+                self.window?.makeToast(json["errorMessage"].string)
+            }
+        }
+    }
 }

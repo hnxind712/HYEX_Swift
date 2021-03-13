@@ -64,6 +64,6 @@ extension UIView {
         
         gradientLayer.colors = colors
         
-        self.layer.addSublayer(gradientLayer)
+        self.layer.insertSublayer(gradientLayer, at: 0)
     }
 }

@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSInviteListViewController" customModule="HYEX_Swift" customModuleProvider="target">
             <connections>
                 <outlet property="earningConvert" destination="gmT-yI-ofa" id="2gB-ZT-ldM"/>
-                <outlet property="headerView" destination="x7B-So-sjs" id="Bd5-Tl-MXa"/>
+                <outlet property="headerView" destination="nbE-cf-z23" id="Fsn-sI-R1G"/>
                 <outlet property="tableView" destination="tNJ-SK-A7h" id="dlh-4P-uKp"/>
                 <outlet property="totalInvite" destination="lbW-9S-Gy5" id="eOG-fR-WzT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

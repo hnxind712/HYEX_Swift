@@ -18,4 +18,18 @@ extension String {
         let maxSize = (self as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: attribute, context: nil).size
         return maxSize.height
     }
+    // MARK: 时间字符串转换
+    func timeTransition(formatter:String) -> String {
+        guard self.count > 0 else {
+            return ""
+        }
+        let currentFormatter = DateFormatter()
+        currentFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+        let date = currentFormatter.date(from: self)
+        
+        let transitionFormater = DateFormatter()
+        transitionFormater.dateFormat = formatter
+        let transitionString = transitionFormater.string(from: date!)
+        return transitionString
+    }
 }

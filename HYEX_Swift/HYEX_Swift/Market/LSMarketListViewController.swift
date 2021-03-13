@@ -34,6 +34,10 @@ class LSMarketListViewController: LSBaseViewController {
     func setuoLayout() {
         tableView.register(UINib.init(nibName: String(describing: LSMarketListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: LSMarketListCell.self))
         tableView.tableFooterView = UIView()
+        
+        tableView.spr_setTextHeader {
+            self.setupBind()
+        }
     }
     //MARK: 初始化定时器
     func initTimer() {

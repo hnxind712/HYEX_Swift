@@ -16,6 +16,8 @@ class LSInviteViewController: LSBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "邀请好友".localized
+        
         checkVersion()
         // Do any additional setup after loading the view.
     }
@@ -46,6 +48,8 @@ class LSInviteViewController: LSBaseViewController {
     }
     
     @IBAction func checkInviteListAction(_ sender: UITapGestureRecognizer) {
+        let invite = LSInviteListViewController()
+        self.navigationController?.pushViewController(invite, animated: true)
     }
 }
 extension LSInviteViewController{
