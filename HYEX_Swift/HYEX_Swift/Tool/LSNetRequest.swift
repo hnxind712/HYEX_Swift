@@ -10,7 +10,7 @@ import Alamofire
 
 let token = "7e1aaaab9215992dfe385ea54e43f9ed"//写死
 
-var header: HTTPHeaders = ["token":token,"Accept-Language":Localize.currentLanguage()]
+var header: HTTPHeaders = ["Accept-Language":Localize.currentLanguage()]
 
 // MARK: 成功回调
 typealias ResponseSuccess = (_ responseData: Any)->()
@@ -36,8 +36,19 @@ class LSNetRequest{
                     failure: ResponseError? = nil) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
+        var dic: [String : Any] = [:]
+        if let para = params {
+            dic = para
+        }
+        if let value = UserDefaults.standard.value(forKey: "uniqueStr"){
+            dic["uniqueStr"] = "\(value)"
+        }
+        //配置token信息
+        if LSLoginModel.verifyLogin() {
+            header["token"] = LSLoginModel.sharedInstace()?.token
+        }
         print(KBaseUrl + urlString)
-        AF.request(KBaseUrl + urlString, method: .get, parameters: params, encoding: encoding, headers: header).responseJSON{ (response) in
+        AF.request(KBaseUrl + urlString, method: .get, parameters: dic, encoding: encoding, headers: header).responseJSON{ (response) in
             switch response.result{
             case .success(let value):
                 print(value)
@@ -55,7 +66,10 @@ class LSNetRequest{
                      failure: @escaping ResponseError) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
-        var dic: [String : Any] = params!
+        var dic: [String : Any] = [:]
+        if let para = params {
+            dic = para
+        }
         if let value = UserDefaults.standard.value(forKey: "uniqueStr"){
             dic["uniqueStr"] = "\(value)"
         }
@@ -80,15 +94,19 @@ class LSNetRequest{
     }
     
     func downloadGraphVerifyRequest(_ url: String,
-                         params: [String:Any],
+                         params: [String:Any]? = nil,
                          progress: @escaping ResponseProgress,
                          success: @escaping ResponseSuccess,
                          failure: @escaping ResponseError) {
         let urlString: String = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         let encoding:URLEncoding = .queryString
-        var seedParams:[String:Any] = params
+        
+        var seedParams:[String:Any]?
+        if let para = params{
+            seedParams = para
+        }
         let interval = Int32(Date().timeIntervalSince1970)
-        seedParams["seed"] = "\(interval)"
+        seedParams!["seed"] = "\(interval)"
         if urlString == KGraphValidateCode {//如果是图形验证码
             UserDefaults.standard.setValue(String(format: "%d", interval), forKey: "uniqueStr")
             UserDefaults.standard.synchronize()

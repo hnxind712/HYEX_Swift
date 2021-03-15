@@ -50,10 +50,10 @@ class LSProfileViewController: LSBaseViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:HEXCOLOR(h: 0xffffff,alpha: 1),NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+        self.setupBind()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        headerView.reloadHeaderView()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -78,7 +78,9 @@ class LSProfileViewController: LSBaseViewController {
         } failure: { (error) in
             
         }
-        LSLoginModel.getUserInfo()
+        LSLoginModel.getUserInfo(false) { (userInfo) in
+            self.headerView.reloadHeaderView()
+        }
     }
     
 }
@@ -153,6 +155,9 @@ extension LSProfileViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             if indexPath.row == 0 {
                 
+            }else{//收款账户
+                let payMethod = LSPayMethodBindVC()
+                self.navigationController?.pushViewController(payMethod, animated: true)
             }
         case 1:
             if indexPath.row == 0 {//安全中心

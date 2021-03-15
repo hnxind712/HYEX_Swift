@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftyJSON
+
 struct LSLoginModel: Codable {
     
     // MARK: 绑卡
@@ -62,19 +64,25 @@ struct LSLoginModel: Codable {
     }
     
     // MARK: 获取用户信息
-    static func getUserInfo(_ shouldPush: Bool = false) {
+    static func getUserInfo(_ shouldPush: Bool = false,_ completed:((_ userInfo: LSUserInfo)->())? = nil) {
         LSNetRequest.sharedInstance.getRequest(KUserInfoUrl, params: nil) { (response) in
             print(response)
-            
-            if let jsonData = response as? Dictionary<String, Any>{
-                if let userInfo = decodeJsonToModel(json: jsonData["content"] as Any, ele: LSUserInfo.self){
-                    print(userInfo)
-                    UserDefaults.standard.set(try? PropertyListEncoder().encode(userInfo.self), forKey: KUserInfoKey)
-                    if shouldPush {//登录状态下才需要发通知
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: KLoginSuccessNotifyKey), object: nil)//发送通知
+            let json = JSON(response)
+            if json["statusCode"].int == 0 {
+                if let jsonData = response as? Dictionary<String, Any>{
+                    if let userInfo = decodeJsonToModel(json: jsonData["content"] as Any, ele: LSUserInfo.self){
+                        print(userInfo)
+                        UserDefaults.standard.set(try? PropertyListEncoder().encode(userInfo.self), forKey: KUserInfoKey)
+                        if shouldPush {//登录状态下才需要发通知
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: KLoginSuccessNotifyKey), object: nil)//发送通知
+                        }
+                        if let block = completed {
+                            block(userInfo)
+                        }
                     }
-
                 }
+            }else{
+                UIApplication.shared.keyWindow?.makeToast(json["errorMessage"].string)
             }
         } failure: { (error) in
             

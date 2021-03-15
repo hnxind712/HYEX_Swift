@@ -74,6 +74,7 @@ extension LSFeedBackRecordVC: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: LSFeedBackRecordCell = tableView.dequeueReusableCell(withIdentifier: String(describing: LSFeedBackRecordCell.self)) as! LSFeedBackRecordCell
+        cell.selectionStyle = .none
         cell.model = datasource[indexPath.row]
         return cell
     }

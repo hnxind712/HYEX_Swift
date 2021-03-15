@@ -22,7 +22,7 @@ class LSVerifyCodeView: UIView {
         }
         return nil
     }
-    func show(_ params:[String:Any]) {
+    func show(_ params:[String:Any]? = nil) {
         let view = UIApplication.shared.keyWindow
         view?.addSubview(self)
         self.frame = view!.bounds
@@ -54,7 +54,7 @@ class LSVerifyCodeView: UIView {
         showGraphverifyCode()
     }
     func showGraphverifyCode() {
-        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KGraphValidateCode, params: _params!) { (progress) in
+        LSNetRequest.sharedInstance.downloadGraphVerifyRequest(KGraphValidateCode, params: _params) { (progress) in
             
         } success: { (response) in
             self.imageCode.image = UIImage(data: response as! Data)

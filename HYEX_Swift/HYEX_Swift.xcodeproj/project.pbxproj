@@ -101,6 +101,9 @@
 		D748D5FE25FA12D70048662A /* LSFeedBackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D5FD25FA12D70048662A /* LSFeedBackModel.swift */; };
 		D748D61625FA1F960048662A /* LSAliyunOSSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748D61525FA1F960048662A /* LSAliyunOSSManager.swift */; };
 		D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */; };
+		D759D58125FF35B500009C36 /* LSPayMethodBindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759D57F25FF35B500009C36 /* LSPayMethodBindVC.swift */; };
+		D759D58225FF35B500009C36 /* LSPayMethodBindVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D759D58025FF35B500009C36 /* LSPayMethodBindVC.xib */; };
+		D759D58925FF475C00009C36 /* LSPayMethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759D58825FF475C00009C36 /* LSPayMethodInfo.swift */; };
 		D75C174525FCA0CF00160B78 /* LSModifyPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C174325FCA0CF00160B78 /* LSModifyPasswordVC.swift */; };
 		D75C174625FCA0CF00160B78 /* LSModifyPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75C174425FCA0CF00160B78 /* LSModifyPasswordVC.xib */; };
 		D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820B25E3586400F2360E /* NSObject+Extension.swift */; };
@@ -248,6 +251,9 @@
 		D748D5FD25FA12D70048662A /* LSFeedBackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSFeedBackModel.swift; sourceTree = "<group>"; };
 		D748D61525FA1F960048662A /* LSAliyunOSSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSAliyunOSSManager.swift; sourceTree = "<group>"; };
 		D74C02F225E0E3EA0017E1E7 /* LSNetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSNetRequest.swift; sourceTree = "<group>"; };
+		D759D57F25FF35B500009C36 /* LSPayMethodBindVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPayMethodBindVC.swift; sourceTree = "<group>"; };
+		D759D58025FF35B500009C36 /* LSPayMethodBindVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSPayMethodBindVC.xib; sourceTree = "<group>"; };
+		D759D58825FF475C00009C36 /* LSPayMethodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPayMethodInfo.swift; sourceTree = "<group>"; };
 		D75C174325FCA0CF00160B78 /* LSModifyPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSModifyPasswordVC.swift; sourceTree = "<group>"; };
 		D75C174425FCA0CF00160B78 /* LSModifyPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSModifyPasswordVC.xib; sourceTree = "<group>"; };
 		D78B820B25E3586400F2360E /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -527,6 +533,7 @@
 				D732D60A25FB1E41000126E6 /* Authentication */,
 				D7FED40B25FB746C00DD3F6F /* Invite */,
 				D75C174225FCA06400160B78 /* Safety */,
+				D759D58625FF473A00009C36 /* PayMethod */,
 				D70E2EBD25F86DFF0025B9F3 /* LSProfileViewController.swift */,
 				D70E2EB925F86DFF0025B9F3 /* LSProfileViewController.xib */,
 				D7FED3F025FB558300DD3F6F /* LSHelpCenterViewController.swift */,
@@ -665,6 +672,24 @@
 				D726B57825F3206B00B51D61 /* MD5.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		D759D58625FF473A00009C36 /* PayMethod */ = {
+			isa = PBXGroup;
+			children = (
+				D759D58725FF475000009C36 /* Model */,
+				D759D57F25FF35B500009C36 /* LSPayMethodBindVC.swift */,
+				D759D58025FF35B500009C36 /* LSPayMethodBindVC.xib */,
+			);
+			path = PayMethod;
+			sourceTree = "<group>";
+		};
+		D759D58725FF475000009C36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D759D58825FF475C00009C36 /* LSPayMethodInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D75C174225FCA06400160B78 /* Safety */ = {
@@ -944,6 +969,7 @@
 				D70E2F5725F8C31D0025B9F3 /* LSInviteViewController.xib in Resources */,
 				D70E2F2125F8B2190025B9F3 /* Market2.json in Resources */,
 				D70E2EE425F86DFF0025B9F3 /* LSProfileViewController.xib in Resources */,
+				D759D58225FF35B500009C36 /* LSPayMethodBindVC.xib in Resources */,
 				D7FED41B25FB775E00DD3F6F /* LSInviteListCell.xib in Resources */,
 				D732D60E25FB1E59000126E6 /* LSAuthenticationViewController.xib in Resources */,
 				D7FED3F325FB558300DD3F6F /* LSHelpCenterViewController.xib in Resources */,
@@ -1027,6 +1053,7 @@
 				D7E81C9325E4ADB4003D760B /* LSIBInspectable.swift in Sources */,
 				D70E2EDF25F86DFF0025B9F3 /* LSSustainabilityManager.swift in Sources */,
 				D70E2EDA25F86DFF0025B9F3 /* LSOTCMainViewController.swift in Sources */,
+				D759D58125FF35B500009C36 /* LSPayMethodBindVC.swift in Sources */,
 				D70E2E2325F86DAB0025B9F3 /* VolChartRenderer.swift in Sources */,
 				D70E2EEC25F86DFF0025B9F3 /* LSLoginModel.swift in Sources */,
 				D7F9F55D25C1089B00BB32D7 /* LSBaseNavigationController.swift in Sources */,
@@ -1065,6 +1092,7 @@
 				D70E2EE525F86DFF0025B9F3 /* LSProfileCell.swift in Sources */,
 				3CEDFB7825FA5EDD0004F88B /* LSFeedBackRecordCell.swift in Sources */,
 				D70E2ECF25F86DFF0025B9F3 /* LSMarketListModel.swift in Sources */,
+				D759D58925FF475C00009C36 /* LSPayMethodInfo.swift in Sources */,
 				D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */,
 				D7FED42025FB777700DD3F6F /* LSInviteListModel.swift in Sources */,
 				D70E2ED025F86DFF0025B9F3 /* LSBannerModel.swift in Sources */,

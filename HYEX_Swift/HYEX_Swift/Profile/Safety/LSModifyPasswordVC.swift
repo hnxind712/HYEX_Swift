@@ -58,6 +58,14 @@ class LSModifyPasswordVC: LSBaseViewController {
         super.viewDidLoad()
         self.title = resetType == .login ? "登录密码".localized : "交易密码".localized
     }
+    @IBAction func showSecuryTextEntry(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.tag == 10 {
+            self.newpassword.isSecureTextEntry = !sender.isSelected
+        }else{
+            self.confirmPassword.isSecureTextEntry = !sender.isSelected
+        }
+    }
     @IBAction func getVerifyCodeAction(_ sender: LSVerifyCodeBtn) {
         verifyCodeView.show(["areaCode":"86"])
     }
@@ -70,7 +78,7 @@ class LSModifyPasswordVC: LSBaseViewController {
             self.view.makeToast("请再次输入新密码".localized)
             return
         }
-        guard newpassword.text! != confirmPassword.text! else {
+        guard newpassword.text! == confirmPassword.text! else {
             self.view.makeToast("两次输入的密码不一致".localized)
             return
         }

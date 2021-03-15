@@ -92,7 +92,7 @@ extension AppDelegate{
     }
     // MARK: 修改登录密码之后需要重新登录,暂时保留回调，理论上只需要切换root
     func logout(_ sucess:(()->())? = nil) {
-        LSNetRequest.sharedInstance.getRequest(KLoginUrl) { (response) in
+        LSNetRequest.sharedInstance.getRequest(KLogoutUrl) { (response) in
             let json = JSON(response)
             if json["statusCode"].int == 0 {
                 UserDefaults.standard.removeObject(forKey: KUserInfoKey)

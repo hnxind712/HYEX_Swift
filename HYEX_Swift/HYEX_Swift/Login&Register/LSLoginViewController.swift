@@ -52,6 +52,8 @@ class LSLoginViewController: LSBaseViewController {
     
     // MARK: - 忘记密码
     @IBAction func forgotPasswordAction(_ sender: UIButton) {
+        let forgorPassword = LSForgotPasswordVC()
+        self.navigationController?.pushViewController(forgorPassword, animated: true)
     }
     // MARK: - 去注册
     @IBAction func jumpToRegisterAction(_ sender: UIButton) {
@@ -61,6 +63,7 @@ class LSLoginViewController: LSBaseViewController {
     // MARK: - 是否显示密码
     @IBAction func showPasswordAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        self.passwordInput.isSecureTextEntry = !sender.isSelected
     }
     // MARK: - 登录
     @IBAction func loginAction(_ sender: UIButton) {
@@ -82,13 +85,18 @@ class LSLoginViewController: LSBaseViewController {
         // MARK: 登录
         LSNetRequest.sharedInstance.postRequest(KLoginUrl, params: ["userName":accountInput.text!,"password":passwordInput.text!,"captchaImgCode":verifyCodeInput.text!]) { (response) in
             print(response)
-            if let jsonDic = response as? Dictionary<String, Any>{
-                let model: LSLoginModel = decodeJsonToModel(json: jsonDic["content"], ele: LSLoginModel.self)!
-                print(model)
-                //请求个人数据，并缓存到本地
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(model), forKey: KLoginModelKey)
-                
-                LSLoginModel.getUserInfo(true)
+            let json = JSON(response)
+            if json["statusCode"].int == 0 {
+                if let jsonDic = response as? Dictionary<String, Any>{
+                    let model: LSLoginModel = decodeJsonToModel(json: jsonDic["content"], ele: LSLoginModel.self)!
+                    print(model)
+                    //请求个人数据，并缓存到本地
+                    UserDefaults.standard.set(try? PropertyListEncoder().encode(model), forKey: KLoginModelKey)
+                    
+                    LSLoginModel.getUserInfo(true)
+                }
+            }else{
+                self.view.makeToast(json["errorMessage"].string)
             }
         } failure: { (error) in
             self.view.makeToast(error.localizedDescription)

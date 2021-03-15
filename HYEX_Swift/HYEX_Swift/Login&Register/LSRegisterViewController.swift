@@ -55,16 +55,6 @@ class LSRegisterViewController: LSBaseViewController {
             return
         }
         verifyCodeView.show(["areaCode":"86"])
-        /*
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
-            codeTimer.resume()
-        }else{
-            codeTimer.suspend()
-            verifyBtn.setTitle("获取验证码".localized, for: .normal)
-            timeout = 60
-        }
- */
     }
     @IBAction func exchangeRegisterType(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
