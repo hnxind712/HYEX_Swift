@@ -11,7 +11,11 @@ import SwiftyJSON
 enum KPayMethod {
     case bankCard,wechat,alipay
 }
+//获取支付方式信息
 let KPayMethodInfoUrl = "/bank/bank-addresses"
+
+//关闭或开启
+let KPaymethodOnUrl = "/bank/enable-disable"
 
 class LSPayMethodBindVC: LSBaseViewController {
     //银行卡
@@ -19,24 +23,25 @@ class LSPayMethodBindVC: LSBaseViewController {
     @IBOutlet weak var bankCardView: UIView!
     @IBOutlet weak var bankCardOpenLabel: UILabel!
     @IBOutlet weak var bankCardSwitch: UISwitch!
+    @IBOutlet weak var bankCardInfo: UILabel!
+    @IBOutlet weak var bankName: UILabel!
     
-    
-    
+    //微信
     @IBOutlet weak var noWechatView: UIView!
+    @IBOutlet weak var noWechatHeight: NSLayoutConstraint!
     @IBOutlet weak var noWechatTop: NSLayoutConstraint!
     @IBOutlet weak var wechatView: UIView!
-    @IBOutlet weak var wechatTop: NSLayoutConstraint!
+    @IBOutlet weak var wechatHeight: NSLayoutConstraint!
     @IBOutlet weak var weOpenLabel: UILabel!//微信是否开启
     @IBOutlet weak var wechatSwitch: UISwitch!
+    @IBOutlet weak var weChatInfo: UILabel!
     
+    //支付宝
     @IBOutlet weak var noAlipayView: UIView!
-    @IBOutlet weak var noAliTop: NSLayoutConstraint!
     @IBOutlet weak var alipayView: UIView!
-    @IBOutlet weak var alipayTop: NSLayoutConstraint!
     @IBOutlet weak var alipayOpenLabel: UILabel!//支付宝是否开启
     @IBOutlet weak var alipaySwitch: UISwitch!
-    
-    let sema = DispatchSemaphore.init(value: 0)
+    @IBOutlet weak var alipayInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,56 +52,29 @@ class LSPayMethodBindVC: LSBaseViewController {
     }
     func setupBind() {
         //请求三个方式的数据
-//
-//        let oprationBank = BlockOperation.init {
-//            self.getPayMethodInfo(with: .bankCard)
-//        }
-//        let oprationWechat = BlockOperation.init {
-//            self.getPayMethodInfo(with: .wechat)
-//        }
-//        let oprationAlipay = BlockOperation.init {
-//            self.getPayMethodInfo(with: .alipay)
-//        }
-//        oprationAlipay.addDependency(oprationWechat)
-//        oprationWechat.addDependency(oprationBank)
-//
-//        let oprationQueue = OperationQueue.init()
-//        oprationQueue.addOperations([oprationBank,oprationWechat,oprationAlipay], waitUntilFinished: true)
-        
-        let queue = DispatchQueue.init(label: "load",attributes: DispatchQueue.Attributes.concurrent)
-        queue.async {
-//            self.sema.wait()
+        DispatchQueue.global().async {
             self.getPayMethodInfo(with: .bankCard)
-        }
-        queue.async {
-//            self.sema.wait()
             self.getPayMethodInfo(with: .wechat)
-        }
-        queue.async {
-//            self.sema.wait()
             self.getPayMethodInfo(with: .alipay)
         }
-        
     }
     // MARK: 获取对应配置的详细信息
     func getPayMethodInfo(with method:KPayMethod){
         
         let params: [String : Int] = ["bankType":payMethodType(with: method)]
         LSNetRequest.sharedInstance.getRequest(KPayMethodInfoUrl, params: params) { (response) in
-            self.sema.signal()
             let json = JSON(response)
             if json["statusCode"].int == 0 {
                 print("打印顺序 = %@",params)
-                let list = json["content"].array
-                if list!.count > 0 {
-                    if let data = response as? Dictionary<String,Any> {
-                        DispatchQueue.main.async{
-                            let model = decodeJsonToModel(json: data["content"],ele: LSPayMethodInfo.self)
-                            self.configureView(with:method,model:model)
+                DispatchQueue.main.async{
+                    let list = json["content"].array
+                    print(list)
+                    if list!.count > 0 {
+                        if let data = response as? Dictionary<String,Any> {
+                            let infos:[LSPayMethodInfo] = decodeJsonToModel(json: data["content"],ele: [LSPayMethodInfo].self)!
+                            self.configureView(with:method,model:infos.first)
                         }
-                    }
-                }else{
-                    DispatchQueue.main.async{
+                    }else{
                         self.configureView(with:method)
                     }
                 }
@@ -104,7 +82,6 @@ class LSPayMethodBindVC: LSBaseViewController {
                 
             }
         } failure: { (error) in
-            self.sema.signal()
             self.view.makeToast("网络请求失败".localized)
         }
     }
@@ -119,6 +96,7 @@ class LSPayMethodBindVC: LSBaseViewController {
     }
     // MARK: 配置界面信息
     func configureView(with method: KPayMethod, model: LSPayMethodInfo? = nil) {
+        print("来了");
         if method == .bankCard {//银行卡
             if model != nil {//说明存在银行卡
                 self.noBankCardView.isHidden = true
@@ -127,30 +105,40 @@ class LSPayMethodBindVC: LSBaseViewController {
                 self.noBankCardView.isHidden = false
                 self.bankCardView.isHidden = true
             }
-        }else if method == .wechat{//微信
-            if self.noBankCardView.isHidden == true {//如果没有银行卡
-                self.noWechatTop.constant = 140
-                self.wechatTop.constant = 140
+            if model?.status == 1 {
+                bankCardOpenLabel.text = "已启用".localized
+                bankCardOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                bankCardSwitch.isOn = true
             }else{
-                self.noWechatTop.constant = 60
-                self.wechatTop.constant = 60
+                bankCardOpenLabel.text = "已禁用".localized
+                bankCardOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                bankCardSwitch.isOn = false
             }
+            bankName.text = model?.bankName
+            bankCardInfo.text = "\(model!.bankUser)" + " " + "\(model!.bankNo)"
+        }else if method == .wechat{//微信
             if model != nil {//说明存在微信支付
                 self.wechatView.isHidden = false
                 self.noWechatView.isHidden = true
+                self.noWechatTop.constant = 10
+                self.noWechatHeight.constant = 40
             }else{
+                self.wechatHeight.constant = 136
                 self.wechatView.isHidden = true
                 self.noWechatView.isHidden = false
             }
+            if model?.status == 1 {
+                weOpenLabel.text = "已启用".localized
+                weOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                wechatSwitch.isOn = true
+            }else{
+                weOpenLabel.text = "已禁用".localized
+                weOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                wechatSwitch.isOn = false
+            }
+            weChatInfo.text = "\(model!.bankUser)" + " " + "\(model!.bankNo)"
         }
         else{
-            if self.noWechatView.isHidden == true {
-                self.noAliTop.constant = 276
-                self.alipayTop.constant = 276
-            }else{
-                self.noWechatTop.constant = 110
-                self.alipayTop.constant = 110
-            }
             if model != nil {
                 self.alipayView.isHidden = false
                 self.noAlipayView.isHidden = true
@@ -158,6 +146,75 @@ class LSPayMethodBindVC: LSBaseViewController {
                 self.alipayView.isHidden = true
                 self.noAlipayView.isHidden = false
             }
+            if model?.status == 1 {
+                alipayOpenLabel.text = "已启用".localized
+                alipayOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                alipaySwitch.isOn = true
+            }else{
+                alipayOpenLabel.text = "已禁用".localized
+                alipayOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                alipaySwitch.isOn = false
+            }
+            alipayInfo.text = "\(model!.bankUser)" + " " + "\(model!.bankNo)"
         }
+    }
+    @IBAction func bankSwitchAction(_ sender: UISwitch) {
+        switchOnOrOff(with: .bankCard, isOn: sender.isOn)
+    }
+    @IBAction func wechatSwitchAction(_ sender: UISwitch) {
+        switchOnOrOff(with: .wechat, isOn: sender.isOn)
+    }
+    @IBAction func alipaySwitchAction(_ sender: UISwitch) {
+        switchOnOrOff(with: .alipay, isOn: sender.isOn)
+    }
+    private func switchOnOrOff(with method: KPayMethod, isOn: Bool){
+        let params: [String : Any] = ["bankType":payMethodType(with: method),"status":isOn]
+        LSNetRequest.sharedInstance.postRequest(KPaymethodOnUrl, params: params) { (reponse) in
+            let json = JSON(reponse)
+            if json["statusCode"].int == 0 {
+                if method == .bankCard {
+                    if isOn {
+                        self.bankCardOpenLabel.text = "已启用".localized
+                        self.bankCardOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                    }else{
+                        self.bankCardOpenLabel.text = "已禁用".localized
+                        self.bankCardOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                    }
+                    self.bankCardSwitch.isOn = isOn
+                }else if method == .wechat{
+                    if isOn {
+                        self.weOpenLabel.text = "已启用".localized
+                        self.weOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                    }else{
+                        self.weOpenLabel.text = "已禁用".localized
+                        self.weOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                    }
+                    self.wechatSwitch.isOn = isOn
+                }else{
+                    if isOn {
+                        self.alipayOpenLabel.text = "已启用".localized
+                        self.alipayOpenLabel.textColor = HEXCOLOR(h: 0x00A985, alpha: 1)
+                    }else{
+                        self.alipayOpenLabel.text = "已禁用".localized
+                        self.alipayOpenLabel.textColor = HEXCOLOR(h: 0xA2A2A2, alpha: 1)
+                    }
+                    self.alipaySwitch.isOn = isOn
+                }
+            }else{
+                self.view.makeToast(json["errorMessage"].string)
+            }
+        } failure: { (error) in
+            self.view.makeToast(error.localizedDescription)
+        }
+
+    }
+    //绑定银行卡
+    @IBAction func bindBankCardAction(_ sender: UIButton) {
+    }
+    //绑定微信
+    @IBAction func bindWechatAction(_ sender: UIButton) {
+    }
+    //绑定支付宝
+    @IBAction func bindAlipayAction(_ sender: UIButton) {
     }
 }
