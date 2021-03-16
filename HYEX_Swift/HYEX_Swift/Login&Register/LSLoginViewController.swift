@@ -92,7 +92,9 @@ class LSLoginViewController: LSBaseViewController {
                     print(model)
                     //请求个人数据，并缓存到本地
                     UserDefaults.standard.set(try? PropertyListEncoder().encode(model), forKey: KLoginModelKey)
-                    
+                    UserDefaults.standard.synchronize()
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: KLoginSuccessNotifyKey), object: nil)//发送通知
+                    sleep(1)
                     LSLoginModel.getUserInfo(true)
                 }
             }else{

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftPullToRefresh
 
 //获取用户交易信息
 fileprivate let KProfileGetTradeInfo = "/otc-trade/merchant/apply"
@@ -64,10 +65,14 @@ class LSProfileViewController: LSBaseViewController {
         tableView.register(UINib.init(nibName: String(describing: LSProfileCell.self), bundle: nil), forCellReuseIdentifier: String(describing: LSProfileCell.self))
         tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
+        tableView.spr_setTextHeader {
+            self.setupBind()
+        }
     }
     
     func  setupBind() {
         LSNetRequest.sharedInstance.getRequest(KProfileGetTradeInfo, params: nil) { (response) in
+            self.tableView.spr_endRefreshing()
             if let data = response as? Dictionary<String, Any> as NSDictionary?{
                 if data["statusCode"] as! Int == 0 {//说明拿到了数据
                     self.tradeInfo = decodeJsonToModel(json: data["content"], ele: LSOTCTradeUserInfo.self)
@@ -76,9 +81,10 @@ class LSProfileViewController: LSBaseViewController {
                 }
             }
         } failure: { (error) in
-            
+            self.tableView.spr_endRefreshing()
         }
         LSLoginModel.getUserInfo(false) { (userInfo) in
+            self.tableView.spr_endRefreshing()
             self.headerView.reloadHeaderView()
         }
     }

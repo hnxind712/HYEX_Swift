@@ -19,7 +19,7 @@ class LSPayMethodBindVC: LSBaseViewController {
     @IBOutlet weak var bankCardView: UIView!
     @IBOutlet weak var bankCardOpenLabel: UILabel!
     @IBOutlet weak var bankCardSwitch: UISwitch!
-  
+    
     
     
     @IBOutlet weak var noWechatView: UIView!
@@ -36,25 +36,54 @@ class LSPayMethodBindVC: LSBaseViewController {
     @IBOutlet weak var alipayOpenLabel: UILabel!//支付宝是否开启
     @IBOutlet weak var alipaySwitch: UISwitch!
     
+    let sema = DispatchSemaphore.init(value: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "收付款设置".localized
         
         setupBind()
     }
     func setupBind() {
         //请求三个方式的数据
-        DispatchQueue.global().async {
-            self.getPayMethodInfo(with:.bankCard)
-            self.getPayMethodInfo(with:.wechat)
-            self.getPayMethodInfo(with:.alipay)
+//
+//        let oprationBank = BlockOperation.init {
+//            self.getPayMethodInfo(with: .bankCard)
+//        }
+//        let oprationWechat = BlockOperation.init {
+//            self.getPayMethodInfo(with: .wechat)
+//        }
+//        let oprationAlipay = BlockOperation.init {
+//            self.getPayMethodInfo(with: .alipay)
+//        }
+//        oprationAlipay.addDependency(oprationWechat)
+//        oprationWechat.addDependency(oprationBank)
+//
+//        let oprationQueue = OperationQueue.init()
+//        oprationQueue.addOperations([oprationBank,oprationWechat,oprationAlipay], waitUntilFinished: true)
+        
+        let queue = DispatchQueue.init(label: "load",attributes: DispatchQueue.Attributes.concurrent)
+        queue.async {
+//            self.sema.wait()
+            self.getPayMethodInfo(with: .bankCard)
         }
+        queue.async {
+//            self.sema.wait()
+            self.getPayMethodInfo(with: .wechat)
+        }
+        queue.async {
+//            self.sema.wait()
+            self.getPayMethodInfo(with: .alipay)
+        }
+        
     }
     // MARK: 获取对应配置的详细信息
-    func getPayMethodInfo(with method:KPayMethod) {
+    func getPayMethodInfo(with method:KPayMethod){
+        
         let params: [String : Int] = ["bankType":payMethodType(with: method)]
         LSNetRequest.sharedInstance.getRequest(KPayMethodInfoUrl, params: params) { (response) in
+            self.sema.signal()
             let json = JSON(response)
             if json["statusCode"].int == 0 {
                 print("打印顺序 = %@",params)
@@ -75,6 +104,7 @@ class LSPayMethodBindVC: LSBaseViewController {
                 
             }
         } failure: { (error) in
+            self.sema.signal()
             self.view.makeToast("网络请求失败".localized)
         }
     }
@@ -99,11 +129,11 @@ class LSPayMethodBindVC: LSBaseViewController {
             }
         }else if method == .wechat{//微信
             if self.noBankCardView.isHidden == true {//如果没有银行卡
-                self.noWechatTop.constant = 60
-                self.wechatTop.constant = 60
-            }else{
                 self.noWechatTop.constant = 140
                 self.wechatTop.constant = 140
+            }else{
+                self.noWechatTop.constant = 60
+                self.wechatTop.constant = 60
             }
             if model != nil {//说明存在微信支付
                 self.wechatView.isHidden = false
@@ -112,10 +142,22 @@ class LSPayMethodBindVC: LSBaseViewController {
                 self.wechatView.isHidden = true
                 self.noWechatView.isHidden = false
             }
-        }else{
-//            if <#condition#> {
-//                <#code#>
-//            }
+        }
+        else{
+            if self.noWechatView.isHidden == true {
+                self.noAliTop.constant = 276
+                self.alipayTop.constant = 276
+            }else{
+                self.noWechatTop.constant = 110
+                self.alipayTop.constant = 110
+            }
+            if model != nil {
+                self.alipayView.isHidden = false
+                self.noAlipayView.isHidden = true
+            }else{
+                self.alipayView.isHidden = true
+                self.noAlipayView.isHidden = false
+            }
         }
     }
 }

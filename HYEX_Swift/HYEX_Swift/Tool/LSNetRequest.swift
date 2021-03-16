@@ -54,6 +54,7 @@ class LSNetRequest{
                 print(value)
                 success(value)
             case .failure(let error):
+                print(response.response?.statusCode)
                 failure!(error)
             }
         }

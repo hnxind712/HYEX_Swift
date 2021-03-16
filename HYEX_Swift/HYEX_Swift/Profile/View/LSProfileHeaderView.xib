@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-6o-acd">
-                    <rect key="frame" x="67" y="60" width="61.5" height="18"/>
+                    <rect key="frame" x="67" y="60" width="16" height="18"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI00012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-hs-hbI">
-                            <rect key="frame" x="8" y="3" width="45.5" height="12"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-hs-hbI">
+                            <rect key="frame" x="8" y="3" width="0.0" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="zCJ-pI-Yy6"/>
                             </constraints>
@@ -83,7 +83,7 @@
                     </constraints>
                 </view>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-1o-DcM">
-                    <rect key="frame" x="173.5" y="36.5" width="70" height="15"/>
+                    <rect key="frame" x="80.5" y="36.5" width="70" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="8Vf-Xb-w3e"/>
                     </constraints>
@@ -116,8 +116,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundTop" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="131****1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA6-8k-Z7X">
-                    <rect key="frame" x="67" y="36" width="93" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA6-8k-Z7X">
+                    <rect key="frame" x="67" y="36" width="0.0" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="FjI-11-Ake"/>
                     </constraints>

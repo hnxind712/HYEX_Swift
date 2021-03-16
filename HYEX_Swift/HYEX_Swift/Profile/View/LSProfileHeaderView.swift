@@ -34,6 +34,7 @@ class LSProfileHeaderView: UIView {
         }else{
             self.headPortrait.image = UIImage(named: "icon_trader_avatar_default")
         }
+        self.inviteId.text = userInfo.inviteCode
         //处理nickName
         var location = 4
         
