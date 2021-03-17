@@ -106,6 +106,10 @@
 		D759D58925FF475C00009C36 /* LSPayMethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D759D58825FF475C00009C36 /* LSPayMethodInfo.swift */; };
 		D75C174525FCA0CF00160B78 /* LSModifyPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75C174325FCA0CF00160B78 /* LSModifyPasswordVC.swift */; };
 		D75C174625FCA0CF00160B78 /* LSModifyPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75C174425FCA0CF00160B78 /* LSModifyPasswordVC.xib */; };
+		D77DB88D2601AC1B004A197E /* LSAddWechatAndAlipayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB88B2601AC1B004A197E /* LSAddWechatAndAlipayVC.swift */; };
+		D77DB88E2601AC1B004A197E /* LSAddWechatAndAlipayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77DB88C2601AC1B004A197E /* LSAddWechatAndAlipayVC.xib */; };
+		D77DB8942601F546004A197E /* LSAddBankInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DB8922601F546004A197E /* LSAddBankInfoViewController.swift */; };
+		D77DB8952601F546004A197E /* LSAddBankInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D77DB8932601F546004A197E /* LSAddBankInfoViewController.xib */; };
 		D78B820E25E3586400F2360E /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820B25E3586400F2360E /* NSObject+Extension.swift */; };
 		D78B820F25E3586400F2360E /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820C25E3586400F2360E /* Localize.swift */; };
 		D78B821025E3586400F2360E /* Bundle+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */; };
@@ -256,6 +260,10 @@
 		D759D58825FF475C00009C36 /* LSPayMethodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSPayMethodInfo.swift; sourceTree = "<group>"; };
 		D75C174325FCA0CF00160B78 /* LSModifyPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSModifyPasswordVC.swift; sourceTree = "<group>"; };
 		D75C174425FCA0CF00160B78 /* LSModifyPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSModifyPasswordVC.xib; sourceTree = "<group>"; };
+		D77DB88B2601AC1B004A197E /* LSAddWechatAndAlipayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSAddWechatAndAlipayVC.swift; sourceTree = "<group>"; };
+		D77DB88C2601AC1B004A197E /* LSAddWechatAndAlipayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSAddWechatAndAlipayVC.xib; sourceTree = "<group>"; };
+		D77DB8922601F546004A197E /* LSAddBankInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSAddBankInfoViewController.swift; sourceTree = "<group>"; };
+		D77DB8932601F546004A197E /* LSAddBankInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LSAddBankInfoViewController.xib; sourceTree = "<group>"; };
 		D78B820B25E3586400F2360E /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		D78B820C25E3586400F2360E /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		D78B820D25E3586400F2360E /* Bundle+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Swizzling.swift"; sourceTree = "<group>"; };
@@ -680,6 +688,10 @@
 				D759D58725FF475000009C36 /* Model */,
 				D759D57F25FF35B500009C36 /* LSPayMethodBindVC.swift */,
 				D759D58025FF35B500009C36 /* LSPayMethodBindVC.xib */,
+				D77DB88B2601AC1B004A197E /* LSAddWechatAndAlipayVC.swift */,
+				D77DB88C2601AC1B004A197E /* LSAddWechatAndAlipayVC.xib */,
+				D77DB8922601F546004A197E /* LSAddBankInfoViewController.swift */,
+				D77DB8932601F546004A197E /* LSAddBankInfoViewController.xib */,
 			);
 			path = PayMethod;
 			sourceTree = "<group>";
@@ -961,6 +973,7 @@
 				D70E2EF325F86DFF0025B9F3 /* LSMarketListViewController.xib in Resources */,
 				D70E2EEB25F86DFF0025B9F3 /* LSRegisterViewController.xib in Resources */,
 				D7FED40425FB6D7400DD3F6F /* LSCustomAlertView.xib in Resources */,
+				D77DB8952601F546004A197E /* LSAddBankInfoViewController.xib in Resources */,
 				D70E2F0F25F86F2F0025B9F3 /* LSProfileHeaderView.xib in Resources */,
 				D70E2F2325F8B2190025B9F3 /* Market1.json in Resources */,
 				D70E2ED625F86DFF0025B9F3 /* LSHomeViewController.xib in Resources */,
@@ -977,6 +990,7 @@
 				D70E2E3125F86DAB0025B9F3 /* KLineIndicatorsView.xib in Resources */,
 				3CEDFB7925FA5EDD0004F88B /* LSFeedBackRecordCell.xib in Resources */,
 				D70E2EE325F86DFF0025B9F3 /* LSSustainabilityViewController.xib in Resources */,
+				D77DB88E2601AC1B004A197E /* LSAddWechatAndAlipayVC.xib in Resources */,
 				D7FED3EC25FB4E9E00DD3F6F /* LSAuthenticationStatusVC.xib in Resources */,
 				D70E2F2525F8B2190025B9F3 /* depth.json in Resources */,
 				D7FED3FA25FB666200DD3F6F /* LSVersinUploadViewController.xib in Resources */,
@@ -1072,6 +1086,7 @@
 				D70E2EEE25F86DFF0025B9F3 /* LSUserInfo.swift in Sources */,
 				D748D5FE25FA12D70048662A /* LSFeedBackModel.swift in Sources */,
 				D748D57B25F9BB530048662A /* LSFeedBackRecordVC.swift in Sources */,
+				D77DB8942601F546004A197E /* LSAddBankInfoViewController.swift in Sources */,
 				D70E2E2F25F86DAB0025B9F3 /* KLineIndicatorsView.swift in Sources */,
 				D70E2F0725F86F140025B9F3 /* LSProfileHeaderView.swift in Sources */,
 				D74C02F325E0E3EA0017E1E7 /* LSNetRequest.swift in Sources */,
@@ -1102,6 +1117,7 @@
 				D7FED40E25FB749300DD3F6F /* LSInviteListViewController.swift in Sources */,
 				D70E2ECE25F86DFF0025B9F3 /* LSHomeViewController.swift in Sources */,
 				D70E2F2825F8B2190025B9F3 /* CHDepthChartView.swift in Sources */,
+				D77DB88D2601AC1B004A197E /* LSAddWechatAndAlipayVC.swift in Sources */,
 				D70E2E2E25F86DAB0025B9F3 /* KLineInfoView.swift in Sources */,
 				D7F9F5A125C10CDD00BB32D7 /* Common.swift in Sources */,
 				D70E2EDC25F86DFF0025B9F3 /* LSCoinCurrencyTradeVC.swift in Sources */,

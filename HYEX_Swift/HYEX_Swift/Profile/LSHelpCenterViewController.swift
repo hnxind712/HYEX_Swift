@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import SwiftyJSON
 
-let KPrivacyUrl = "/article/type"
+fileprivate let KPrivacyUrl = "/article/type"
 
 enum KHtmlLoadType {
     //@"STAKING_AGREEMENT"->矿池协议

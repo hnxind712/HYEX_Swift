@@ -12,10 +12,10 @@ enum KPayMethod {
     case bankCard,wechat,alipay
 }
 //获取支付方式信息
-let KPayMethodInfoUrl = "/bank/bank-addresses"
+fileprivate let KPayMethodInfoUrl = "/bank/bank-addresses"
 
 //关闭或开启
-let KPaymethodOnUrl = "/bank/enable-disable"
+fileprivate let KPaymethodOnUrl = "/bank/enable-disable"
 
 class LSPayMethodBindVC: LSBaseViewController {
     //银行卡
@@ -42,6 +42,12 @@ class LSPayMethodBindVC: LSBaseViewController {
     @IBOutlet weak var alipayOpenLabel: UILabel!//支付宝是否开启
     @IBOutlet weak var alipaySwitch: UISwitch!
     @IBOutlet weak var alipayInfo: UILabel!
+    
+    var bankModel: LSPayMethodInfo?
+    
+    var wechatModel: LSPayMethodInfo?
+    
+    var alipayModel: LSPayMethodInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +104,7 @@ class LSPayMethodBindVC: LSBaseViewController {
     func configureView(with method: KPayMethod, model: LSPayMethodInfo? = nil) {
         print("来了");
         if method == .bankCard {//银行卡
+            bankModel = model
             if model != nil {//说明存在银行卡
                 self.noBankCardView.isHidden = true
                 self.bankCardView.isHidden = false
@@ -117,6 +124,7 @@ class LSPayMethodBindVC: LSBaseViewController {
             bankName.text = model?.bankName
             bankCardInfo.text = "\(model!.bankUser)" + " " + "\(model!.bankNo)"
         }else if method == .wechat{//微信
+            wechatModel = model
             if model != nil {//说明存在微信支付
                 self.wechatView.isHidden = false
                 self.noWechatView.isHidden = true
@@ -137,8 +145,8 @@ class LSPayMethodBindVC: LSBaseViewController {
                 wechatSwitch.isOn = false
             }
             weChatInfo.text = "\(model!.bankUser)" + " " + "\(model!.bankNo)"
-        }
-        else{
+        }else{
+            alipayModel = model
             if model != nil {
                 self.alipayView.isHidden = false
                 self.noAlipayView.isHidden = true
@@ -210,11 +218,39 @@ class LSPayMethodBindVC: LSBaseViewController {
     }
     //绑定银行卡
     @IBAction func bindBankCardAction(_ sender: UIButton) {
+        let addBank = LSAddBankInfoViewController()
+        addBank.defultModel = bankModel
+        self.navigationController?.pushViewController(addBank, animated: true)
+    }
+    @IBAction func modifyBankCardAction(_ sender: UIButton) {
+        let addBank = LSAddBankInfoViewController()
+        addBank.defultModel = bankModel
+        self.navigationController?.pushViewController(addBank, animated: true)
     }
     //绑定微信
     @IBAction func bindWechatAction(_ sender: UIButton) {
+        let addWe = LSAddWechatAndAlipayVC()
+        addWe.type = .wechat
+        addWe.defultModel = wechatModel
+        self.navigationController?.pushViewController(addWe, animated: true)
+    }
+    @IBAction func modifyWechatAction(_ sender: UIButton) {
+        let addWe = LSAddWechatAndAlipayVC()
+        addWe.type = .wechat
+        addWe.defultModel = wechatModel
+        self.navigationController?.pushViewController(addWe, animated: true)
     }
     //绑定支付宝
     @IBAction func bindAlipayAction(_ sender: UIButton) {
+        let addWe = LSAddWechatAndAlipayVC()
+        addWe.type = .alipay
+        addWe.defultModel = alipayModel
+        self.navigationController?.pushViewController(addWe, animated: true)
+    }
+    @IBAction func modifyAlipayAction(_ sender: UIButton) {
+        let addWe = LSAddWechatAndAlipayVC()
+        addWe.type = .alipay
+        addWe.defultModel = alipayModel
+        self.navigationController?.pushViewController(addWe, animated: true)
     }
 }

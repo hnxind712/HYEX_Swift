@@ -9,7 +9,7 @@ import UIKit
 import CLImagePickerTool
 import SwiftyJSON
 
-let KAuthenticationUrl = "/user/id-card-auth"
+fileprivate let KAuthenticationUrl = "/user/id-card-auth"
 
 class LSAuthenticationViewController: LSBaseViewController {
     @IBOutlet weak var failView: UIView!

@@ -39,4 +39,7 @@ struct LSPayMethodInfo: Codable {
     let status: Int32
     
     let userId: Int32
+    
+    let id: Int32
+    
 }
