@@ -35,7 +35,7 @@ class LSMainTabbarController: UITabBarController {
                                KTabbarImage:"icon_trade",
                                KTabbarSelectedImage:"icon_trade_h"
         ],
-        KTabbarItemType.asset:[KTabbarVC:"LSHomeViewController",
+        KTabbarItemType.asset:[KTabbarVC:"LSAssetViewController",
                                KTabbarTitle:"资产",
                                KTabbarImage:"icon_purse",
                                KTabbarSelectedImage:"icon_purse_h"
